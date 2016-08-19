@@ -1,6 +1,6 @@
 {
   "name": "v-render",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a component based web framework for NodeJS applications.",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/shicy/v-render/issues"
   },
-  "homepage": "https://github.com/shicy/v-render#readme"
+  "homepage": "https://github.com/shicy/v-render#readme",
+  "dependencies": {
+    "log4js": "^0.6.38"
+  }
 }
