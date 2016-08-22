@@ -3,4 +3,4 @@
 // Create on 2016-08-15
 // ========================================================
 
-module.exports = require("./lib/v-render");
+module.exports = require("./lib/v-render.js");
