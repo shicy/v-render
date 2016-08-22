@@ -1,2 +1,2 @@
 # v-render
-a component based web framework for NodeJS applications.
+a web framework for NodeJS applications, which is component based.
