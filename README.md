@@ -41,7 +41,7 @@ VRender.create().initialize(config).run();
 类型：`String`或`Object`，默认值：`无`，文件基于`config.logdir`。  
 系统日志输出文件名称定义，如<code>"app.log"</code>将所有日志信息输出到`"./logs/app.log"`文件（基于`config.cwd`）。想要分类型输出到不同的日志文件，可以使用下面的方式配置：
 
-```json
+```javascript
 {
 	logfiles: {
 		"error": "err.log", // 错误日志
@@ -70,7 +70,7 @@ WEB 静态资源缓存策略，包含`age`和`files`属性。
 类型：`Object`，默认值：`无`。  
 域名替换，可以将用户访问的公开域名替换成内部域名，该项配置在对接后台服务器是很有用。比如：用户访问域名`www.xxx.cn`可替换成`www.xxx.com`，参见`config.dataServer`根据域名对接后台服务器。
 
-```json
+```javascript
 {
     "www.xxx.cn": "www.xxx.com", // 将www.xxx.cn替换成www.xxx.com
     "localhost": "www.xxx.com"
@@ -88,4 +88,34 @@ WEB 静态资源根目录，是图片、脚本、样式等文件的存放目录�
 #### - config.server.waitTimeout
 类型：`Number`，默认值：`120000`，即2分钟。  
 WEB 服务器超时等待时间，默认2分钟。
+
+#### - config.router
+路由相关配置
+
+#### - config.router.adapter
+类型：`String`，默认值：`无`。   
+路由适配器，指向一个自定义的路由模块，实现相应的路由转换。
+
+#### - config.router.map
+类型：`Object`，默认值：`{'^/$':'./WebContent/index.html'}`。   
+路由映射表，配置路由和网页（或视图）之间的映射关系。映射表的`key`是路由名称，`value`指向一个网页或视图。其中路由支持**伪正则表达式**，可以使用`"../.."`代表匹配任意多级目录，`".."`可以匹配任意一个子目录。   
+_注：路由映射表的优先级要次于路由适配器，如果适配器受理了某个路由就不会再使用路由映射表了。_
+
+#### - config.router.no_cache
+类型：`Array`，默认值：`无`。   
+禁止某些路由的浏览器缓存，被禁止缓存的路由会在其响应头上设置：`Pragma=no-cache`、 `Expires=0`、 `Cache-Control=no-cache,no-store,must-revalidate,max-age=0`。该属性同路由映射表中的路由配置，支持**伪正则表达式**。
+
+#### - config.dataServer
+数据源服务器配置，即后台数据服务器，比如：JAVA服务。
+
+#### - config.dataServer.server
+类型：`String`，默认值：`127.0.0.1:8080`。
+
+
+
+
+
+
+
+
 
