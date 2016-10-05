@@ -96,8 +96,12 @@ WEB 服务器超时等待时间，默认2分钟。
 类型：`String`，默认值：`无`。   
 路由适配器，指向一个自定义的路由模块，实现相应的路由转换。
 
+#### - config.router.homepage
+类型：`String`，默认值：`./WebContent/index.html`，基于`config.cwd`。  
+首页路由配置，进系统首页打开的页面或视图。
+
 #### - config.router.map
-类型：`Object`，默认值：`{'^/$':'./WebContent/index.html'}`。   
+类型：`Object`，默认值：`无`。   
 路由映射表，配置路由和网页（或视图）之间的映射关系。映射表的`key`是路由名称，`value`指向一个网页或视图。其中路由支持**伪正则表达式**，可以使用`"../.."`代表匹配任意多级目录，`".."`可以匹配任意一个子目录。   
 _注：路由映射表的优先级要次于路由适配器，如果适配器受理了某个路由就不会再使用路由映射表了。_
 
@@ -108,9 +112,25 @@ _注：路由映射表的优先级要次于路由适配器，如果适配器受�
 #### - config.dataServer
 数据源服务器配置，即后台数据服务器，比如：JAVA服务。
 
-#### - config.dataServer.server
-类型：`String`，默认值：`127.0.0.1:8080`。
+#### - config.dataServer.beDataFormat
+类型：`Boolean`，默认值：`true`。  
+数据接口是否返回数据格式：`{code: 0, msg: "", data: {}}`，框架默认接口返回这样的数据格式，其中：`code`表示接口返回的错误码，0是正确码，说明接口执行正确（无异常），其他编码值均表示接口异常，编码值自定义；`msg`一般指接口执行异常时的错误信息；`data`是接口返回的数据集。
 
+#### - config.dataServer.contextPath
+类型：`String`，默认值：`无`。   
+数据接口调用的上下文（可选），当使用相对路径访问接口时，框架自动加上`contextPath`。比如访问接口`human/list`则自动转化为`{contextPath}/human/list`。
+
+#### - config.dataServer.liveApi
+类型：`String`，默认值：`无`。
+数据服务器“存活”检测接口，即“心跳接口”。
+
+#### - config.dataServer.server
+类型：`String`，默认值：`127.0.0.1:8080`。  
+数据服务器IP地址和端口号，其中IP地址也可以用域名代替，如：`www.xxx.com:8080`。
+
+#### - config.dataServer.stopOnServerDown
+类型：`Boolean`，默认值：`false`。   
+当数据服务器不可用时，是否需要停止 WEB 服务器，当“存活”检测接口访问失败时认为数据服务器不可用。在集群环境中当服务不可用需及时的停止服务，保证用户的正常访问。
 
 
 
