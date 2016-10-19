@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+body { min-width: 1200px; }
+
+#main-body > .head {  height: 400px; background-color: #01060A; }
+#main-body > .head > .content { width: 1200px; height: 100%; margin: 0px auto; background-image: url('/theme/main_bg.jpg');
+	background-size: 100%; background-repeat: no-repeat; }
+#main-body > .head > .content > .menus { position: absolute; left: 65px; bottom: 25px; font-size: 20px; }
+#main-body > .head > .content > .menus > .menu { color: #fff; padding-left: 20px; margin-right: 35px;
+	background-repeat: no-repeat; background-size: 16px; background-position: 0px center; }
+#main-body > .head > .content > .menus > .menu.quickstart { background-image: url('/theme/icons/menu_quickstart.png'); }
+#main-body > .head > .content > .menus > .menu.documents { background-image: url('/theme/icons/menu_document.png'); }
+#main-body > .head > .content > .menus > .menu.components { background-image: url('/theme/icons/menu_component.png'); }
+#main-body > .head > .content > .menus > .menu.styles { background-image: url('/theme/icons/menu_style.png'); }
+#main-body > .head > .content > .menus > .menu.apis { background-image: url('/theme/icons/menu_api.png'); }
+
+#main-body > .features { padding: 75px 0px 15px; }
+#main-body > .features > .items { width: 1200px; margin: 0px auto; padding: 0px 8px 0px 7px; }
+#main-body > .features > .items > .item { display: inline-block; width: 33.333333%; padding: 0px 7px 0px 8px; 
+	margin-bottom: 50px; vertical-align: top; }
+#main-body > .features > .items > .item > .box { color: #fff; height: 153px; padding: 20px 10px 0px 120px; 
+	background-repeat: no-repeat; background-position: 15px center; background-size: 90px;
+	transition: transform 1s; -webkit-transition: -webkit-transform 1s; }
+#main-body > .features > .items > .item > .box:hover { transform: scale(1.08); -webkit-transform: scale(1.08); }
+#main-body > .features > .items > .item > .box > .title { font-size: 20px; }
+#main-body > .features > .items > .item > .box > .desc { font-size: 14px; margin-top: 12px; }
+#main-body > .features > .items > .item.server > .box { box-shadow: 0px 3px 20px 0px rgba(0, 193, 222, .5);
+	background-color: #00C1DE; background-image: url('/theme/icons/feature_server.png'); }
+#main-body > .features > .items > .item.component > .box { box-shadow: 0px 3px 20px 0px rgba(139, 87, 42, .5);
+	background-color: #8B572A; background-image: url('/theme/icons/feature_component.png'); }
+#main-body > .features > .items > .item.build > .box { box-shadow: 0px 3px 20px 0px rgba(15, 133, 144, .5);
+	background-color: #0F85F4; background-image: url('/theme/icons/feature_build.png'); }
+#main-body > .features > .items > .item.merge > .box { box-shadow: 0px 3px 20px 0px rgba(21, 159, 65, .5);
+	background-color: #159F41; background-image: url('/theme/icons/feature_join.png'); }
+#main-body > .features > .items > .item.depend > .box { box-shadow: 0px 3px 20px 0px rgba(236, 110, 59, .5);
+	background-color: #EC6E3B; background-image: url('/theme/icons/feature_depend.png'); }
+#main-body > .features > .items > .item.datasource > .box { box-shadow: 0px 3px 20px 0px rgba(86, 206, 254, .5);
+	background-color: #56CEFE; background-image: url('/theme/icons/feature_datasource.png'); }
+
+#main-body > .introduce { background-color: #f9f9f9; padding-bottom: 100px; }
+#main-body > .introduce .source { color: #787878; }
+#main-body > .introduce .version { font-size: 12px; line-height: 20px; background-color: #fff; 
+	border: 1px solid #ddd; border-radius: 3px; padding: 0px 6px; margin-left: 10px; vertical-align: 2px; }
+#main-body > .introduce .version:before { content: ""; position: absolute; border: 0px solid transparent;
+    border-width: 6px 8px 6px 0px; border-right-color: #ddd; left: -8px; top: 4px; }
+#main-body > .introduce .version:after { content: ""; position: absolute; border: 0px solid transparent;
+    border-width: 5px 7px 5px 0px; border-right-color: #fff; left: -7px; top: 5px; }
+#main-body > .introduce > article { width: 1200px; margin: 0px auto; padding: 25px 40px; }
+#main-body > .introduce > article > header { font-size: 20px; color: #814D21; line-height: 24px; margin-top: 40px; }
+#main-body > .introduce > article > header:first-child { margin-top: 0px; }
+#main-body > .introduce > article > header + section { margin-top: 15px; }
+#main-body > .introduce > article > section > p { color: #787878; margin-top: 15px; }
+#main-body > .introduce > article > section > p:first-child { margin-top: 0px; }
+
+#main-body > .foot { background-color: #333444; color: #fff; font-size: 12px; line-height: 16px; padding: 20px 40px; }
+#main-body > .foot a { color: #fff; }
