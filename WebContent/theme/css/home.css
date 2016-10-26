@@ -21,8 +21,8 @@ body { min-width: 1200px; }
 	margin-bottom: 50px; vertical-align: top; }
 #main-body > .features > .items > .item > .box { color: #fff; height: 153px; padding: 20px 10px 0px 120px; 
 	background-repeat: no-repeat; background-position: 15px center; background-size: 90px;
-	transition: transform 1s; -webkit-transition: -webkit-transform 1s; }
-#main-body > .features > .items > .item > .box:hover { transform: scale(1.08); -webkit-transform: scale(1.08); }
+	transition: transform .8s; -webkit-transition: -webkit-transform .8s; }
+#main-body > .features > .items > .item > .box:hover { transform: scale(1.06); -webkit-transform: scale(1.06); }
 #main-body > .features > .items > .item > .box > .title { font-size: 20px; }
 #main-body > .features > .items > .item > .box > .desc { font-size: 14px; margin-top: 12px; }
 #main-body > .features > .items > .item.server > .box { box-shadow: 0px 3px 20px 0px rgba(0, 193, 222, .5);
@@ -39,7 +39,8 @@ body { min-width: 1200px; }
 	background-color: #56CEFE; background-image: url('/theme/icons/feature_datasource.png'); }
 
 #main-body > .introduce { background-color: #f9f9f9; padding-bottom: 100px; }
-#main-body > .introduce .source { color: #787878; }
+#main-body > .introduce .source { color: #787878; background-image: url('/theme/icons/github.png');
+    background-size: 16px; background-repeat: no-repeat; background-position: left center; padding-left: 20px; }
 #main-body > .introduce .version { font-size: 12px; line-height: 20px; background-color: #fff; 
 	border: 1px solid #ddd; border-radius: 3px; padding: 0px 6px; margin-left: 10px; vertical-align: 2px; }
 #main-body > .introduce .version:before { content: ""; position: absolute; border: 0px solid transparent;
