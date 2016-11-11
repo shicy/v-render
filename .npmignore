@@ -1,4 +1,6 @@
 bin/_work
+build
+dev.js
 logs/*.log*
 node_modules
 vrender.sublime-project
