@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+#main-body { max-width: 1200px; margin: 40px auto 100px; padding-left: 190px; }
+
+#main-body > .sidemenu { position: absolute; left: 0px; top: 0px; width: 160px; }
+#main-body > .sidemenu > .grp > .title { background-color: #f3f3f3; line-height: 28px; 
+	padding-left: 10px; border-left: 2px solid #ddd; font-size: 14px; }
+#main-body > .sidemenu > .grp > .menus > .menu { font-size: 12px; line-height: 26px; 
+	background-color: #f6f6f6; border-left: 2px solid #ddd; padding-left: 15px; color: #787878; 
+	cursor: pointer; }
+#main-body > .sidemenu > .grp > .menus > .menu:hover { background-color: #ddd; }
+#main-body > .sidemenu > .grp > .menus > .menu.selected { background-color: #fff; color: #333444;
+	border-left-color: #333444; cursor: default; }
+
+
+#main-body > .container { min-height: 120px; }
+#main-body > .container > .complist > .group { line-height: 32px; border-bottom: 1px solid #eee;
+	margin-top: 40px; }
+#main-body > .container > .complist > .group:first-child { margin-top: 0px; }
+#main-body > .container > .complist > .item { border: 1px solid #ddd; background-color: #f0f0f0; 
+	border-radius: 3px; margin-top: 20px; padding: 10px 20px; }
+#main-body > .container > .complist > .item > a { text-shadow: 1px 1px 1px #ffffff; }
+#main-body > .container > .complist > .item > p { font-size: 14px; color: #787878; margin-top: 10px; }
+#main-body > .container > .complist > .item > p code { color: #ff1e00; margin: 0px 3px; }
+
+
+

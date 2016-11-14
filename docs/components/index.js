@@ -40,7 +40,7 @@ var ComponentView = VRender.SinglePageView.extend(module, {
 	},
 
 	renderIndexView: function (target) {
-		target.write("<h1>组件</h1>");
+		target.writeTmpl(__dirname + "/index_home.tmpl");
 	},
 
 	getSinglePageContainer: function () {

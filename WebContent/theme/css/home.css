@@ -6,7 +6,7 @@ body { min-width: 1200px; }
 #main-body > .head {  height: 400px; background-color: #01060A; }
 #main-body > .head > .content { width: 1200px; height: 100%; margin: 0px auto; background-image: url('/theme/main_bg.jpg');
 	background-size: 100%; background-repeat: no-repeat; }
-#main-body > .head > .content > .menus { position: absolute; left: 65px; bottom: 25px; font-size: 20px; }
+#main-body > .head > .content > .menus { position: absolute; left: 25px; bottom: 25px; font-size: 20px; }
 #main-body > .head > .content > .menus > .menu { color: #fff; padding-left: 20px; margin-right: 35px;
 	background-repeat: no-repeat; background-size: 16px; background-position: 0px center; }
 #main-body > .head > .content > .menus > .menu.quickstart { background-image: url('/theme/icons/menu_quickstart.png'); }
