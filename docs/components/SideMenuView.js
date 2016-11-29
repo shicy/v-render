@@ -9,12 +9,30 @@ var VRender = require("../../index");
 
 var Utils = VRender.Utils;
 
-var menus = [{grp: "常用组件", children: [
+var menus = [{grp: "基础组件", children: [
+	{name: "button", label: "UIButton"},
 	{name: "checkbox", label: "UICheckbox"},
 	{name: "combobox", label: "UICombobox"},
-	{name: "datagrid", label: "UIDatagrid"}
+	{name: "datagrid", label: "UIDatagrid"},
+	{name: "dateinput", label: "UIDateInput"},
+	{name: "datepicker", label: "UIDatePicker"},
+	{name: "daterange", label: "UIDateRange"},
+	{name: "list", label: "UIList"},
+	{name: "paginator", label: "UIPaginator"},
+	{name: "panel", label: "UIPanel"},
+	{name: "radiobox", label: "UIRadiobox"},
+	{name: "radiogroup", label: "UIRadioGroup"},
+	{name: "tabbar", label: "UITabbar"},
+	{name: "tabview", label: "UITabView"},
+	{name: "textview", label: "UITextView"},
+	{name: "timerange", label: "UITimeRange"},
+	{name: "tree", label: "UITree"}
+]}, {grp: "公共组件", children: [
+	{name: "buttonbar", label: "UIButtonBar"},
+	{name: "formview", label: "UIFormView"}
 ]}, {grp: "布局", children: [
 	{name: "container", label: "UIContainer"},
+	{name: "gridview", label: "UIGridView"},
 	{name: "group", label: "UIGroup"}
 ]}];
 

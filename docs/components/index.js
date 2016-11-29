@@ -5,6 +5,7 @@
 // ========================================================
 
 var VRender = require("../../index");
+var ModuleView = require("./ModuleView");
 var HeaderView = require("../HeaderView");
 var SideMenuView = require("./SideMenuView");
 
@@ -28,19 +29,8 @@ var ComponentView = VRender.SinglePageView.extend(module, {
 		new SideMenuView(this, {active: paths[2]}).render(mainBody);
 
 		var container = VRender.$("<div class='container'></div>").appendTo(mainBody);
-		this.renderContent(container, paths[2]);
-	},
-
-	renderContent: function (target, name) {
-		if (Utils.isBlank(name))
-			this.renderIndexView(target);
-		else {
-
-		}
-	},
-
-	renderIndexView: function (target) {
-		target.writeTmpl(__dirname + "/index_home.tmpl");
+		this.options.moduleName = paths[2];
+		new ModuleView(this, this.options).render(container);
 	},
 
 	getSinglePageContainer: function () {
@@ -48,4 +38,4 @@ var ComponentView = VRender.SinglePageView.extend(module, {
 	}
 });
 
-ComponentView.import(["/theme/css/style.css", "/theme/css/components.css"]);
+ComponentView.import("/theme/css/style.css");
