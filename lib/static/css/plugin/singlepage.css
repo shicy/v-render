@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+.singlepage-animate-default { transition-duration: .3s; -webkit-transition-duration: .3s;
+	transition-property: padding-top, opacity; -webkit-transition-property: padding-top, opacity; }
+.singlepage-animate-default.do { padding-top: 40px; opacity: 0; }
+
+
+
+
