@@ -1,0 +1,44 @@
+
+.ui-chkbox {
+    display: inline-block;
+    position: relative;
+    min-height: 16px;
+    padding-left: 16px;
+    vertical-align: middle;
+}
+
+.ui-chkbox:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1px;
+    top: 50%;
+    margin-top: -7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 1px #eee;
+    background-color: #fff;
+}
+
+.ui-chkbox > input {
+    display: none;
+}
+
+.ui-chkbox > span {
+    padding-left: 3px;
+}
+
+.ui-chkbox.checked:before {
+    background-color: #333444;
+    border-color: #333;
+    background-image: url(/VRender/icons/check_dark.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-chkbox + .ui-chkbox {
+    margin-left: 10px;
+}
