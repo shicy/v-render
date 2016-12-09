@@ -30,6 +30,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 	renderView: function () {
 		ModuleChkbox.__super__.renderView.call(this);
 		this.showDemo1();
+		this.showDemo4();
 		this.showDemo2();
 		this.showDemo3();
 	},
@@ -66,7 +67,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 	showDemo3: function () {
 		var section = this.appendSection("设置复选框的值", "给复选框指定一个值，设置属性<code>value</code>。");
 
-		var demoView = new UIGroup(this, {cls: "test-value"});
+		var demoView = new UIGroup(this, {cls: "demo-value"});
 		demoView.append(new UICheckbox(this, {label: "复选框1", value: "1"}));
 		demoView.append(new UICheckbox(this, {label: "复选框2", value: "2"}));
 		demoView.append(new UICheckbox(this, {label: "复选框abc", value: "abc"}));
@@ -77,6 +78,18 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		source.push("new UICheckbox(this, {label: \"复选框1\", value: \"1\"};");
 		source.push("new UICheckbox(this, {label: \"复选框2\", value: \"2\"};");
 		source.push("new UICheckbox(this, {label: \"复选框abc\", value: \"abc\"};");
+
+		this.showDemo(section, demoView, source.join("\n"));
+	},
+
+	showDemo4: function () {
+		var section = this.appendSection("浏览器端创建");
+
+		var demoView = new UIGroup(this, {cls: "demo-front"});
+
+		var source = [];
+		source.push("VRender.Component.Checkbox.create({" +
+			"\n\ttarget: '.demo-front', label: '前端动态创建的复选框'});");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	}
