@@ -31,6 +31,9 @@ var ModuleButton = ModuleBase.extend(module, {
 		ModuleButton.__super__.renderView.call(this);
 		this.showDemo1();
 		this.showDemo2();
+		this.showDemo3();
+		this.showDemo4();
+		this.showDemo5();
 	},
 
 	showDemo1: function () {
@@ -98,5 +101,95 @@ var ModuleButton = ModuleBase.extend(module, {
 		source.push("new UIButton(this, {label: \"large button\", size: \"large\", style: \"ui-btn-primary\"});");
 
 		this.showDemo(section, demoView, source.join("\n"));
+	},
+
+	showDemo3: function () {
+		var section = this.appendSection("浏览器端创建");
+
+		var demoView = new UIGroup(this, {cls: "demo-front"});
+
+		var source = [];
+		source.push("VRender.Component.Button.create({" +
+			"\n\ttarget: '.demo-front', " +
+			"\n\tlabel: '前端动态创建的按钮', " +
+			"\n\tstyle: 'ui-btn-primary'});");
+
+		this.showDemo(section, demoView, source.join("\n"));
+	},
+
+	showDemo4: function () {
+		var section = this.appendSection("已禁用的按钮", "被禁用的按钮不响应任何点击事件。");
+
+		var demoView = new UIGroup(this);
+		demoView.append(new UIButton(this, {label: "禁用的按钮", disabled: true, 
+			style: "ui-btn-primary"}));
+
+		var source = [];
+		source.push("new UIButton(this, {label: '禁用的按钮', disabled: true};");
+
+		this.showDemo(section, demoView, source.join("\n"));
+	},
+
+	showDemo5: function () {
+		var section = this.appendSection("使用type代替style", "为了简化按钮的使用，" +
+			"可以使用<code>type</code>属性代替<code>style</code>属性，相应类型的按钮显示对应的样式，" +
+			"如下所示。可选的类型有：<code>ok</code>，<code>save</code>，<code>submit</code>，" +
+			"<code>major</code>，<code>primary</code>，<code>danger</code>，<code>error</code>，" +
+			"<code>success</code>，<code>complete</code>，<code>finish</code>，<code>warn</code>，" +
+			"<code>warning</code>，<code>info</code>，<code>highlight</code>，<code>text</code>，" +
+			"<code>link</code>。");
+
+		var demoView = new UIGroup(this, {gap: 10});
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Ok", type: "ok"}))
+			.append(new UIButton(this, {label: "Save", type: "save"}))
+			.append(new UIButton(this, {label: "Submit", type: "submit"}))
+			.append(new UIButton(this, {label: "Major", type: "major"}))
+			.append(new UIButton(this, {label: "Primary", type: "primary"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Danger", type: "danger"}))
+			.append(new UIButton(this, {label: "Error", type: "error"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Success", type: "success"}))
+			.append(new UIButton(this, {label: "Complete", type: "complete"}))
+			.append(new UIButton(this, {label: "Finish", type: "finish"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Warn", type: "warn"}))
+			.append(new UIButton(this, {label: "Warning", type: "warning"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Info", type: "info"}))
+			.append(new UIButton(this, {label: "Highlight", type: "highlight"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Text", type: "text"}));
+		demoView.addChild(new UIHGroup(this, {gap: 10}))
+			.append(new UIButton(this, {label: "Link", type: "link"}));
+
+		var source = [];
+		source.push("new UIButton(this, {label: 'Ok', type: 'ok'});");
+		source.push("new UIButton(this, {label: 'Save', type: 'save'});");
+		source.push("new UIButton(this, {label: 'Submit', type: 'submit'});");
+		source.push("new UIButton(this, {label: 'Major', type: 'major'});");
+		source.push("new UIButton(this, {label: 'Primary', type: 'primary'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Danger', type: 'danger'});");
+		source.push("new UIButton(this, {label: 'Error', type: 'error'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Success', type: 'success'});");
+		source.push("new UIButton(this, {label: 'Complete', type: 'complete'});");
+		source.push("new UIButton(this, {label: 'Finish', type: 'finish'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Warn', type: 'warn'});");
+		source.push("new UIButton(this, {label: 'Warning', type: 'warning'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Info', type: 'info'});");
+		source.push("new UIButton(this, {label: 'Highlight', type: 'highlight'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Text', type: 'text'});");
+		source.push("// -----------------------------------------------------")
+		source.push("new UIButton(this, {label: 'Link', type: 'link'});");
+
+		this.showDemo(section, demoView, source.join("\n"));
 	}
 });
+
+ModuleButton.import("./front/button.js");
