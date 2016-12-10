@@ -26,9 +26,8 @@
     "dot": "^1.0.3",
     "htmlparser2": "^3.9.2",
     "log4js": "^0.6.38",
+    "prismjs": "^1.6.0",
     "uglify-js": "^2.7.4"
   },
-  "devDependencies": {
-    "prismjs": "^1.5.1"
-  }
+  "devDependencies": {}
 }
