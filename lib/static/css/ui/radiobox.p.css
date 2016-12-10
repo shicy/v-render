@@ -1,0 +1,51 @@
+
+.ui-radbox {
+	display: inline-block;
+	position: relative;
+	min-height: 16px;
+	padding-left: 16px;
+	vertical-align: middle;
+}
+
+.ui-radbox:before {
+	content: "";
+	position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1px;
+    top: 50%;
+    margin-top: -7px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 1px #eee;
+    background-color: #fff;
+}
+
+.ui-radbox:hover:before {
+	background-color: #f6f6f6;
+}
+
+.ui-radbox.checked:after {
+	content: "";
+	position: absolute;
+	width: 8px;
+    height: 8px;
+    left: 4px;
+    top: 50%;
+    margin-top: -4px;
+    background-color: #333444;
+    border-radius: 100px;
+}
+
+.ui-radbox > input {
+	display: none;
+}
+
+.ui-radbox > span {
+	padding-left: 3px;
+}
+
+.ui-radbox + .ui-radbox {
+	margin-left: 10px;
+}
