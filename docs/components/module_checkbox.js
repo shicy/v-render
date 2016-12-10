@@ -44,7 +44,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 
 		var source = [];
 		source.push("new UICheckbox(this); // 第一个复选框没有文字");
-		source.push("new UICheckbox(this, {label: \"checkbox\"});");
+		source.push("new UICheckbox(this, {label: 'checkbox'});");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	},
@@ -58,8 +58,8 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		demoView.append(new UICheckbox(this, {label: "选中状态", checked: true}));
 
 		var source = [];
-		source.push("new UICheckbox(this, {label: \"未选中状态\"});");
-		source.push("new UICheckbox(this, {label: \"选中状态\", checked: true});");
+		source.push("new UICheckbox(this, {label: '未选中状态'});");
+		source.push("new UICheckbox(this, {label: '选中状态', checked: true});");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	},
@@ -75,9 +75,9 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		demoView.append("<div class='msg'></div>");
 
 		var source = [];
-		source.push("new UICheckbox(this, {label: \"复选框1\", value: \"1\"};");
-		source.push("new UICheckbox(this, {label: \"复选框2\", value: \"2\"};");
-		source.push("new UICheckbox(this, {label: \"复选框abc\", value: \"abc\"};");
+		source.push("new UICheckbox(this, {label: '复选框1', value: '1'};");
+		source.push("new UICheckbox(this, {label: '复选框2', value: '2'};");
+		source.push("new UICheckbox(this, {label: '复选框abc', value: 'abc'};");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	},

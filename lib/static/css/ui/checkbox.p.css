@@ -22,6 +22,10 @@
     background-color: #fff;
 }
 
+.ui-chkbox:hover:before {
+    background-color: #f6f6f6;
+}
+
 .ui-chkbox > input {
     display: none;
 }

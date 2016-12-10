@@ -55,14 +55,14 @@ var ModuleButton = ModuleBase.extend(module, {
 		demoView.append(new UIButton(this, {label: "Text", style: "ui-btn-text"}));
 
 		var source = [];
-		source.push("new UIButton(this, {label: \"Default\"});");
-		source.push("new UIButton(this, {label: \"Primary\", style: \"ui-btn-primary\"})");
-		source.push("new UIButton(this, {label: \"Success\", style: \"ui-btn-success\"})");
-		source.push("new UIButton(this, {label: \"Danger\", style: \"ui-btn-danger\"})");
-		source.push("new UIButton(this, {label: \"Warn\", style: \"ui-btn-warn\"})");
-		source.push("new UIButton(this, {label: \"Info\", style: \"ui-btn-info\"})");
-		source.push("new UIButton(this, {label: \"Link\", style: \"ui-btn-link\"})");
-		source.push("new UIButton(this, {label: \"Text\", style: \"ui-btn-text\"})");
+		source.push("new UIButton(this, {label: 'Default'});");
+		source.push("new UIButton(this, {label: 'Primary', style: 'ui-btn-primary'})");
+		source.push("new UIButton(this, {label: 'Success', style: 'ui-btn-success'})");
+		source.push("new UIButton(this, {label: 'Danger', style: 'ui-btn-danger'})");
+		source.push("new UIButton(this, {label: 'Warn', style: 'ui-btn-warn'})");
+		source.push("new UIButton(this, {label: 'Info', style: 'ui-btn-info'})");
+		source.push("new UIButton(this, {label: 'Link', style: 'ui-btn-link'})");
+		source.push("new UIButton(this, {label: 'Text', style: 'ui-btn-text'})");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	},
@@ -89,16 +89,16 @@ var ModuleButton = ModuleBase.extend(module, {
 		group.append(new UIButton(this, {label: "large button", size: "large", style: "ui-btn-primary"}));
 
 		var source = [];
-		source.push("new UIButton(this, {label: \"tiny button\", size: \"tiny\"});");
-		source.push("new UIButton(this, {label: \"tiny button\", size: \"tiny\", style: \"ui-btn-primary\"});");
-		source.push("new UIButton(this, {label: \"small button\", size: \"small\"});");
-		source.push("new UIButton(this, {label: \"small button\", size: \"small\", style: \"ui-btn-primary\"});");
-		source.push("new UIButton(this, {label: \"normal button\", size: \"normal\"});");
-		source.push("new UIButton(this, {label: \"normal button\", size: \"normal\", style: \"ui-btn-primary\"});");
-		source.push("new UIButton(this, {label: \"big button\", size: \"big\"});");
-		source.push("new UIButton(this, {label: \"big button\", size: \"big\", style: \"ui-btn-primary\"});");
-		source.push("new UIButton(this, {label: \"large button\", size: \"large\"});");
-		source.push("new UIButton(this, {label: \"large button\", size: \"large\", style: \"ui-btn-primary\"});");
+		source.push("new UIButton(this, {label: 'tiny button', size: 'tiny'});");
+		source.push("new UIButton(this, {label: 'tiny button', size: 'tiny', style: 'ui-btn-primary'});");
+		source.push("new UIButton(this, {label: 'small button', size: 'small'});");
+		source.push("new UIButton(this, {label: 'small button', size: 'small', style: 'ui-btn-primary'});");
+		source.push("new UIButton(this, {label: 'normal button', size: 'normal'});");
+		source.push("new UIButton(this, {label: 'normal button', size: 'normal', style: 'ui-btn-primary'});");
+		source.push("new UIButton(this, {label: 'big button', size: 'big'});");
+		source.push("new UIButton(this, {label: 'big button', size: 'big', style: 'ui-btn-primary'});");
+		source.push("new UIButton(this, {label: 'large button', size: 'large'});");
+		source.push("new UIButton(this, {label: 'large button', size: 'large', style: 'ui-btn-primary'});");
 
 		this.showDemo(section, demoView, source.join("\n"));
 	},
