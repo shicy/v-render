@@ -46,7 +46,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		source.push("new UICheckbox(this); // 第一个复选框没有文字");
 		source.push("new UICheckbox(this, {label: 'checkbox'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo2: function () {
@@ -61,7 +61,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		source.push("new UICheckbox(this, {label: '未选中状态'});");
 		source.push("new UICheckbox(this, {label: '选中状态', checked: true});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo3: function () {
@@ -79,7 +79,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		source.push("new UICheckbox(this, {label: '复选框2', value: '2'};");
 		source.push("new UICheckbox(this, {label: '复选框abc', value: 'abc'};");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo4: function () {
@@ -91,7 +91,7 @@ var ModuleChkbox = ModuleBase.extend(module, {
 		source.push("VRender.Component.Checkbox.create({" +
 			"\n\ttarget: '.demo-front', label: '前端动态创建的复选框'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	}
 });
 

@@ -88,6 +88,8 @@ var ModuleBase = VRender.UIView.extend(module, {
 			new UIGroup(this, {cls: "preview"}).append(demoView).render(demo);
 		}
 		if (Utils.isNotBlank(source)) {
+			if (Utils.isArray(source))
+				source = source.join("\n");
 			source = Prism.highlight(source, Prism.languages.javascript)
 			demo.write("<div class='source'><pre>" + source + "</pre></div>");
 		}

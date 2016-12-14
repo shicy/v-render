@@ -45,7 +45,7 @@ var ModuleRadbox = ModuleBase.extend(module, {
 		source.push("new UIRadiobox(this, {name: 'radio1'}); // 第一个单选框没有文字");
 		source.push("new UIRadiobox(this, {name: 'radio1', label: 'radiobox'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo2: function () {
@@ -59,7 +59,7 @@ var ModuleRadbox = ModuleBase.extend(module, {
 		source.push("VRender.Component.Radiobox.create({" +
 			"\n\ttarget: '.demo-front', name: 'radio2', label: '单选框2'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo3: function () {
@@ -74,7 +74,7 @@ var ModuleRadbox = ModuleBase.extend(module, {
 		source.push("new UIRadiobox(this, {name: 'radio3', label: '未选中单选框'});");
 		source.push("new UIRadiobox(this, {name: 'radio3', label: '选中单选框', checked: true});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	}
 });
 

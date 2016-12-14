@@ -48,7 +48,7 @@ var ModuleTextView = ModuleBase.extend(module, {
 			"\n\tdesc: '该输入框的说明描述内容，介绍信息等', \n\ttips: '标注', " +
 			"\n\twidth: 300, \n\tmaxSize: 25});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo2: function () {
@@ -61,7 +61,7 @@ var ModuleTextView = ModuleBase.extend(module, {
 			"\n\tprompt: '文本输入框提示信息', \n\trequired: true, \n\tempty: '输入框不能为空', " +
 			"\n\tdesc: '该输入框组件由前端动态创建', \n\tvalue: '默认文本框内容'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo3: function () {
@@ -76,7 +76,7 @@ var ModuleTextView = ModuleBase.extend(module, {
 		var source = [];
 		source.push("new UITextView(this, {multi: true, value: '...'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo4: function () {
@@ -113,7 +113,7 @@ var ModuleTextView = ModuleBase.extend(module, {
 		source.push("new UITextView(this, {type: 'tel'}); // 电话或手机号码类型输入框");
 		source.push("new UITextView(this, {type: 'url', width: 320, value: 'http://'}); // URL类型输入框");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo5: function () {
@@ -125,7 +125,7 @@ var ModuleTextView = ModuleBase.extend(module, {
 		var source = [];
 		source.push("new UITextView(this, {readonly: true, value: '...'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	}
 });
 

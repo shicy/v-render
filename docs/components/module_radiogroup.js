@@ -43,7 +43,7 @@ var ModuleRadgrp = ModuleBase.extend(module, {
 		var source = [];
 		source.push("new UIRadioGroup(this, {data: ['A', 'B', 'C', 'D']});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo2: function () {
@@ -55,7 +55,7 @@ var ModuleRadgrp = ModuleBase.extend(module, {
 		source.push("VRender.Component.RadioGroup.create({" +
 			"\n\ttarget: '.demo-front', data: ['a', 'b', 'c', 'd']});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo3: function () {
@@ -79,7 +79,7 @@ var ModuleRadgrp = ModuleBase.extend(module, {
 			"\n\t{title: '标题C', label: 'ccc'}, {title: '标题D', label: 'ddd'}, " +
 			"\n\t{title: '标题E', label: 'eee'}]});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo4: function () {
@@ -104,7 +104,7 @@ var ModuleRadgrp = ModuleBase.extend(module, {
 		source.push("new UIRadioGroup(this, {selectedId: 4, data: data});");
 		source.push("new UIRadioGroup(this, {selectedId: 'bb', data: data, idField: 'val'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	}
 });
 

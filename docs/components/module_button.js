@@ -64,7 +64,7 @@ var ModuleButton = ModuleBase.extend(module, {
 		source.push("new UIButton(this, {label: 'Link', style: 'ui-btn-link'})");
 		source.push("new UIButton(this, {label: 'Text', style: 'ui-btn-text'})");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo2: function () {
@@ -100,7 +100,7 @@ var ModuleButton = ModuleBase.extend(module, {
 		source.push("new UIButton(this, {label: 'large button', size: 'large'});");
 		source.push("new UIButton(this, {label: 'large button', size: 'large', style: 'ui-btn-primary'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo3: function () {
@@ -114,7 +114,7 @@ var ModuleButton = ModuleBase.extend(module, {
 			"\n\tlabel: '前端动态创建的按钮', " +
 			"\n\tstyle: 'ui-btn-primary'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo4: function () {
@@ -127,7 +127,7 @@ var ModuleButton = ModuleBase.extend(module, {
 		var source = [];
 		source.push("new UIButton(this, {label: '禁用的按钮', disabled: true};");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	},
 
 	showDemo5: function () {
@@ -188,7 +188,7 @@ var ModuleButton = ModuleBase.extend(module, {
 		source.push("// -----------------------------------------------------")
 		source.push("new UIButton(this, {label: 'Link', type: 'link'});");
 
-		this.showDemo(section, demoView, source.join("\n"));
+		this.showDemo(section, demoView, source);
 	}
 });
 
