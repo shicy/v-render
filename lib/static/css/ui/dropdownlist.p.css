@@ -15,6 +15,10 @@
 
 .ui-dropdownlist > ul > li.item {
 	padding: 0px 10px;
+	line-height: 26px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     cursor: pointer;
 }
 
