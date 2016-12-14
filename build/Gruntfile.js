@@ -5,13 +5,15 @@ module.exports = function (grunt) {
 		uglify: {
 			pc: {
 				files: [{
-					src: ["VRender.front.js", "js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
+					src: ["js/jquery.tap.js", "VRender.front.js",
+						"js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
 					dest: "VRender.front.min.js"
 				}]
 			},
 			mobile: {
 				files: [{
-					src: ["VRender.front.js", "js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
+					src: ["js/jquery.tap.js", "VRender.front.js", 
+						"js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
 					dest: "VRender.front.mobile.min.js"
 				}]
 			}
