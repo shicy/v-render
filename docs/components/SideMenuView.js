@@ -17,6 +17,7 @@ var menus = [{grp: "基础组件", children: [
 	{name: "dateinput", label: "UIDateInput"},
 	{name: "datepicker", label: "UIDatePicker"},
 	{name: "daterange", label: "UIDateRange"},
+	{name: "dropdownlist", label: "UIDropdownList"},
 	{name: "list", label: "UIList"},
 	{name: "paginator", label: "UIPaginator"},
 	{name: "panel", label: "UIPanel"},
