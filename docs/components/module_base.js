@@ -32,7 +32,26 @@ var ModuleBase = VRender.UIView.extend(module, {
 		ModuleBase.__super__.renderView.call(this);
 		this.$el.addClass("comp-mod-base");
 
+		this.renderViewData();
+
 		this.renderCompInfos(this.$el);
+	},
+
+	renderViewData: function () {
+		var data = this.getViewData();
+		if (Utils.isNotBlank(data)) {
+			var tagid = VRender.uuid();
+			var target = this.$el.appendAndGet("<script></script>");
+			target.addClass("vrender-fragment-script").attr("vid", tagid);
+
+			// target.write("$(function(){");
+
+			target.write("$('[vid=" + this.getViewId() + "]').data('viewData', " + 
+				JSON.stringify(data) + ");");
+			
+			target.write("$('[vid=" + tagid + "]').remove();");
+			// target.write("});");
+		}
 	},
 
 	// 渲染组件基本信息
@@ -64,9 +83,9 @@ var ModuleBase = VRender.UIView.extend(module, {
 		msgbox.addClass(type);
 
 		if (Utils.isNotBlank(title))
-			msgbox.append("<div class='title'>" + title + "</div>");
+			msgbox.write("<div class='title'>" + title + "</div>");
 		if (Utils.isNotBlank(text))
-			msgbox.append("<div class='msg'>" + text + "</div>");
+			msgbox.write("<div class='msg'>" + text + "</div>");
 
 		return msgbox;
 	},
@@ -93,6 +112,10 @@ var ModuleBase = VRender.UIView.extend(module, {
 			source = Prism.highlight(source, Prism.languages.javascript)
 			demo.write("<div class='source'><pre>" + source + "</pre></div>");
 		}
+	},
+
+	getMapData: function () {
+		// 禁止默认viewData绑定
 	}
 
 });
