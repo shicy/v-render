@@ -1,0 +1,131 @@
+
+.ui-datagrid {
+	border: 1px solid #e7e7eb;
+    font-size: 14px;
+    text-align: left;
+    color: #383838;
+}
+
+.ui-datagrid td.col-op {
+	text-align: right;
+	padding: 0px 12px 0px 0px;
+}
+
+.ui-datagrid td.col-op > a {
+	margin-left: 5px;
+}
+
+.ui-datagrid td.col-op > a:first-child {
+	margin-left: 0px;
+}
+
+.ui-datagrid td.col-type-chk {
+	width: 25px;
+    position: relative;
+}
+
+.ui-datagrid td.col-type-chk > .chkbox {
+	position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 8px;
+    top: 50%;
+    margin-top: -7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.ui-datagrid td.col-type-date {
+	width: 110px;
+}
+
+.ui-datagrid tr.selected > td.col-type-chk > .chkbox {
+	background-color: #333444;
+    background-image: url(/VRender/icons/check_dark.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.ui-datagrid thead td.col-type-chk > .chkbox {
+	display: none;
+}
+
+.ui-datagrid > table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.ui-datagrid > table > thead {
+	border-bottom: 1px solid #e7e7eb;
+}
+
+.ui-datagrid > table > thead > tr {
+	height: 34px;
+    background-color: #f4f5f9;
+}
+
+.ui-datagrid > table > thead > tr > td {
+	padding: 0px 5px 0px 12px;
+}
+
+.ui-datagrid > table > tbody > tr {
+	line-height: 16px;
+}
+
+.ui-datagrid > table > tbody > tr:hover {
+	background-color: #f0f0f0;
+}
+
+.ui-datagrid > table > tbody > tr.selected {
+	background-color: #333444;
+	color: #fff;
+}
+
+.ui-datagrid > table > tbody > tr.selected > td.col-op > a {
+	color: #fff;
+}
+
+.ui-datagrid > table > tbody > tr > td {
+	padding: 10px 12px;
+	border-top: 1px solid #e7e7eb;
+}
+
+.ui-datagrid > table > tbody > tr:first-child > td {
+	border-top: 0px;
+}
+
+.ui-datagrid > .datagrid-emp {
+	text-align: center;
+    font-size: 18px;
+    min-height: 100px;
+    padding: 26px 30px 10px;
+    color: #a0a0a0;
+    text-shadow: 1px 1px 3px #ccc;
+    display: none;
+}
+
+.ui-datagrid > .datagrid-emp > div {
+	text-shadow: none;
+}
+
+.ui-datagrid > .datagrid-emp > div img {
+	width: auto;
+	height: auto;
+}
+
+.ui-datagrid.multiple > table > thead > tr > td.col-type-chk > .chkbox {
+	display: block;
+}
+
+.ui-datagrid.no-head > table > thead {
+	display: none;
+}
+
+.ui-datagrid.no-data > .datagrid-emp {
+	display: block;;
+}
