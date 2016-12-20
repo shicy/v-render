@@ -50,6 +50,9 @@
 .comp-mod-base > section > .desc { margin-top: 10px; color: #999; }
 .comp-mod-base > section > .demo { border: 1px solid #eee; margin-top: 10px; }
 .comp-mod-base > section > .demo > .preview { padding: 20px; border-bottom: 1px solid #eee; }
+.comp-mod-base > section > .demo > .preview .demo-title { line-height: 26px; padding-left: 10px; }
+.comp-mod-base > section > .demo > .preview .demo-title:before { content: ""; position: absolute; 
+	border-left: 5px solid #999; height: 16px; left: 0px; top: 5px; }
 .comp-mod-base > section > .demo > .source { background-color: #f6f6f6; padding: 10px 20px; font-size: 14px;
 	overflow: auto; }
 
