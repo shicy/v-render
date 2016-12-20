@@ -18,7 +18,9 @@ body {
 	user-select: none;
 }
 
-.ui-lblfunc { display: none; }
+.ui-fn {
+	display: none;
+}
 
 
 
