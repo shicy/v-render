@@ -31,7 +31,6 @@ var ModuleCombobox = ModuleBase.extend(module, {
 		this.showDemo1();
 		this.showDemo2();
 		this.showDemo3();
-		// this.showDemo4();
 	},
 
 	showDemo1: function () {
