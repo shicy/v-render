@@ -1,0 +1,79 @@
+
+.ui-paginator > .pages {
+	display: inline-block;
+}
+
+.ui-paginator > .pages > button {
+	font-size: 12px;
+    line-height: 30px;
+    width: 32px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.ui-paginator > .pages > button:hover {
+	background-color: #f4f5f9;
+}
+
+.ui-paginator > .pages > button:active {
+	background-color: #333444;
+	color: #fff;
+}
+
+.ui-paginator > .pages > .page {
+	display: inline-block;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0px 12px;
+    vertical-align: middle;
+}
+
+.ui-paginator > .pages > .pageipt {
+	font-size: 14px;
+    width: 75px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px 5px 0px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    outline: none;
+}
+
+.ui-paginator > .pages > .goto {
+	width: 60px;
+}
+
+.ui-paginator > .status {
+    display: inline-block;
+    line-height: 32px;
+    font-size: 14px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.ui-paginator > .status-src {
+    display: none;
+}
+
+.ui-paginator.page-first > .pages > .prev {
+    color: #ccc;
+    background-color: #eee;
+    opacity: .5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.ui-paginator.page-last > .pages > .next {
+    color: #ccc;
+    background-color: #eee;
+    opacity: .5;
+    cursor: default;
+    pointer-events: none;
+}
