@@ -60,6 +60,7 @@
     right: 1px;
     top: 34px;
     display: none;
+    z-index: 1000;
 }
 
 .ui-combobox.has-val > .ipt > .prompt {
