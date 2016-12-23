@@ -23,5 +23,6 @@ table { border-collapse: collapse; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { line-height: normal; }
 
-
+input, textarea { color: #222;
+	font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif; }
 
