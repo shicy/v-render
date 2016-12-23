@@ -1,0 +1,118 @@
+
+.ui-datepicker {
+	display: inline-block;
+	width: 210px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+}
+
+.ui-datepicker > header {
+	text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+    background-color: #f4f5f9;
+    padding: 0px 30px;
+    font-size: 14px;
+}
+
+.ui-datepicker > header > button {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ui-datepicker > header > button:hover {
+	border-color: #ddd;
+}
+
+.ui-datepicker > header > button:active {
+	background-color: #f0f0f0;
+}
+
+.ui-datepicker > header > button:before {
+	content: "";
+	position: absolute;
+	border: 0px solid transparent;
+	top: 5px;
+}
+
+.ui-datepicker > header > button.prev {
+	left: 5px;
+}
+
+.ui-datepicker > header > button.prev:before {
+	border-right-color: #ccc;
+    border-width: 4px 6px 4px 0px;
+    left: 5px;
+}
+
+.ui-datepicker > header > button.next {
+	right: 5px;
+}
+
+.ui-datepicker > header > button.next:before {
+	border-left-color: #ccc;
+	border-width: 4px 0px 4px 6px;
+	right: 5px;
+}
+
+.ui-datepicker > table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.ui-datepicker > table > thead > tr {
+	background-color: #f7f7fc;
+}
+
+.ui-datepicker > table > thead > tr > th {
+	font-weight: normal;
+	height: 30px;
+}
+
+.ui-datepicker > table > tbody > tr > td {
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.ui-datepicker > table > tbody > tr > td:hover {
+	background-color: #f6f6f6;
+}
+
+.ui-datepicker > table > tbody > tr > td.disabled {
+	background-color: #fff;
+	color: #ddd;
+	pointer-events: none;
+}
+
+.ui-datepicker > table > tbody > tr > td.today > span {
+	display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 28px;
+    color: #8a572e;
+    border: 1px solid #8a572e;
+    border-radius: 2px;
+}
+
+.ui-datepicker > table > tbody > tr > td.selected > span {
+	display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    background-color: #333444;
+    color: #fff;
+    border-radius: 2px;
+}
