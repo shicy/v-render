@@ -1,0 +1,322 @@
+
+.ui-daterange {
+	display: inline-block;
+}
+
+.ui-daterange > .ipt {
+	display: inline-block;
+	width: 260px;
+}
+
+.ui-daterange > .ipt:before {
+	content: "";
+    position: absolute;
+    width: 30px;
+    height: 32px;
+    background-image: url(/VRender/icons/date_light.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    opacity: .5;
+    z-index: 1;
+}
+
+.ui-daterange > .ipt > input {
+	width: 100%;
+    height: 32px;
+    font-size: 16px;
+    border: 1px inset #ddd;
+    background-color: #fff;
+    padding: 0px 3px 0px 30px;
+    margin: 0px;
+    outline: none;
+}
+
+.ui-daterange > .ipt > input:focus {
+	border-color: #66afe9;
+}
+
+.ui-daterange > .ipt > .clear {
+	position: absolute;
+	width: 16px;
+    height: 16px;
+    top: 8px;
+    right: 6px;
+    border: none;
+    background-color: #fff;
+    background-image: url(/VRender/icons/close_light.png);
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+    outline: none;
+}
+
+.ui-daterange > .ipt > .prompt {
+	position: absolute;
+    left: 30px;
+    top: 1px;
+    right: 1px;
+    line-height: 30px;
+    color: #999;
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ui-daterange > .ipt > .picker {
+	position: absolute;
+    left: 0px;
+    top: 34px;
+    width: 420px;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    display: none;
+    z-index: 1000;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table-e {
+	border-left: 1px solid #eee;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header {
+	font-size: 14px;
+	text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+    background-color: #f4f5f9;
+    padding: 0px 30px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > button {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > button:hover {
+	border-color: #ddd;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > button:active {
+	background-color: #f0f0f0;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > button:before {
+	content: "";
+	position: absolute;
+    border: 0px solid transparent;
+    top: 5px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > .prev {
+	left: 5px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > .prev:before {
+    border-right-color: #ccc;
+    border-width: 4px 6px 4px 0px;
+	left: 5px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > .next {
+	right: 5px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > header > .next:before {
+	border-left-color: #ccc;
+	border-width: 4px 0px 4px 6px;
+	right: 5px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > thead > tr {
+	background-color: #f7f7fc;
+	height: 30px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > thead > tr > th {
+	font-weight: normal;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td {
+	position: relative;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td:hover {
+	background-color: #f6f6f6;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td.disabled {
+	background-color: #fff;
+	color: #ddd;
+	pointer-events: none;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td.selected > span {
+	display: inline-block;
+    width: 100%;
+    line-height: 24px;
+    color: #fff;
+    background-color: #333444;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td.start > span {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td.end > span {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.ui-daterange > .ipt > .picker > .content > .table > table > tbody > tr > td.today:before {
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #8a572e;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.ui-daterange > .ipt > .picker > footer {
+	background-color: #f4f5f9;
+	height: 48px;
+}
+
+.ui-daterange > .ipt > .picker > footer > .values {
+	position: absolute;
+	left: 10px;
+	top: 12px;
+}
+
+.ui-daterange > .ipt > .picker > footer > .values > span {
+	background-color: #fff;
+    padding: 0px 10px;
+    color: #999;
+    width: 85px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ui-daterange > .ipt > .picker > footer > .btns {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+}
+
+.ui-daterange > .ipt > .picker > footer > .btns > .ui-btn {
+	margin-left: 10px;
+}
+
+.ui-daterange > .ipt > .picker > footer > .btns > .ui-btn > button {
+	width: 80px;
+}
+
+.ui-daterange > .ipt:hover > input {
+	padding-right: 30px;
+}
+
+.ui-daterange > .tools {
+	display: inline-block;
+}
+
+.ui-daterange > .tools {
+	vertical-align: top;
+}
+
+.ui-daterange > .tools > .item {
+	display: inline-block;
+	font-size: 14px;
+    line-height: 30px;
+    min-width: 80px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0px 12px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.ui-daterange > .tools > .item:hover {
+	background-color: #f0f0f0;
+}
+
+.ui-daterange > .tools > .item.selected {
+	color: #fff;
+	border-color: #333444;
+	background-color: #333444;
+}
+
+.ui-daterange > .tools > .item:first-child {
+	margin-left: 0px;
+}
+
+.ui-daterange > .format {
+	display: none;
+}
+
+.ui-daterange.show-picker > .ipt > .picker {
+	display: block;
+}
+
+.ui-daterange.show-before > .ipt > .picker {
+	top: auto;
+	bottom: 35px;
+}
+
+.ui-daterange.show-right > .ipt > .picker {
+	left: auto;
+	right: 0px;
+}
+
+.ui-daterange.has-val > .ipt > .prompt {
+	display: none;
+}
+
+.ui-daterange.has-val > .ipt:hover > .clear {
+	display: block;
+	opacity: .5;
+}
+
+.ui-daterange > .ipt > .clear:hover {
+	opacity: .75;
+}
+
+.ui-daterange > .ipt > .clear:active {
+	opacity: 1;
+}
