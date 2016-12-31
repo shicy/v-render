@@ -2,6 +2,7 @@
 .ui-btn {
 	border: 1px solid #ddd;
     border-radius: 3px;
+    background-color: #fff;
     font-size: 0px;
     display: inline-block;
 }
