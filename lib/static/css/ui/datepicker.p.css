@@ -74,11 +74,11 @@
 
 .ui-datepicker > table > thead > tr {
 	background-color: #f7f7fc;
+    height: 30px;
 }
 
 .ui-datepicker > table > thead > tr > th {
 	font-weight: normal;
-	height: 30px;
 }
 
 .ui-datepicker > table > tbody > tr > td {
