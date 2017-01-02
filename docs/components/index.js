@@ -50,4 +50,4 @@ var ComponentView = VRender.SinglePageView.extend(module, {
 	}
 });
 
-ComponentView.import(["/theme/css/prism.css", "/theme/css/style.css"]);
+ComponentView.import(["/theme/css/prism.css", "/theme/css/style.css", "../frame.front.js"]);
