@@ -6,6 +6,8 @@
     box-shadow: 0px 1px 4px 2px #ddd;
     border-radius: 2px;
     color: #383838;
+    max-height: 280px;
+    overflow: auto;
 }
 
 .ui-dropdownlist > ul {

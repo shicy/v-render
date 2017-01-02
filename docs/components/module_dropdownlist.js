@@ -33,6 +33,7 @@ var ModuleDropdownList = ModuleBase.extend(module, {
 		this.showDemo2();
 		this.showDemo3();
 		this.showDemo4();
+		this.showDemo5();
 	},
 
 	showDemo1: function () {
@@ -73,13 +74,13 @@ var ModuleDropdownList = ModuleBase.extend(module, {
 		var demoView = new UIDropdownList(this, {data: data, labelField: "name"});
 
 		var source = [];
-		source.push("var data = [[{id: 1, name: '微微一笑很倾城', score: 5.4}, " +
-			"\n\t\t{id: 2, name: '疯狂动物城', score: 9.3}], " +
-			"\n\t[{id: 3, name: '反黑行动组', score: 5.5}, " +
-			"\n\t\t{id: 4, name: '塔洛', score: 7.8}, " + 
-			"\n\t\t{id: 5, name: '凄灵室', score: 2.9}], " +
-			"\n\t{id: 6, name: '肖申克的救赎', score: 9.6}];");
-		source.push("new UIDropdownList(this, {data: data, labelField: 'name'});");
+		source.push("var datas = [];");
+		source.push("datas.push([{id: 1, name: '微微一笑很倾城', score: 5.4}, {id: 2, name: '疯狂动物城', score: 9.3}]);");
+		source.push("datas.push([{id: 3, name: '反黑行动组', score: 5.5}, {id: 4, name: '塔洛', score: 7.8}, " +
+			"\n\t{id: 5, name: '凄灵室', score: 2.9}]);");
+		source.push("datas.push([{id: 6, name: '肖申克的救赎', score: 9.6}]);");
+		source.push("// ---------------------------------------------");
+		source.push("new UIDropdownList(this, {data: datas, labelField: 'name'});");
 
 		this.showDemo(section, demoView, source);
 	},
@@ -99,16 +100,28 @@ var ModuleDropdownList = ModuleBase.extend(module, {
 		}});
 
 		var source = [];
-		source.push("var data = [[{id: 1, name: '微微一笑很倾城', score: 5.4}, " +
-			"\n\t\t{id: 2, name: '疯狂动物城', score: 9.3}], " +
-			"\n\t[{id: 3, name: '反黑行动组', score: 5.5}, " +
-			"\n\t\t{id: 4, name: '塔洛', score: 7.8}, " + 
-			"\n\t\t{id: 5, name: '凄灵室', score: 2.9}], " +
-			"\n\t{id: 6, name: '肖申克的救赎', score: 9.6}];");
+		source.push("var datas = [];");
+		source.push("datas.push([{id: 1, name: '微微一笑很倾城', score: 5.4}, {id: 2, name: '疯狂动物城', score: 9.3}]);");
+		source.push("datas.push([{id: 3, name: '反黑行动组', score: 5.5}, {id: 4, name: '塔洛', score: 7.8}, " +
+			"\n\t{id: 5, name: '凄灵室', score: 2.9}]);");
+		source.push("datas.push([{id: 6, name: '肖申克的救赎', score: 9.6}]);");
+		source.push("// ---------------------------------------------");
 		source.push("var lblFun = function (data) {" +
 			"\n\treturn data.name + '(' + parseFloat(data.score).toFixed(1) + '分)';" +
 			"\n};");
-		source.push("new UIDropdownList(this, {data: data, labelFunction: lblFun});");
+		source.push("// ---------------------------------------------");
+		source.push("new UIDropdownList(this, {data: datas, labelFunction: lblFun});");
+
+		this.showDemo(section, demoView, source);
+	},
+
+	showDemo5: function () {
+		var section = this.appendSection("动态数据集");
+
+		var demoView = new UIDropdownList(this, {apiName: "demo.datas.musics", selectedIndex: 0});
+
+		var source = [];
+		source.push("new UIDropdownList(this, {apiName: 'demo.datas.musics', selectedIndex: 0});");
 
 		this.showDemo(section, demoView, source);
 	}
