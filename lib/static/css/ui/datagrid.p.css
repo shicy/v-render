@@ -127,5 +127,20 @@
 }
 
 .ui-datagrid.no-data > .datagrid-emp {
-	display: block;;
+	display: block;
+}
+
+.ui-datagrid + .ui-paginator {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.ui-datagrid + .ui-paginator button.disabled {
+	display: none;
+}
+
+.ui-datagrid + .ui-paginator > .status {
+	position: absolute;
+    left: 0px;
+    top: 0px;
 }

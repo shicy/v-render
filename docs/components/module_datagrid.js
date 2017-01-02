@@ -10,6 +10,7 @@ var ModuleBase = require("./module_base");
 
 var UIGroup = VRender.UIGroup;
 var UIDatagrid = VRender.UIDatagrid;
+var UIPaginator = VRender.UIPaginator;
 
 var ModuleDatagrid = ModuleBase.extend(module, {
 	className: "mod-datagrid",
@@ -60,6 +61,7 @@ var ModuleDatagrid = ModuleBase.extend(module, {
 		this.showDemo6();
 		this.showDemo7();
 		this.showDemo8();
+		this.showDemo9();
 		this.showDemo0();
 	},
 
@@ -336,6 +338,32 @@ var ModuleDatagrid = ModuleBase.extend(module, {
 		source.push("new UIDatagrid(this, {columns: columns, data: datas, selectedItem: datas[1], chkbox: true, multi: true});");
 		source.push("// ---------------------------------------------");
 		source.push("new UIDatagrid(this, {columns: columns, data: datas, selectedId: '宅女侦探桂香', idField: 'name'});");
+
+		this.showDemo(section, demoView, source);
+	},
+
+	showDemo9: function () {
+		var section = this.appendSection("动态数据及分页");
+
+		var columns = [];
+		columns.push({name: "name", title: "名称"});
+		columns.push({name: "singer", title: "歌手"});
+		columns.push({name: "album", title: "专辑"});
+
+		var demoView = new UIGroup(this);
+		var grid = demoView.addChild(new UIDatagrid(this, {columns: columns, apiName: "demo.datas.musics",
+			multi: true, selectedIndex: [0, 2]}));
+		var pager = demoView.addChild(new UIPaginator(this, {size: 3, status: true}));
+		grid.setPaginator(pager);
+
+		var source = [];
+		source.push("var columns = [];");
+		source.push("columns.push({name: 'name', title: '名称'});");
+		source.push("columns.push({name: 'singer', title: '歌手'});");
+		source.push("columns.push({name: 'album', title: '专辑'});");
+		source.push("var grid = new UIDatagrid(this, {columns: columns, apiName: 'demo.datas.musics', " +
+			"\n\tselectedIndex: [0, 2], multi: true});");
+		source.push("grid.setPaginator(new UIPaginator(this, {size: 3, status: true}));");
 
 		this.showDemo(section, demoView, source);
 	}
