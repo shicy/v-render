@@ -6,14 +6,14 @@ module.exports = function (grunt) {
 			pc: {
 				files: [{
 					src: ["js/jquery.tap.js", "VRender.front.js",
-						"js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
+						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", "js/ui/*.js"],
 					dest: "VRender.front.min.js"
 				}]
 			},
 			mobile: {
 				files: [{
 					src: ["js/jquery.tap.js", "VRender.front.js", 
-						"js/util/*.js", "js/EventEmitter.js", "js/ui/*.js"],
+						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", "js/ui/*.js"],
 					dest: "VRender.front.mobile.min.js"
 				}]
 			}
