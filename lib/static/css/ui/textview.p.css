@@ -1,4 +1,8 @@
 
+.ui-textview {
+    display: inline-block;
+}
+
 .ui-textview > .ipt {
     display: inline-block;
     width: 200px;
@@ -66,7 +70,7 @@
     top: 1px;
     right: 1px;
     background-color: #fff;
-    background-image: url(/VRender/icons/close_light.png);
+    background-image: url(/VRender/icons/002.png);
     background-size: 14px;
     background-repeat: no-repeat;
     background-position: center;
