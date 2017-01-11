@@ -22,4 +22,6 @@ body {
 	display: none;
 }
 
-
+.ui-scrollless {
+	overflow: hidden !important;
+}
