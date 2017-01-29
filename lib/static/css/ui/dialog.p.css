@@ -78,21 +78,18 @@
     height: 600px;
 }
 
-.ui-dialog.normal > .box > .dialog-view > section {
-    overflow: auto;
-}
-
 .ui-dialog.full > .box {
     width: 100%;
     height: 100%;
 }
 
-.ui-dialog.full > .box > .dialog-view > section {
+.ui-dialog.fill > .box > .dialog-view > section {
+    padding: 0px;
     overflow: auto;
 }
 
-.ui-dialog.fill > .box > .dialog-view > section {
-    padding: 0px;
+.ui-dialog.fill > .box > .dialog-view > section > * {
+    padding: 38px 25px 50px;
 }
 
 .ui-dialog-wrap {

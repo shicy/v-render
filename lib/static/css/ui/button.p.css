@@ -9,7 +9,7 @@
 
 .ui-btn.disabled {
     pointer-events: none;
-    opacity: .5;
+    opacity: .25;
 }
 
 .ui-btn > .btn {
@@ -113,7 +113,6 @@
 }
 
 .ui-btn.ui-btn-text {
-	background-color: #f0f0f0;
     border: 0px;
     border-radius: 0px;
 }
