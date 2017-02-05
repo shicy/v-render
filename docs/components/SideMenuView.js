@@ -23,7 +23,6 @@ var menus = [{grp: "基础组件", children: [
 	{name: "paginator", label: "UIPaginator"},
 	{name: "panel", label: "UIPanel"},
 	{name: "radiobox", label: "UIRadiobox"},
-	{name: "radiogroup", label: "UIRadioGroup"},
 	{name: "tabbar", label: "UITabbar"},
 	{name: "tabview", label: "UITabView"},
 	{name: "textview", label: "UITextView"},
@@ -31,7 +30,8 @@ var menus = [{grp: "基础组件", children: [
 	{name: "tree", label: "UITree"}
 ]}, {grp: "公共组件", children: [
 	{name: "buttonbar", label: "UIButtonBar"},
-	{name: "formview", label: "UIFormView"}
+	{name: "formview", label: "UIFormView"},
+	{name: "radiogroup", label: "UIRadioGroup"}
 ]}, {grp: "布局", children: [
 	{name: "container", label: "UIContainer"},
 	{name: "gridview", label: "UIGridView"},
