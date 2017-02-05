@@ -5,6 +5,7 @@
     background-color: #fff;
     font-size: 0px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .ui-btn.disabled {
