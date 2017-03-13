@@ -38,7 +38,7 @@ var ModulePanel = ModuleBase.extend(module, {
 		this.showDemo1();
 		this.showDemo2();
 		this.showDemo3();
-		// this.showDemo4();
+		this.showDemo4();
 		// this.showDemo5();
 	},
 
@@ -50,7 +50,7 @@ var ModulePanel = ModuleBase.extend(module, {
 		var sources = [];
 		sources.push("new UIPanel(this, {content: '内容'});");
 		sources.push("// 前端构建方法");
-		sources.push("VRender.Component.Panel.create({target: [target], content: '内容'});");
+		sources.push("VR_Panel.create({target: [$el], content: '内容'});");
 
 		this.showDemo(section, demoView, sources);
 	},
@@ -62,11 +62,13 @@ var ModulePanel = ModuleBase.extend(module, {
 
 		var demoView = new UIGroup(this, {gap: 10});
 		demoView.append(new UIPanel(this, {title: "自定义标题", content: "文本内容"}));
+		demoView.append(new UIPanel(this, {title: "", content: "不显示标题，设置title为false或空"}));
 		demoView.append(new UIPanel(this, {title: "网页", content: "<h3>这里是网页代码</h3><p>网页内容等等。。</p>"}));
 		demoView.append(new UIPanel(this, {title: "组件", content: new UITextView(this, {prompt: "支持组件内容"})}));
 
 		var sources = [];
 		sources.push("new UIPanel(this, {title: '自定义标题', content: '文本内容'});");
+		sources.push("new UIPanel(this, {title: '', content: '不显示标题，设置title为false或空'});");
 		sources.push("new UIPanel(this, {title: '网页', content: '<h3>这里是网页代码</h3><p>网页内容等等。。</p>'});");
 		sources.push("new UIPanel(this, {title: '组件', content: new UITextView(this, {prompt: '支持组件内容'})});");
 
@@ -74,13 +76,45 @@ var ModulePanel = ModuleBase.extend(module, {
 	},
 
 	showDemo3: function () {
-		var section = this.appendSection("给面板添加按钮");
+		var section = this.appendSection("给嵌板添加按钮", "在嵌板右上角添加按钮，使用<code>buttons</code>属性，" +
+			"如果按钮存在<code>children</code>属性，将作为下拉菜单显示，当按钮设置属性<code>{disabled: true}</code>时不可点击。");
 
 		var buttons = [{name: "aa", label: "标准按钮"}];
-		buttons.push({name: "bb", type: "dropdown"});
-		var demoView = new UIPanel(this, {title: "带按钮的面板", content: "按钮显示在标题栏右边"});
+		buttons.push({name: "bb", label: "禁用的按钮", disabled: true});
+		buttons.push({name: "cc", label: "下拉按钮", toggle: true, children: [{name: "cca", label: "选项1"},
+			{name: "ccb", label: "选项2", disabled: true}, {name: "ccc", label: "选项3", 
+				children: [{name: "ccc1", label: "选项3-1"}, {name: "ccc2", label: "选项3-2"}]}, 
+			{name: "ccd", label: "选项4"}, {name: "cce", label: "长文本长文本长文本长文本"}]});
+		var demoView = new UIPanel(this, {title: "带按钮的面板", content: "按钮显示在标题栏右边", buttons: buttons});
 
 		var sources = [];
+		sources.push("var buttons = [\n\t{name: 'aa', label: '标准按钮'}, " +
+			"\n\t{name: 'bb', label: '禁用的按钮', disabled: true}, \n\t{name: 'cc', label: '下拉按钮', toggle: true, " +
+				"children: [\n\t\t{name: 'cca', label: '选项1'}, \n\t\t{name: 'ccb', label: '选项2', disabled: true}, " +
+					"\n\t\t{name: 'ccc', label: '选项3'}, \n\t\t{name: 'ccd', label: '选项4'}, " +
+					"\n\t\t{name: 'cce', label: '长文本长文本长文本长文本'}\n\t]}\n];");
+		sources.push("new UIPanel(this, {title: '带按钮的面板', content: '按钮显示在标题栏右边', buttons: buttons});")
+
+		this.showDemo(section, demoView, sources);
+	},
+
+	showDemo4: function () {
+		var section = this.appendSection("选项卡设置", "");
+
+		var tabs = [];
+		tabs.push({name: "tab1", title: "选项卡1", view: "<h1>这是第一个视图</h1><p>支持网页源码，自由显示</p>"});
+		tabs.push({name: "tab2", title: "选项卡2", view: new UITextView(this, {prompt: "组件视图"})});
+		tabs.push({name: "tab3", title: "选项卡3"});
+		tabs.push({name: "tab4", title: "选项卡4"});
+		var demoView = new UIPanel(this, {title: "选择选项卡", tabs: tabs, tabIndex: 0});
+
+		var sources = [];
+		sources.push("var tabs = [];");
+		sources.push("tabs.push({name: 'tab1', title: '选项卡1', view: '<h1>这是第一个视图</h1><p>支持网页源码，自由显示</p>'});");
+		sources.push("tabs.push({name: 'tab2', title: '选项卡2', view: new UITextView(this, {prompt: '组件视图'})});");
+		sources.push("tabs.push({name: 'tab3', title: '选项卡3'});");
+		sources.push("tabs.push({name: 'tab4', title: '选项卡4'});");
+		sources.push("new UIPanel(this, {title: '选择选项卡', tabs: tabs, tabIndex: 2});");
 
 		this.showDemo(section, demoView, sources);
 	}
