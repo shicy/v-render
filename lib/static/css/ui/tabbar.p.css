@@ -1,0 +1,132 @@
+
+.ui-tabbar {
+	padding-top: 5px;
+}
+
+.ui-tabbar:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-tabbar > .bar {
+	padding-bottom: 1px;
+	overflow: hidden;
+}
+
+.ui-tabbar > .bar > .tabs {
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.ui-tabbar > .bar > .tabs > .tab { 
+	display: inline-block;
+	vertical-align: top;
+	min-width: 80px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    padding: 0px 12px;
+    cursor: default;
+}
+
+.ui-tabbar > .bar > .tabs > .tab > .close {
+	position: absolute;
+	display: none;
+    width: 12px;
+    height: 12px;
+    background-image: url(/VRender/icons/001.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+    opacity: .5;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+}
+
+.ui-tabbar > .bar > .tabs > .tab:hover {
+	background-color: #f4f5f9;
+}
+
+.ui-tabbar > .bar > .tabs > .tab.selected {
+	color: #333444;
+}
+
+.ui-tabbar > .bar > .tabs > .tab.selected:after {
+	content: "";
+	position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -1px;
+    border-bottom: 2px solid #333444;
+}
+
+.ui-tabbar > .bar > .tabs > .tab.disabled {
+	color: #ccc;
+	background-color: inherit;
+    cursor: no-drop;
+}
+
+.ui-tabbar > .bar > .tabs > .tab.hide {
+	display: none;
+}
+
+.ui-tabbar > .bar > .tabs > .closable:hover > .close {
+	display: block;
+}
+
+.ui-tabbar > .bar > .tabs > .closable > .close:hover {
+	opacity: 1;
+}
+
+.ui-tabbar > .btns {
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+	color: #999;
+	display: none;
+}
+
+.ui-tabbar > .btns > .btn {
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ui-tabbar > .btns > .btn:hover {
+	color: #333444;
+}
+
+.ui-tabbar > .btns > .btn.disabled {
+	color: #ccc;
+	cursor: no-drop;
+}
+
+.ui-tabbar.over {
+	padding-right: 48px;
+}
+
+.ui-tabbar.over > .bar:after {
+	content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 1px;
+    width: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.ui-tabbar.over > .btns {
+	display: block;
+}
