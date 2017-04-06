@@ -259,7 +259,7 @@ var ModuleDatagrid = ModuleBase.extend(module, {
 		var columnRenderer = function (name, data) {
 			if (name === "op")
 				return "<a name='detail'>详情</a><a name='eval'>评价</a>";
-		}
+		};
 		var dataMapper = function (data) {
 			return {id: data.id, name: data.name};
 		};
