@@ -11,7 +11,7 @@ body, div, header, section, footer, li, span, a { position: relative; }
 img { width: 100%; height: 100%; }
 
 /* 超链接 */
-a { text-decoration: none; display: inline-block; color: #0282F9; }
+a { text-decoration: none; display: inline-block; color: #0473F8; }
 a:hover { text-decoration: underline; cursor: pointer; }
 /* 列表中直接子标签A作为布局，使用默认样式 */
 li > a, li > a:hover, li > a:visited { color: inherit; text-decoration: none; }
