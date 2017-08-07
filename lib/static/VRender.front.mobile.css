@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max-height: 999999px;
+}
+
+body {
+	font-size: 16px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body, div, ul {
+	-webkit-overflow-scrolling : touch;
+}

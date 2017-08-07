@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 			},
 			mobile: {
 				files: [{
-					src: ["VRender.front.css", "css/ui/*.m.css"],
+					src: ["VRender.front.mobile.css", "css/ui/*.m.css"],
 					dest: "VRender.front.mobile.min.css"
 				}]
 			}

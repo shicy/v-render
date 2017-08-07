@@ -1,1 +1,1 @@
-@charset "utf-8";*{box-sizing:border-box;-moz-box-sizing:border-box}.no-select{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none}.ui-fn{display:none}.ui-scrollless{overflow:hidden!important}
+@charset "utf-8";*{box-sizing:border-box;-moz-box-sizing:border-box;max-height:999999px}body{font-size:16px;overflow-x:hidden;overflow-y:scroll}body,div,ul{-webkit-overflow-scrolling:touch}
