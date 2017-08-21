@@ -1,134 +1,145 @@
 
 .ui-btn {
-	border: 1px solid #ddd;
-    border-radius: 3px;
-    background-color: #fff;
-    font-size: 0px;
     display: inline-block;
     vertical-align: middle;
-}
-
-.ui-btn.disabled {
-    pointer-events: none;
-    opacity: .25;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
 }
 
 .ui-btn > .btn {
-	height: 30px;
-    font-size: 14px;
-    padding: 0px 12px 2px;
-    border: 0px;
-    background-color: transparent;
-    cursor: pointer;
-    text-align: center;
-    color: inherit;
-    outline: none;
+    display: block;
     vertical-align: middle;
+    height: 100%;
+    color: inherit;
+    font-size: 14px;
+    text-align: center;
+    border: 0px;
+    background: none;
+    padding: 0px 12px 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ui-btn-primary {
+    color: #fff;
+    border-color: #232431;
+    background-color: #333444;
+}
+
+.ui-btn-success {
+    color: #fff;
+    border-color: #56a24c;
+    background-color: #67bb5c;
+}
+
+.ui-btn-danger {
+    color: #fff;
+    border-color: #de4b4b;
+    background-color: #f55959;
+}
+
+.ui-btn-warn {
+    color: #fff;
+    border-color: #d4970d;
+    background-color: #eca912;
+}
+
+.ui-btn-info {
+    color: #fff;
+    border-color: #12bae0;
+    background-color: #13c9f3;
+}
+
+.ui-btn-link {
+    color: #0054ff;
+    border: 0px;
+}
+
+.ui-btn-text {
+    border: 0px;
 }
 
 .ui-btn.tiny {
-    line-height: 20px;
+    height: 22px;
 }
 
 .ui-btn.tiny > .btn {
     font-size: 12px;
     padding: 0px 3px 1px;
-    height: 20px;
+}
+
+.ui-btn.small {
+    height: 26px;
 }
 
 .ui-btn.small > .btn {
     font-size: 12px;
-    height: 26px;
     padding: 0px 6px 2px;
+}
+
+.ui-btn.big {
+    height: 38px;
 }
 
 .ui-btn.big > .btn {
     font-size: 16px;
-    height: 38px;
     padding: 0px 20px 2px;
 }
 
-.ui-btn.large > .btn {
-    font-size: 20px;
+.ui-btn.bigger {
     height: 46px;
+}
+
+.ui-btn.bigger > .btn {
+    font-size: 20px;
     padding: 0px 25px 2px;
 }
 
-.ui-btn > .btn:hover {
-	background-color: rgba(0, 0, 0, 0.15);
+.ui-btn:hover > .btn {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.ui-btn-primary:hover > .btn {
+    background-color: #222;
+}
+
+.ui-btn-link:hover > .btn {
+    text-decoration: underline;
+    background-color: inherit;
 }
 
 .ui-btn > .btn:active {
-    background-color: rgba(0, 0, 0, 0.05);
-	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
     padding-top: 2px;
 }
 
-.ui-btn.tiny > .btn:active {
-    padding-top: 1px;
+.ui-btn-link > .btn:active {
+    background-color: inherit;
+    box-shadow: none;
+    padding-top: inherit;
 }
 
-.ui-btn.ui-btn-primary {
-	color: #fff;
-	background-color: #333444;
-    border-color: #232431;
+.ui-btn.disabled {
+    opacity: .35;
+    cursor: no-drop;
 }
 
-.ui-btn.ui-btn-success {
-	color: #fff;
-    background-color: #67bb5c;
-    border-color: #56a24c;
+.ui-btn.disabled > .btn {
+    pointer-events: none;
+    background-color: inherit;
 }
 
-.ui-btn.ui-btn-danger {
-	color: #fff;
-    background-color: #f55959;
-    border-color: #de4b4b;
+.ui-btn-default.disabled {
+    background-color: #ddd;
 }
 
-.ui-btn.ui-btn-warn {
-	color: #fff;
-    background-color: #eca912;
-    border-color: #d4970d;
+.ui-btn-link.disabled:hover > .btn {
+    text-decoration: none;
 }
-
-.ui-btn.ui-btn-info {
-	color: #fff;
-    background-color: #13c9f3;
-    border-color: #12bae0;
-}
-
-.ui-btn.ui-btn-link {
-	color: #0054ff;
-    border: 0px;
-}
-.ui-btn.ui-btn-link > .btn {
-	height: 32px;
-}
-.ui-btn.ui-btn-link > .btn:hover {
-	background-color: transparent;
-	text-decoration: underline;
-}
-.ui-btn.ui-btn-link > .btn:active {
-	box-shadow: none;
-}
-
-.ui-btn.ui-btn-text {
-    border: 0px;
-    border-radius: 0px;
-}
-
-.ui-btn.ui-btn-text > .btn {
-	height: 32px;
-}
-
-.ui-btn.ui-btn-text > .btn:active {
-	box-shadow: none;
-	background-color: #ddd;
-}
-
-
-
 
 
 
