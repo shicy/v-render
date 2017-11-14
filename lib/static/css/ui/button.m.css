@@ -1,0 +1,79 @@
+
+.ui-btn {
+	width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 0.03rem;
+}
+
+.ui-btn > .btn {
+	width: 100%;
+    height: 0.44rem;
+    color: inherit;
+    font-size: 0.16rem;
+    line-height: 0.44rem;
+    text-decoration: none;
+    border: 0px;
+    background: none;
+    border-radius: 0.03rem;
+    padding: 0px 0.12rem;
+    outline: none;
+}
+
+.ui-btn-primary {
+    color: #fff;
+    border-color: #000;
+    background-color: #333444;
+}
+
+.ui-btn-success {
+    color: #fff;
+    border-color: #56a24c;
+    background-color: #67bb5c;
+}
+
+.ui-btn-danger {
+    color: #fff;
+    border-color: #de4b4b;
+    background-color: #f55959;
+}
+
+.ui-btn-warn {
+    color: #fff;
+    border-color: #d4970d;
+    background-color: #eca912;
+}
+
+.ui-btn-info {
+    color: #fff;
+    border-color: #12bae0;
+    background-color: #13c9f3;
+}
+
+.ui-btn-text, .ui-btn-link {
+    border-color: transparent;
+}
+
+.ui-btn-link {
+    color: #0054ff;
+}
+
+.ui-btn:active > .btn {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.ui-btn-primary:active > .btn {
+    background-color: #444;
+}
+
+.ui-btn-text:active > .btn {
+    background-color: #f6f6f6;
+}
+
+.ui-btn-link:active > .btn {
+    background-color: #f6f6f6;
+}
+
+.ui-btn.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
