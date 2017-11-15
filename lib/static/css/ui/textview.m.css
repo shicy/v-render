@@ -1,0 +1,124 @@
+
+.ui-textview {
+	font-size: 0.16rem;
+}
+
+.ui-textview > .ipt {
+	width: 100%;
+    height: 0.44rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.ui-textview > .ipt > input {
+	width: 100%;
+    height: 100%;
+    font-size: inherit;
+    border: 1px solid transparent;
+    padding: 0px 0.1rem 0px 0.14rem;
+    margin: 0px;
+    outline: none;
+}
+
+.ui-textview > .ipt > textarea {
+	width: 100%;
+    height: 100%;
+    font-size: inherit;
+    border: 1px solid transparent;
+    padding: 0.09rem 0.14rem 0rem;
+    margin: 0px;
+    outline: none;
+    resize: none;
+}
+
+.ui-textview > .ipt > input:focus,
+.ui-textview > .ipt > textarea:focus {
+	border-color: #ddd;
+	background-color: #fdfaf6;
+}
+
+.ui-textview > .ipt > .clear {
+	display: none;
+	position: absolute;
+    width: 0.4rem;
+    height: 0.42rem;
+    top: 0.01rem;
+    right: 0px;
+    background-image: url(/VRender/icons/002.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.16rem;
+    opacity: 0.25;
+}
+
+.ui-textview > .ipt > .prompt {
+	position: absolute;
+    left: 0.14rem;
+    top: 50%;
+    color: #999;
+    line-height: 0.2rem;
+    margin-top: -0.1rem;
+    pointer-events: none;
+}
+
+.ui-textview > .desc {
+	color: #787878;
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+}
+
+.ui-textview > .errmsg {
+	display: none;
+	color: #f00;
+    font-size: 0.14rem;
+}
+
+.ui-textview.multi > .ipt {
+	min-height: 1rem;
+}
+
+.ui-textview.multi > .ipt > .prompt {
+	top: 0.09rem;
+	margin-top: 0px;
+}
+
+.ui-textview.has-val > .ipt > input {
+	padding-right: 0.4rem;
+}
+
+.ui-textview.has-val > .ipt > .clear {
+	display: block;
+}
+
+.ui-textview.has-val > .ipt > .prompt {
+	display: none;
+}
+
+.ui-textview.readonly > .ipt > input {
+	padding-right: 0.1rem;
+}
+
+.ui-textview.readonly > .ipt > .clear {
+	display: none;
+}
+
+.ui-textview.show-error > .ipt {
+	border-color: #f00;
+}
+
+.ui-textview.show-error > .errmsg {
+	display: block;
+}
+
+.ui-textview.disabled > .ipt > input,
+.ui-textview.disabled > .ipt > textarea {
+	color: #ccc;
+    border-color: transparent;
+    background-color: #f9f9f9;
+    pointer-events: none;
+}
+
+.ui-textview.disabled > .ipt > .clear {
+	display: none;
+}
