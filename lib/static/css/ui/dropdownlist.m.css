@@ -1,0 +1,66 @@
+
+body[iphone] .ui-dropdownlist {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 2.5rem;
+    background-color: #eee;
+    box-shadow: 0px -0.02rem 0.06rem 0px #ccc;
+    z-index: 5000;
+}
+
+body[iphone] .ui-dropdownlist:before {
+	content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    background: -moz-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
+    background: -webkit-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
+    background: -o-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
+    pointer-events: none;
+}
+
+body[iphone] .ui-dropdownlist > ul {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem 0px 1rem;
+    overflow-y: auto;
+}
+
+body[iphone] .ui-dropdownlist > ul > .item {
+	flex: none;
+    width: 100%;
+    height: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+    padding: 0px 0.14rem;
+}
+
+body[iphone] .ui-dropdownlist > ul > .sep {
+	display: none;
+}
+
+body[iphone] .ui-dropdownlist > ul:before {
+	content: "";
+    position: absolute;
+    width: 90%;
+    height: 0.01rem;
+    top: 1rem;
+    background-color: #ddd;
+}
+
+body[iphone] .ui-dropdownlist > ul:after {
+	content: "";
+    position: absolute;
+    width: 90%;
+    height: 0.01rem;
+    top: 1.5rem;
+    background-color: #ddd;
+}

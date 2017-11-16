@@ -6,7 +6,9 @@
 .ui-combobox > .ipt > input {
 	width: 100%;
     height: 32px;
-    border: 1px inset #ddd;
+    border: 1px solid #ddd;
+    border-top-color: #999;
+    border-left-color: #999;
     background-color: #fff;
     font-size: 16px;
     padding: 0px 25px 0px 10px;
@@ -23,19 +25,20 @@
 }
 
 .ui-combobox > .ipt > .dropdownbtn {
-	position: absolute;
-    border: 0px;
-    background: none;
+    position: absolute;
     top: 1px;
     right: 1px;
     bottom: 1px;
     width: 25px;
-    padding: 0px;
-    margin: 0px;
+    border: 0px;
+    border-radius: 0px;
+    background: none;
     background-image: url(/VRender/icons/005.png);
     background-size: 10px;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 0px;
+    margin: 0px;
     outline: none;
 }
 
