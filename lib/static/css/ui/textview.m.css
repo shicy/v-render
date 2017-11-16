@@ -14,28 +14,39 @@
 .ui-textview > .ipt > input {
 	width: 100%;
     height: 100%;
+    color: inherit;
     font-size: inherit;
-    border: 1px solid transparent;
+    border: 0px;
+    background: none;
     padding: 0px 0.1rem 0px 0.14rem;
     margin: 0px;
     outline: none;
 }
 
+.ui-textview > .ipt > input::-webkit-outer-spin-button,
+.ui-textview > .ipt > input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+/* FireFox */
+.ui-textview > .ipt > input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
 .ui-textview > .ipt > textarea {
 	width: 100%;
     height: 100%;
+    color: inherit;
     font-size: inherit;
-    border: 1px solid transparent;
+    border: 0px;
+    background: none;
     padding: 0.09rem 0.14rem 0rem;
     margin: 0px;
     outline: none;
     resize: none;
-}
-
-.ui-textview > .ipt > input:focus,
-.ui-textview > .ipt > textarea:focus {
-	border-color: #ddd;
-	background-color: #fdfaf6;
 }
 
 .ui-textview > .ipt > .clear {
@@ -72,6 +83,11 @@
 	display: none;
 	color: #f00;
     font-size: 0.14rem;
+}
+
+.ui-textview.focus > .ipt {
+    border-color: #ccc;
+    background-color: #fdfaf6;
 }
 
 .ui-textview.multi > .ipt {
@@ -111,10 +127,13 @@
 	display: block;
 }
 
-.ui-textview.disabled > .ipt > input,
-.ui-textview.disabled > .ipt > textarea {
+.ui-textview.display-as-pwd > .ipt > input {
+    -webkit-text-security: disc;
+    text-security: disc;
+}
+
+.ui-textview.disabled > .ipt {
 	color: #ccc;
-    border-color: transparent;
     background-color: #f9f9f9;
     pointer-events: none;
 }

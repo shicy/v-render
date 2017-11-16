@@ -13,18 +13,25 @@
     color: #383838;
     padding: 0px 3px 0px 10px;
     margin: 0px;
-    border: 1px inset #ddd;
+    border: 1px solid #ddd;
+    border-top-color: #999;
+    border-left-color: #999;
     background-color: #fff;
     height: 32px;
     font-size: 16px;
     outline: none;
-    appearance: none;
-    -webkit-appearance: none;
 }
 
 .ui-textview > .ipt > input::-webkit-outer-spin-button,
 .ui-textview > .ipt > input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+/* FireFox */
+.ui-textview > .ipt > input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .ui-textview > .ipt > input:focus {
@@ -36,7 +43,8 @@
     min-height: 65px;
     color: #383838;
     border: 1px solid #ddd;
-    border-style: inset;
+    border-top-color: #999;
+    border-left-color: #999;
     padding: 2px 3px 3px 10px;
     margin: 0px;
     vertical-align: top;
@@ -158,7 +166,8 @@
 
 .ui-textview.readonly > .ipt > input,
 .ui-textview.readonly > .ipt > textarea {
-    background-color: #ffffe4;
+    background-color: #fffcf4;
+    padding-right: 3px;
 }
 
 .ui-textview.readonly > .ipt > .clear {
@@ -193,4 +202,16 @@
 .ui-textview.display-as-pwd > .ipt > input {
     -webkit-text-security: disc;
     text-security: disc;
+}
+
+.ui-textview.disabled > .ipt > input,
+.ui-textview.disabled > .ipt > textarea {
+    color: #ccc;
+    background-color: #f9f9f9;
+    padding-right: 3px;
+    pointer-events: none;
+}
+
+.ui-textview.disabled > .ipt > .clear {
+    display: none;
 }

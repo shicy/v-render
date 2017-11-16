@@ -3,6 +3,7 @@
 	width: 100%;
     border: 1px solid #ddd;
     border-radius: 0.03rem;
+    overflow: hidden;
 }
 
 .ui-btn > .btn {
@@ -13,8 +14,8 @@
     line-height: 0.43rem;
     text-decoration: none;
     border: 0px;
+    border-radius: 0px;
     background: none;
-    border-radius: 0.03rem;
     padding: 0px 0.12rem;
     outline: none;
 }

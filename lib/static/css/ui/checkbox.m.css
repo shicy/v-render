@@ -1,0 +1,51 @@
+
+.ui-chkbox {
+	display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 0.44rem;
+}
+
+.ui-chkbox {
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ui-chkbox:before {
+	content: "";
+    flex: none;
+    width: 0.2rem;
+    height: 0.2rem;
+    border: 1px solid #aaa;
+    border-radius: 100px;
+    vertical-align: middle;
+}
+
+.ui-chkbox > input {
+	display: none;
+}
+
+.ui-chkbox > span {
+	flex: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding-left: 0.15rem;
+}
+
+.ui-chkbox.checked:before {
+    border-color: #222;
+	background-color: #333444;
+    background-image: url(/VRender/icons/0031.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-chkbox.checked:before {
+    border-color: #333;
+}
+
+.ui-chkbox.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}

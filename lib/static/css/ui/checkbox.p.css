@@ -46,3 +46,8 @@
 .ui-chkbox + .ui-chkbox {
     margin-left: 10px;
 }
+
+.ui-chkbox.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
