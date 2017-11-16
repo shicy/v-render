@@ -22,6 +22,14 @@
     background-color: #fff;
 }
 
+.ui-radbox > input {
+    display: none;
+}
+
+.ui-radbox > span {
+    padding-left: 3px;
+}
+
 .ui-radbox:hover:before {
 	background-color: #f6f6f6;
 }
@@ -38,12 +46,9 @@
     border-radius: 100px;
 }
 
-.ui-radbox > input {
-	display: none;
-}
-
-.ui-radbox > span {
-	padding-left: 3px;
+.ui-radbox.disabled {
+    opacity: 0.35;
+    pointer-events: none;
 }
 
 .ui-radbox + .ui-radbox {
