@@ -44,7 +44,7 @@
     background-color: #333444;
 }
 
-.ui-radbox.disabled {
+.ui-radbox[disabled] {
 	opacity: 0.35;
 	pointer-events: none;
 }

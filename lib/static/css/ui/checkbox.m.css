@@ -44,7 +44,7 @@
     border-color: #333;
 }
 
-.ui-chkbox.disabled {
+.ui-chkbox[disabled] {
     opacity: 0.35;
     pointer-events: none;
 }

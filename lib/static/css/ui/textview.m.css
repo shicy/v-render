@@ -132,12 +132,12 @@
     text-security: disc;
 }
 
-.ui-textview.disabled > .ipt {
+.ui-textview[disabled] > .ipt {
 	color: #ccc;
     background-color: #f9f9f9;
     pointer-events: none;
 }
 
-.ui-textview.disabled > .ipt > .clear {
+.ui-textview[disabled] > .ipt > .clear {
 	display: none;
 }

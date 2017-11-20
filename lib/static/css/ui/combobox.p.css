@@ -93,15 +93,15 @@
 	bottom: 35px;
 }
 
-.ui-combobox.disabled {
+.ui-combobox[disabled] {
     opacity: 0.5;
     cursor: no-drop;
 }
 
-.ui-combobox.disabled > .ipt {
+.ui-combobox[disabled] > .ipt {
     pointer-events: none;
 }
 
-.ui-combobox.disabled > .ipt > input {
+.ui-combobox[disabled] > .ipt > input {
     background-color: #f0f0f0;
 }

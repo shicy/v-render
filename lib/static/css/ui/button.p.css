@@ -125,21 +125,21 @@
     padding-top: inherit;
 }
 
-.ui-btn.disabled {
+.ui-btn[disabled] {
     opacity: .35;
     cursor: no-drop;
 }
 
-.ui-btn.disabled > .btn {
+.ui-btn[disabled] > .btn {
     pointer-events: none;
     background-color: inherit;
 }
 
-.ui-btn-default.disabled {
+.ui-btn-default[disabled] {
     background-color: #ddd;
 }
 
-.ui-btn-link.disabled:hover > .btn {
+.ui-btn-link[disabled]:hover > .btn {
     text-decoration: none;
 }
 

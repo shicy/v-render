@@ -61,11 +61,11 @@
 	display: block;
 }
 
-.ui-combobox.disabled {
+.ui-combobox[disabled] {
     opacity: 0.5;
     pointer-events: none;
 }
 
-.ui-combobox.disabled > .ipt {
+.ui-combobox[disabled] > .ipt {
     background-color: #f0f0f0;
 }
