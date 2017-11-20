@@ -1,0 +1,74 @@
+
+
+.ui-datepicker > header {
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-datepicker > header > label {
+	display: inline-block;
+    line-height: 0.4rem;
+}
+
+.ui-datepicker > header > .prev,
+.ui-datepicker > header > .next {
+	position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    top: 0px;
+    right: 0.5rem;
+    border: 0px;
+    background: none;
+    background-image: url(/VRender/icons/008.png);
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px;
+    margin: 0px;
+    opacity: .6;
+    outline: none;
+}
+
+.ui-datepicker > header > .prev {
+    right: 0px;
+    background-image: url(/VRender/icons/006.png);
+}
+
+.ui-datepicker > table {
+	width: 100%;
+}
+
+.ui-datepicker > table > thead > tr {
+	height: 0.3rem;
+}
+
+.ui-datepicker > table > thead > tr > th {
+	color: #999;
+    font-weight: 200;
+}
+
+.ui-datepicker > table > tbody > tr > td {
+	text-align: center;
+    height: 0.47rem;
+}
+
+.ui-datepicker > table > tbody > tr > td:nth-child(6),
+.ui-datepicker > table > tbody > tr > td:nth-child(7) {
+	color: #f00;
+}
+
+.ui-datepicker > table > tbody > tr > td.disabled {
+	color: #aaa;
+}
+
+.ui-datepicker > table > tbody > tr > td.today {
+	color: #008fff;
+}
+
+.ui-datepicker > table > tbody > tr > td.selected > span {
+	display: block;
+    color: #fff;
+    line-height: 0.47rem;
+    border-radius: 0.03rem;
+    background-color: #333444;
+}
+
