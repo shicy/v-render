@@ -1,0 +1,59 @@
+
+
+.ui-dateipt > .ipt {
+	height: 0.44rem;
+    border: 1px solid #ddd;
+}
+
+.ui-dateipt > .ipt:before {
+	content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 100%;
+    left: 0.12rem;
+    background-image: url(/VRender/icons/004.png);
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .7;
+}
+
+.ui-dateipt > .ipt > input {
+	width: 100%;
+    height: 100%;
+    color: inherit;
+    font-size: inherit;
+    border: 0px;
+    background: none;
+    padding: 0px 0px 0px 0.4rem;
+    margin: 0px;
+    outline: none;
+}
+
+.ui-dateipt > .ipt > .clear {
+	display: none;
+	position: absolute;
+    width: .4rem;
+    height: .42rem;
+    top: .01rem;
+    right: 0;
+    background-image: url(/VRender/icons/002.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: .16rem;
+    opacity: .25;
+}
+
+.ui-dateipt.has-val > .ipt > .clear {
+	display: inline-block;
+}
+
+.ui-dateipt[disabled] > .ipt {
+	opacity: 0.5;
+    pointer-events: none;
+    background-color: #f0f0f0;
+}
+
+.ui-dateipt[disabled] > .ipt > .clear {
+	display: none;
+}

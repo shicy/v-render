@@ -21,7 +21,9 @@
 	width: 100%;
     height: 32px;
     font-size: 16px;
-    border: 1px inset #ddd;
+    border: 1px solid #ddd;
+    border-top-color: #999;
+    border-left-color: #999;
     padding: 0px 3px 0px 30px;
     margin: 0px;
     background-color: #fff;
@@ -84,4 +86,17 @@
 .ui-dateipt.show-before > .ui-datepicker {
     top: auto;
     bottom: 35px;
+}
+
+.ui-dateipt[disabled] {
+    cursor: no-drop;
+}
+
+.ui-dateipt[disabled] > .ipt {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.ui-dateipt[disabled] > .ipt > input {
+    background-color: #f0f0f0;
 }
