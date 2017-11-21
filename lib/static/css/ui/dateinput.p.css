@@ -71,7 +71,7 @@
 	display: none;
 }
 
-.ui-dateipt > .ui-datepicker {
+.ui-dateipt > .picker {
     position: absolute;
     left: 0px;
     top: 34px;
@@ -79,11 +79,11 @@
     display: none;
 }
 
-.ui-dateipt.show-picker > .ui-datepicker {
+.ui-dateipt.show-picker > .picker {
     display: block;
 }
 
-.ui-dateipt.show-before > .ui-datepicker {
+.ui-dateipt.show-before > .picker {
     top: auto;
     bottom: 35px;
 }

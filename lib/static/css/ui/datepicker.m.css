@@ -15,10 +15,9 @@
     width: 0.4rem;
     height: 0.4rem;
     top: 0px;
-    right: 0.5rem;
+    right: 0px;
     border: 0px;
     background: none;
-    background-image: url(/VRender/icons/008.png);
     background-size: 0.16rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,7 +28,11 @@
 }
 
 .ui-datepicker > header > .prev {
-    right: 0px;
+    right: 0.5rem;
+    background-image: url(/VRender/icons/008.png);
+}
+
+.ui-datepicker > header > .next {
     background-image: url(/VRender/icons/006.png);
 }
 
