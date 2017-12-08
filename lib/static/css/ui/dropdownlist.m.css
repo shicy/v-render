@@ -120,18 +120,4 @@ body[iphone] .ui-dropdownlist > ul > .sep {
 	display: none;
 }
 
-body[iphone] .ui-dropdownlist > .mask {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: 1;
-    background: -moz-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
-    background: -webkit-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
-    background: -o-linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
-    background: linear-gradient(#fff, rgba(255, 255, 255, 0), #fff);
-    pointer-events: none;
-}
 
