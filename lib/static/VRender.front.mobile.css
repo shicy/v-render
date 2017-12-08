@@ -16,7 +16,7 @@ body, div, ul {
 	-webkit-overflow-scrolling : touch;
 }
 
-input, textarea, button, a, img {
+input, textarea, select, button, a, img {
 	tap-highlight-color: transparent;
 	-webkit-tap-highlight-color: transparent;
 }
