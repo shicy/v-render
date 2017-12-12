@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 				files: [{
 					src: ["js/jquery.tap.js", "VRender.front.js",
 						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", 
-						"js/ui/*.js", "js/layout/*.js"],
+						"js/render/*.js", "js/ui/*.js", "js/layout/*.js"],
 					dest: "VRender.front.min.js"
 				}]
 			},
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 				files: [{
 					src: ["VRender.front.js", "VRender.front.mobile.js",
 						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", 
-						"js/ui/*.js", "js/layout/*.js"],
+						"js/render/*.js", "js/ui/*.js", "js/layout/*.js"],
 					dest: "VRender.front.mobile.min.js"
 				}]
 			}
