@@ -1,21 +1,31 @@
 module.exports = function (grunt) {
+
+	var commonScripts = [];
+	commonScripts.push("js/util/*.js");
+	commonScripts.push("js/EventEmitter.js");
+	commonScripts.push("js/FrontComponent.js");
+	// commonScripts.push("js/render/*.js");
+	// commonScripts.push("js/ui/*.js");
+	commonScripts.push("js/render/_base.js");
+	commonScripts.push("js/render/dropdownlist.js");
+	commonScripts.push("js/render/group.js");
+	commonScripts.push("js/ui/_base.js");
+	commonScripts.push("js/ui/dropdownlist.js");
+	commonScripts.push("js/ui/group.js");
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
 
 		uglify: {
 			pc: {
 				files: [{
-					src: ["js/jquery.tap.js", "VRender.front.js",
-						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", 
-						"js/render/*.js", "js/ui/*.js", "js/layout/*.js"],
+					src: ["VRender.front.js"].concat(commonScripts),
 					dest: "VRender.front.min.js"
 				}]
 			},
 			mobile: {
 				files: [{
-					src: ["VRender.front.js", "VRender.front.mobile.js",
-						"js/util/*.js", "js/EventEmitter.js", "js/FrontComponent.js", 
-						"js/render/*.js", "js/ui/*.js", "js/layout/*.js"],
+					src: ["VRender.front.js", "VRender.front.mobile.js"].concat(commonScripts),
 					dest: "VRender.front.mobile.min.js"
 				}]
 			}
