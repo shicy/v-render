@@ -20,3 +20,8 @@ input, textarea, select, button, a, img {
 	tap-highlight-color: transparent;
 	-webkit-tap-highlight-color: transparent;
 }
+
+.ui-noscroll {
+	height: 100% !important;
+	overflow: hidden !important;
+}
