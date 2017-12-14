@@ -53,6 +53,11 @@
 	display: none;
 }
 
+.ui-combobox > .ui-dropdownlist > ul {
+    border-radius: 0.05rem;
+    padding: 0.1rem 0px;
+}
+
 .ui-combobox > select {
     position: absolute;
     left: 0px;
