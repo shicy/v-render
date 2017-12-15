@@ -18,6 +18,7 @@ module.exports = function (grunt) {
 	commonScripts.push("js/render/dateinput.js");
 	commonScripts.push("js/render/daterange.js");
 	commonScripts.push("js/render/panel.js");
+	commonScripts.push("js/render/datagrid.js");
 
 	// commonScripts.push("js/ui/*.js");
 	commonScripts.push("js/ui/_base.js");
@@ -32,6 +33,7 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/dateinput.js");
 	commonScripts.push("js/ui/daterange.js");
 	commonScripts.push("js/ui/panel.js");
+	commonScripts.push("js/ui/datagrid.js");
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
