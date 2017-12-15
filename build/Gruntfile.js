@@ -10,10 +10,12 @@ module.exports = function (grunt) {
 	commonScripts.push("js/render/dropdownlist.js");
 	commonScripts.push("js/render/group.js");
 	commonScripts.push("js/render/combobox.js");
+	commonScripts.push("js/render/button.js");
 	commonScripts.push("js/ui/_base.js");
 	commonScripts.push("js/ui/dropdownlist.js");
 	commonScripts.push("js/ui/group.js");
 	commonScripts.push("js/ui/combobox.js");
+	commonScripts.push("js/ui/button.js");
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
