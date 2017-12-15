@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 	commonScripts.push("js/util/*.js");
 	commonScripts.push("js/EventEmitter.js");
 	commonScripts.push("js/FrontComponent.js");
-	
+
 	// commonScripts.push("js/render/*.js");
 	commonScripts.push("js/render/_base.js");
 	commonScripts.push("js/render/group.js");
@@ -16,6 +16,7 @@ module.exports = function (grunt) {
 	commonScripts.push("js/render/combobox.js");
 	commonScripts.push("js/render/datepicker.js");
 	commonScripts.push("js/render/dateinput.js");
+	commonScripts.push("js/render/daterange.js");
 	commonScripts.push("js/render/panel.js");
 
 	// commonScripts.push("js/ui/*.js");
@@ -29,6 +30,7 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/combobox.js");
 	commonScripts.push("js/ui/datepicker.js");
 	commonScripts.push("js/ui/dateinput.js");
+	commonScripts.push("js/ui/daterange.js");
 	commonScripts.push("js/ui/panel.js");
 
 	grunt.initConfig({
