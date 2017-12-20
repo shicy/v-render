@@ -21,42 +21,48 @@
 	display: inline-block;
 	position: relative;
 	white-space: nowrap;
+	margin-bottom: -1px;
 }
 
 .ui-tabbar > .bar > .tabs > .tab { 
 	display: inline-block;
 	vertical-align: top;
 	min-width: 80px;
+	color: #999;
     font-size: 14px;
     text-align: center;
-    line-height: 32px;
+    line-height: 30px;
+    border: 1px solid transparent;
     padding: 0px 12px;
-    cursor: default;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.ui-tabbar > .bar > .tabs > .tab > .box {
+	display: inline-block;
+	pointer-events: none;
 }
 
 .ui-tabbar > .bar > .tabs > .tab > .close {
-	position: absolute;
-	display: none;
+	display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url(/VRender/icons/001.png);
+    background-image: url(/VRender/icons/009.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 8px;
+    background-size: 6px;
+    margin-left: 5px;
     opacity: .5;
-    top: 1px;
-    right: 1px;
-    cursor: pointer;
 }
 
 .ui-tabbar > .bar > .tabs > .tab:hover {
-	background-color: #f4f5f9;
+	color: #333444;
 }
 
 .ui-tabbar > .bar > .tabs > .tab.selected {
 	color: #333444;
 }
-
+/*
 .ui-tabbar > .bar > .tabs > .tab.selected:after {
 	content: "";
 	position: absolute;
@@ -64,7 +70,7 @@
     right: 0px;
     bottom: -1px;
     border-bottom: 2px solid #333444;
-}
+}*/
 
 .ui-tabbar > .bar > .tabs > .tab.disabled {
 	color: #ccc;
@@ -76,12 +82,31 @@
 	display: none;
 }
 
+.ui-tabbar > .bar > .tabs > .closable:hover {
+	/*border-color: #f3f3f3;*/
+}
+
 .ui-tabbar > .bar > .tabs > .closable:hover > .close {
-	display: block;
+	/*display: block;*/
 }
 
 .ui-tabbar > .bar > .tabs > .closable > .close:hover {
+    border-radius: 100px;
+    background-color: #ff6c6c;
+    background-image: url(/VRender/icons/0091.png);
+    background-size: 6px;
 	opacity: 1;
+}
+
+
+.ui-tabbar > .bar > .thumb {
+	position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: #333444;
+    transition: all .5s;
 }
 
 .ui-tabbar > .btns {
@@ -117,14 +142,34 @@
 	padding-right: 48px;
 }
 
-.ui-tabbar.over > .bar:after {
+.ui-tabbar.over-l > .bar:before {
 	content: "";
     position: absolute;
+    left: 0px;
     top: 0px;
+    bottom: 2px;
+    width: 20px;
+    background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0)); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, #fff, rgba(255,255,255,0)); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, #fff, rgba(255,255,255,0)); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, #fff, rgba(255,255,255,0)); /* 标准的语法 */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ui-tabbar.over-r > .bar:after {
+	content: "";
+    position: absolute;
     right: 0px;
-    bottom: 1px;
-    width: 3px;
-    background-color: rgba(255, 255, 255, 0.85);
+    top: 0px;
+    bottom: 2px;
+    width: 20px;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0), #fff); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, rgba(255,255,255,0), #fff); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, rgba(255,255,255,0), #fff); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, rgba(255,255,255,0), #fff); /* 标准的语法 */
+    z-index: 1;
+    pointer-events: none;
 }
 
 .ui-tabbar.over > .btns {
