@@ -62,32 +62,15 @@
 .ui-tabbar > .bar > .tabs > .tab.selected {
 	color: #333444;
 }
-/*
-.ui-tabbar > .bar > .tabs > .tab.selected:after {
-	content: "";
-	position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: -1px;
-    border-bottom: 2px solid #333444;
-}*/
 
 .ui-tabbar > .bar > .tabs > .tab.disabled {
-	color: #ccc;
-	background-color: inherit;
+	color: inherit;
+	opacity: 0.15;
     cursor: no-drop;
 }
 
 .ui-tabbar > .bar > .tabs > .tab.hide {
 	display: none;
-}
-
-.ui-tabbar > .bar > .tabs > .closable:hover {
-	/*border-color: #f3f3f3;*/
-}
-
-.ui-tabbar > .bar > .tabs > .closable:hover > .close {
-	/*display: block;*/
 }
 
 .ui-tabbar > .bar > .tabs > .closable > .close:hover {
