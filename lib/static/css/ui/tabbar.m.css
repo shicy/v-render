@@ -45,7 +45,9 @@
 
 .ui-tabbar > .bar > .thumb {
 	position: absolute;
+    width: 0px;
     height: 3px;
+    left: 0px;
     bottom: 0px;
     background-color: #333444;
     transition: all 0.5s;
