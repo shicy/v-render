@@ -22,6 +22,5 @@ input, textarea, select, button, a, img {
 }
 
 .ui-noscroll {
-	height: 100% !important;
 	overflow: hidden !important;
 }
