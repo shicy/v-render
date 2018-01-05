@@ -54,6 +54,7 @@
 
 .ui-datepicker table > tbody > tr > td {
 	text-align: center;
+    width: 14.285714%;
     height: 0.47rem;
 }
 
@@ -71,11 +72,13 @@
 }
 
 .ui-datepicker table > tbody > tr > td.selected > span {
-	display: block;
+	display: inline-block;
     color: #fff;
-    line-height: 0.47rem;
-    border-radius: 0.03rem;
+    width: 0.32rem;
+    line-height: 0.32rem;
+    border-radius: 100%;
     background-color: #333444;
+    /*box-shadow: 0px 0.02rem 0.03rem 0px #999;*/
 }
 
 .ui-datepicker > .content {
