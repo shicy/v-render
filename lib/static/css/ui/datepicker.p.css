@@ -1,120 +1,220 @@
-/*
+
 .ui-datepicker {
-	display: inline-block;
-	width: 210px;
+    display: inline-block;
+    border: 1px solid #eee;
     border-radius: 3px;
     background-color: #fff;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-    font-size: 12px;
 }
 
 .ui-datepicker > header {
-	text-align: center;
-    line-height: 30px;
-    border-bottom: 1px solid #eee;
     background-color: #f4f5f9;
-    padding: 0px 30px;
-    font-size: 14px;
 }
 
-.ui-datepicker > header > button {
-	position: absolute;
+.ui-datepicker > header > .title {
+    font-size: 14px;
+    text-align: center;
+}
+
+.ui-datepicker > header > .title > .item {
+    position: relative;
+}
+
+.ui-datepicker > header > .title > .item > .lbl {
+    line-height: 30px;
+}
+
+.ui-datepicker > header > .title > .item > .val {
+    display: none;
+    line-height: 30px;
+}
+
+.ui-datepicker > header > .title > .item > button {
+    position: absolute;
+    top: 5px;
     width: 20px;
     height: 20px;
-    top: 5px;
-    border: 1px solid transparent;
-    border-radius: 100px;
-    background-color: #fff;
-    padding: 0px;
-    margin: 0px;
+    border: 0px;
+    background: none;
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .45;
     cursor: pointer;
     outline: none;
 }
 
-.ui-datepicker > header > button:hover {
-	border-color: #ddd;
+.ui-datepicker > header > .title > .item > button:hover {
+    opacity: 1;
 }
 
-.ui-datepicker > header > button:active {
-	background-color: #f0f0f0;
+.ui-datepicker > header > .title > .item > button.disabled {
+    opacity: .10;
+    pointer-events: none;
 }
 
-.ui-datepicker > header > button:before {
-	content: "";
-	position: absolute;
-	border: 0px solid transparent;
-	top: 5px;
+.ui-datepicker > header > .title > .item > button.prev.y {
+    left: 0px;
+    background-image: url(/VRender/icons/0110.png);
 }
 
-.ui-datepicker > header > button.prev {
-	left: 5px;
+.ui-datepicker > header > .title > .item > button.prev.m {
+    left: 20px;
+    background-image: url(/VRender/icons/008.png);
 }
 
-.ui-datepicker > header > button.prev:before {
-	border-right-color: #ccc;
-    border-width: 4px 6px 4px 0px;
-    left: 5px;
+.ui-datepicker > header > .title > .item > button.next.y {
+    right: 0px;
+    background-image: url(/VRender/icons/0100.png);
 }
 
-.ui-datepicker > header > button.next {
-	right: 5px;
+.ui-datepicker > header > .title > .item > button.next.m {
+    right: 20px;
+    background-image: url(/VRender/icons/006.png);
 }
 
-.ui-datepicker > header > button.next:before {
-	border-left-color: #ccc;
-	border-width: 4px 0px 4px 6px;
-	right: 5px;
-}
-
-.ui-datepicker table {
-	width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0px;
-}
-
-.ui-datepicker table > thead > tr {
-	background-color: #f7f7fc;
-    height: 24px;
-}
-
-.ui-datepicker table > thead > tr > th {
-	font-weight: normal;
-}
-
-.ui-datepicker table > tbody > tr > td {
-	text-align: center;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
-
-.ui-datepicker table > tbody > tr > td:hover {
-	background-color: #f6f6f6;
-}
-
-.ui-datepicker table > tbody > tr > td.disabled {
-	background-color: #fff;
-	color: #ddd;
-	pointer-events: none;
-}
-
-.ui-datepicker table > tbody > tr > td.today > span {
-	display: inline-block;
-    box-sizing: border-box;
+.ui-datepicker > section table {
     width: 100%;
-    line-height: 28px;
-    color: #8a572e;
-    border: 1px solid #8a572e;
-    border-radius: 2px;
+    font-size: 14px;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
-.ui-datepicker table > tbody > tr > td.selected > span {
-	display: inline-block;
+.ui-datepicker > section th {
+    font-weight: normal;
+}
+
+.ui-datepicker > section > .table {
+    display: inline-block;
+    width: 210px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.ui-datepicker > section > .table:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    bottom: 0px;
+    width: 1px;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.ui-datepicker > section > .table:first-child:before {
+    display: none;
+}
+
+.ui-datepicker > section > .table table.head tr {
+    background-color: #f7f7fc;
+}
+
+.ui-datepicker > section > .table table.body {
+    font-size: 12px;
+}
+
+.ui-datepicker > section > .table table.body thead {
+    display: none;
+}
+
+.ui-datepicker > section > .table table.body tr {
+    height: 30px;
+}
+
+.ui-datepicker > section > .table table.body td {
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+}
+
+.ui-datepicker > section > .table table.body td:hover {
+    background-color: #f0f0f0;
+}
+
+.ui-datepicker > section > .table table.body td.today:before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    top: 3px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+}
+
+.ui-datepicker > section > .table table.body td.selected span {
+    display: inline-block;
     width: 100%;
-    line-height: 30px;
-    background-color: #333444;
+    line-height: 22px;
     color: #fff;
-    border: 0px;
-    border-radius: 2px;
+    background-color: #333444;
 }
-*/
+
+.ui-datepicker > section > .table table.body td.selected.start span {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.ui-datepicker > section > .table table.body td.selected.end span {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.ui-datepicker > section > .table table.body td.disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.ui-datepicker > section > .table table.body td.over {
+    color: #fff;
+}
+
+.ui-datepicker > section > .table table.body td.over span {
+    background-color: #fff;
+}
+
+.ui-datepicker > footer {
+    height: 48px;
+    background-color: #f4f5f9;
+}
+
+.ui-datepicker > footer > .vals {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #999;
+}
+
+.ui-datepicker > footer > .vals > span {
+    display: inline-block;
+    width: 80px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #fff;
+}
+
+.ui-datepicker > footer > .btns {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.ui-datepicker > footer > .btns > button {
+    width: 85px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.ui-datepicker.is-range > header > .title > .item {
+    display: inline-block;
+    width: 50%;
+}
+
+.ui-datepicker.is-range > header > .title > .item > .lbl {
+    display: none;
+}
+
+.ui-datepicker.is-range > header > .title > .item > .val {
+    display: block;
+}
