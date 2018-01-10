@@ -106,6 +106,7 @@
 }
 
 .ui-datepicker > section > .table table.head tr {
+    color: #aaa;
     background-color: #f7f7fc;
 }
 
@@ -144,20 +145,11 @@
 
 .ui-datepicker > section > .table table.body td.selected span {
     display: inline-block;
-    width: 100%;
-    line-height: 22px;
+    width: 24px;
+    line-height: 24px;
     color: #fff;
+    border-radius: 100px;
     background-color: #333444;
-}
-
-.ui-datepicker > section > .table table.body td.selected.start span {
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-
-.ui-datepicker > section > .table table.body td.selected.end span {
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
 }
 
 .ui-datepicker > section > .table table.body td.disabled {
@@ -188,10 +180,12 @@
 .ui-datepicker > footer > .vals > span {
     display: inline-block;
     width: 80px;
+    height: 24px;
     font-size: 12px;
     text-align: center;
     line-height: 24px;
     background-color: #fff;
+    vertical-align: middle;
 }
 
 .ui-datepicker > footer > .btns {
@@ -200,9 +194,8 @@
     right: 10px;
 }
 
-.ui-datepicker > footer > .btns > button {
+.ui-datepicker > footer > .btns > .ui-btn {
     width: 85px;
-    font-size: 14px;
     margin-left: 10px;
 }
 
@@ -217,4 +210,20 @@
 
 .ui-datepicker.is-range > header > .title > .item > .val {
     display: block;
+}
+
+.ui-datepicker.is-range > section > .table table.body td.selected span {
+    width: 100%;
+    line-height: 22px;
+    border-radius: 0px;
+}
+
+.ui-datepicker.is-range > section > .table table.body td.selected.start span {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.ui-datepicker.is-range > section > .table table.body td.selected.end span {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
