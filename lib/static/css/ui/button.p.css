@@ -12,6 +12,7 @@
 .ui-btn > .btn {
     display: block;
     vertical-align: middle;
+    width: 100%;
     height: 100%;
     color: inherit;
     font-size: 14px;
