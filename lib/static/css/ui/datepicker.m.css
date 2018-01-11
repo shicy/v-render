@@ -2,6 +2,7 @@
 .ui-datepicker {
     border: 1px solid #ddd;
     border-radius: 0.03rem;
+    overflow: hidden;
 }
 
 .ui-datepicker > header {
@@ -9,7 +10,7 @@
 }
 
 .ui-datepicker > header > .title {
-    padding-left: 0.1rem;
+    padding: 0px 0.1rem;
 }
 
 .ui-datepicker > header > .title > .item > .lbl {
