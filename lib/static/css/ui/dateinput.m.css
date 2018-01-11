@@ -75,29 +75,61 @@
     left: 50%;
     top: 50%;
     width: 3.2rem;
-    transform: translate(-50%,-50%);
-    border-radius: 0.05rem;
+    transform: translate(-50%, -50%);
+    border: 0px;
     background-color: #fff;
-    padding-bottom: 0.05rem;
-    overflow: hidden;
 }
 
 .ui-dateipt > .picker > .ui-datepicker > header {
     color: #fff;
-    font-size: 0.25rem;
+    font-size: 0.26rem;
     text-align: center;
-    border-top: 1px solid #333444;
+    border-bottom: 0px;
     background-color: #333444;
-    padding: 0.5rem 0px;
+    padding: 0.6rem 0px 0.2rem;
 }
 
-.ui-dateipt > .picker > .ui-datepicker > header > .prev,
-.ui-dateipt > .picker > .ui-datepicker > header > .next {
+.ui-dateipt > .picker > .ui-datepicker > header > .title > .item > .val {
+    display: block;
+    color: #999;
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+}
+
+.ui-dateipt > .picker > .ui-datepicker > header > .title > .item > button {
     display: none;
 }
 
-.ui-dateipt > .picker > .ui-datepicker > table > thead > tr {
-    background-color: #f3f3f3;
+.ui-dateipt > .picker > .ui-datepicker > header > button {
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 0.4rem;
+    height: 0.4rem;
+    color: #999;
+    font-size: 0.1rem;
+    border: 0px;
+    background: none;
+    padding: 0px;
+}
+
+.ui-dateipt > .picker > .ui-datepicker > header > button.today {
+    right: 0.6rem;
+}
+
+.ui-dateipt > .picker > .ui-datepicker > header > button.clear {
+    right: 0.1rem;
+}
+
+.ui-dateipt > .picker > .ui-datepicker > header > button > label {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0.02rem;
+    padding: 0.01rem 0.05rem;
+}
+
+.ui-dateipt > .picker > .ui-datepicker > section > .table > table.head {
+    background-color: #333444;
 }
 
 .ui-dateipt.show-picker > .picker {
