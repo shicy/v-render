@@ -55,6 +55,14 @@
     outline: none;
 }
 
+.ui-daterange > .ipt > .clear:hover {
+    opacity: .75;
+}
+
+.ui-daterange > .ipt > .clear:active {
+    opacity: 1;
+}
+
 .ui-daterange > .ipt > .prompt {
 	position: absolute;
     left: 30px;
@@ -70,6 +78,15 @@
 }
 
 .ui-daterange > .ipt > .picker {
+    position: absolute;
+    left: 0px;
+    top: 33px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/*.ui-daterange > .ipt > .picker {
 	position: absolute;
     left: 0px;
     top: 34px;
@@ -248,7 +265,7 @@
 
 .ui-daterange > .ipt > .picker > footer > .btns > .ui-btn > button {
 	width: 80px;
-}
+}*/
 
 .ui-daterange > .ipt:hover > input {
 	padding-right: 30px;
@@ -341,7 +358,7 @@
     box-shadow: 0px 1px 3px 0px #ccc;
 }
 
-.ui-daterange.show-picker > .ipt > .picker {
+/*.ui-daterange.show-picker > .ipt > .picker {
 	display: block;
 }
 
@@ -353,7 +370,7 @@
 .ui-daterange.show-right > .ipt > .picker {
 	left: auto;
 	right: 0px;
-}
+}*/
 
 .ui-daterange.has-val > .ipt > .prompt {
 	display: none;
@@ -362,14 +379,6 @@
 .ui-daterange.has-val > .ipt:hover > .clear {
 	display: block;
 	opacity: .5;
-}
-
-.ui-daterange > .ipt > .clear:hover {
-	opacity: .75;
-}
-
-.ui-daterange > .ipt > .clear:active {
-	opacity: 1;
 }
 
 .ui-daterange[disabled] {

@@ -1,6 +1,7 @@
 
 .ui-datepicker {
     display: inline-block;
+    min-width: 212px;
     border: 1px solid #eee;
     border-radius: 3px;
     background-color: #fff;
@@ -197,6 +198,10 @@
 .ui-datepicker > footer > .btns > .ui-btn {
     width: 85px;
     margin-left: 10px;
+}
+
+.ui-datepicker.is-range {
+    min-width: 422px;
 }
 
 .ui-datepicker.is-range > header > .title > .item {
