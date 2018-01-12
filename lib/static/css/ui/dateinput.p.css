@@ -33,6 +33,20 @@
     border-color: #66afe9;
 }
 
+.ui-dateipt > .ipt > .prompt {
+    position: absolute;
+    left: 30px;
+    top: 1px;
+    right: 1px;
+    line-height: 30px;
+    color: #999;
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .ui-dateipt > .ipt > .clear {
 	position: absolute;
 	width: 16px;
@@ -86,6 +100,10 @@
 .ui-dateipt.show-before > .picker {
     top: auto;
     bottom: 35px;
+}
+
+.ui-dateipt.has-val > .ipt > .prompt {
+    display: none;
 }
 
 .ui-dateipt[disabled] {
