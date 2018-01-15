@@ -1,5 +1,10 @@
 
 
+.ui-dateipt {
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .ui-dateipt > .ipt {
 	height: 0.44rem;
     border: 1px solid #ddd;
@@ -54,6 +59,20 @@
     background-size: .16rem;
     opacity: .25;
     z-index: 1;
+}
+
+.ui-dateipt > .ipt > .prompt {
+    position: absolute;
+    left: 0.4rem;
+    right: 0px;
+    top: 50%;
+    color: #999;
+    line-height: 0.2rem;
+    margin-top: -0.1rem;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .ui-dateipt > .picker {
@@ -135,6 +154,10 @@
 
 .ui-dateipt.has-val > .ipt > .clear {
 	display: inline-block;
+}
+
+.ui-dateipt.has-val > .ipt > .prompt {
+    display: none;
 }
 
 .ui-dateipt[disabled] > .ipt {

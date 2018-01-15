@@ -1,4 +1,9 @@
 
+.ui-daterange {
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .ui-daterange > .ipt {
 	height: 0.44rem;
     border: 1px solid #ddd;
@@ -22,11 +27,11 @@
     height: 100%;
     color: inherit;
     font-size: inherit;
-    border: 0;
-    background: 0 0;
-    padding: 0 0 0 .4rem;
-    margin: 0;
-    outline: 0;
+    border: 0px;
+    background: none;
+    padding: 0px 0px 0px .4rem;
+    margin: 0px;
+    outline: none;
     pointer-events: none;
 }
 
