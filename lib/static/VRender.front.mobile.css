@@ -21,6 +21,10 @@ input, textarea, select, button, a, img {
 	-webkit-tap-highlight-color: transparent;
 }
 
+.ui-hidden, .ui-fn {
+	display: none;
+}
+
 .ui-noscroll {
 	overflow: hidden !important;
 }
