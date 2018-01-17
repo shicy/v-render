@@ -47,7 +47,7 @@
 	display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url(/VRender/icons/009.png);
+    background-image: url(/VRender/icons/009a.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 6px;
@@ -76,7 +76,7 @@
 .ui-tabbar > .bar > .tabs > .closable > .close:hover {
     border-radius: 100px;
     background-color: #ff6c6c;
-    background-image: url(/VRender/icons/0091.png);
+    background-image: url(/VRender/icons/009b.png);
     background-size: 6px;
 	opacity: 1;
 }

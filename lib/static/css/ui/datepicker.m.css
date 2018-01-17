@@ -44,12 +44,12 @@
 
 .ui-datepicker > header > .title > .item > button.prev.m {
     right: 0.4rem;
-    background-image: url(/VRender/icons/008.png);
+    background-image: url(/VRender/icons/008a.png);
 }
 
 .ui-datepicker > header > .title > .item > button.next.m {
     right: 0px;
-    background-image: url(/VRender/icons/006.png);
+    background-image: url(/VRender/icons/006a.png);
 }
 
 .ui-datepicker > header > button {
