@@ -26,6 +26,50 @@
     outline: none;
 }
 
+.ui-btn > .btn > .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-btn.waitting {
+    pointer-events: none;
+}
+
+.ui-btn.waitting:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.ui-btn.waitting:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0px 0px -8px;
+    background-image: url(/VRender/icons/016b.png);
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: ui-btn-waitting 1s infinite;
+    -webkit-animation: ui-btn-waitting 1s infinite;
+    z-index: 1;
+}
+
 .ui-btn-primary {
     color: #fff;
     border-color: #232431;
@@ -145,7 +189,25 @@
 }
 
 
+@-webkit-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
+@-o-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-moz-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
 
