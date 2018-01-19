@@ -1,119 +1,129 @@
 
-/*.ui-dialog > .box {
-    display: inline-block;
-	min-width: 450px;
+.ui-dialog {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 2100;
 }
 
-.ui-dialog > .box > .dialog-view {
+.ui-dialog > .dialog-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 900px;
+    height: 600px;
+    max-width: 92%;
+    max-height: 94%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.ui-dialog > .dialog-container > .dialog-view {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    min-height: 250px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    text-align: left;
+    min-width: 400px;
+    min-height: 200px;
 }
 
-.ui-dialog > .box > .dialog-view > header {
-	height: 52px;
+.ui-dialog > .dialog-container > .dialog-view > header {
+    flex: none;
     background-color: #f4f5f9;
-    padding: 0px 0px 0px 12px;
 }
 
-.ui-dialog > .box > .dialog-view > header > .title {
-	display: inline-block;
+.ui-dialog > .dialog-container > .dialog-view > header > .title {
+    padding: 9px 60px 9px 12px;
     font-size: 16px;
-    line-height: 52px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.ui-dialog > .box > .dialog-view > header > .closebtn {
-	position: absolute;
-    width: 40px;
-    height: 52px;
-    top: 0px;
-    right: 0px;
+.ui-dialog > .dialog-container > .dialog-view > header > .closebtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    border: 0px;
+    background: none;
     background-image: url(/VRender/icons/001a.png);
     background-size: 12px;
-    background-position: center;
     background-repeat: no-repeat;
-    opacity: .5;
+    background-position: center;
+    outline: none;
     cursor: pointer;
+    opacity: 0.5;
 }
 
-.ui-dialog > .box > .dialog-view > header > .closebtn:hover {
-	opacity: .85;
+.ui-dialog > .dialog-container > .dialog-view > header > .closebtn:hover {
+    opacity: 1;
+    background-size: 14px;
 }
 
-.ui-dialog > .box > .dialog-view > header > .closebtn:active {
-	background-color: #f0f0f0;
+.ui-dialog > .dialog-container > .dialog-view > section {
+    flex: auto;
 }
 
-.ui-dialog > .box > .dialog-view > section {
-    font-size: 14px;
-	padding: 38px 25px 50px;
-    flex: 1;
+.ui-dialog > .dialog-container > .dialog-view > section > .container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 14px 30px 26px;
+    overflow: auto;
 }
 
-.ui-dialog > .box > .dialog-view > footer {
-	background-color: #f4f5f9;
+.ui-dialog > .dialog-container > .dialog-view > footer {
+    flex: none;
+    height: 54px;
+    background-color: #f4f5f9;
 }
 
-.ui-dialog > .box > .dialog-view > footer > .btnbar {
-	text-align: center;
-    padding: 13px 0px 14px;
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar {
+    position: absolute;
+    top: 11px;
+    right: 20px;
 }
 
-.ui-dialog > .box > .dialog-view > footer > .btnbar > div {
-	display: inline-block;
-	padding: 0px 5px;
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
 }
 
-.ui-dialog > .box > .dialog-view > footer > .btnbar > div > .ui-btn > button {
-	min-width: 90px;
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn {
+    min-width: 80px;
 }
 
-.ui-dialog.normal > .box {
-    width: 900px;
-    height: 600px;
+.ui-dialog.small > .dialog-container {
+    width: 540px;
+    height: 320px;
 }
 
-.ui-dialog.full > .box {
+.ui-dialg.big > .dialog-container {
     width: 100%;
     height: 100%;
 }
 
-.ui-dialog.fill > .box > .dialog-view > section {
-    padding: 0px;
-    overflow: auto;
-}
-
-.ui-dialog.fill > .box > .dialog-view > section > * {
-    padding: 38px 25px 50px;
-}
-
-.ui-dialog-wrap {
-	position: fixed;
+.ui-dialog-mask {
+    position: fixed;
     left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1000;
+    z-index: 2000;
 }
-
-.ui-dialog-wrap > .ui-dialog {
-	position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-.ui-dialog-wrap > .ui-dialog > .box {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 96%;
-    max-height: 96%;
-}*/

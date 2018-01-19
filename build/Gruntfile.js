@@ -6,39 +6,39 @@ module.exports = function (grunt) {
 	commonScripts.push("js/FrontComponent.js");
 
 	// commonScripts.push("js/render/*.js");
-	commonScripts.push("js/render/_base.js");
-	commonScripts.push("js/render/group.js");
-	commonScripts.push("js/render/button.js");
-	commonScripts.push("js/render/checkbox.js");
-	commonScripts.push("js/render/radiobox.js");
-	commonScripts.push("js/render/textview.js");
-	commonScripts.push("js/render/dropdownlist.js");
-	commonScripts.push("js/render/combobox.js");
-	commonScripts.push("js/render/datepicker.js");
-	commonScripts.push("js/render/dateinput.js");
-	commonScripts.push("js/render/daterange.js");
-	commonScripts.push("js/render/panel.js");
-	commonScripts.push("js/render/container.js");
-	commonScripts.push("js/render/datagrid.js");
-	commonScripts.push("js/render/tabbar.js");
-	commonScripts.push("js/render/dialog.js");
-
 	// commonScripts.push("js/ui/*.js");
+
+	commonScripts.push("js/render/_base.js");
 	commonScripts.push("js/ui/_base.js");
-	commonScripts.push("js/ui/group.js");
-	commonScripts.push("js/ui/button.js");
-	commonScripts.push("js/ui/checkbox.js");
-	commonScripts.push("js/ui/radiobox.js");
-	commonScripts.push("js/ui/textview.js");
+	commonScripts.push("js/render/dropdownlist.js");
 	commonScripts.push("js/ui/dropdownlist.js");
+	commonScripts.push("js/render/group.js");
+	commonScripts.push("js/ui/group.js");
+	commonScripts.push("js/render/button.js");
+	commonScripts.push("js/ui/button.js");
+	commonScripts.push("js/render/checkbox.js");
+	commonScripts.push("js/ui/checkbox.js");
+	commonScripts.push("js/render/radiobox.js");
+	commonScripts.push("js/ui/radiobox.js");
+	commonScripts.push("js/render/textview.js");
+	commonScripts.push("js/ui/textview.js");
+	commonScripts.push("js/render/combobox.js");
 	commonScripts.push("js/ui/combobox.js");
+	commonScripts.push("js/render/datepicker.js");
 	commonScripts.push("js/ui/datepicker.js");
+	commonScripts.push("js/render/dateinput.js");
 	commonScripts.push("js/ui/dateinput.js");
+	commonScripts.push("js/render/daterange.js");
 	commonScripts.push("js/ui/daterange.js");
+	commonScripts.push("js/render/panel.js");
 	commonScripts.push("js/ui/panel.js");
+	commonScripts.push("js/render/container.js");
 	commonScripts.push("js/ui/container.js");
+	commonScripts.push("js/render/datagrid.js");
 	commonScripts.push("js/ui/datagrid.js");
+	commonScripts.push("js/render/tabbar.js");
 	commonScripts.push("js/ui/tabbar.js");
+	commonScripts.push("js/render/dialog.js");
 	commonScripts.push("js/ui/dialog.js");
 
 	grunt.initConfig({
