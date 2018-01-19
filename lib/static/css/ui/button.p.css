@@ -113,6 +113,10 @@
     height: 22px;
 }
 
+.ui-btn.tiny.waitting:after {
+    background-size: 12px;
+}
+
 .ui-btn.tiny > .btn {
     font-size: 12px;
     padding: 0px 3px 1px;
@@ -120,6 +124,10 @@
 
 .ui-btn.small {
     height: 26px;
+}
+
+.ui-btn.small.waitting:after {
+    background-size: 14px;
 }
 
 .ui-btn.small > .btn {
@@ -131,6 +139,13 @@
     height: 38px;
 }
 
+.ui-btn.big.waitting:after {
+    width: 18px;
+    height: 18px;
+    margin: -9px 0px 0px -9px;
+    background-size: 18px;
+}
+
 .ui-btn.big > .btn {
     font-size: 16px;
     padding: 0px 20px 2px;
@@ -138,6 +153,13 @@
 
 .ui-btn.bigger {
     height: 46px;
+}
+
+.ui-btn.bigger.waitting:after {
+    width: 20px;
+    height: 20px;
+    margin: -10px 0px 0px -10px;
+    background-size: 20px;
 }
 
 .ui-btn.bigger > .btn {
