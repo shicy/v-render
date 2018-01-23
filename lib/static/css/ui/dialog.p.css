@@ -109,35 +109,55 @@
     min-width: 80px;
 }
 
+.ui-dialog.waitting > .dialog-container:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+
+.ui-dialog.waitting > .dialog-container:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    margin: -16px 0px 0px -16px;
+    background-image: url(/VRender/icons/017a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    animation: ui-btn-waitting 1s steps(8, end) infinite;
+    -webkit-animation: ui-btn-waitting 1s steps(8, end) infinite;
+    opacity: 0.75;
+    z-index: 1;
+}
+
 .ui-dialog.show-dialog {
     display: block;
 }
 
-/*.ui-dialog.translate {
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.ui-dialog.translate.show-dialog {
-    opacity: 1;
-}*/
-
-.ui-dialog.small > .dialog-container {
+.ui-dialog[opt-size='small'] > .dialog-container {
     width: 540px;
     height: 320px;
 }
 
-.ui-dialog.big > .dialog-container {
+.ui-dialog[opt-size='big'] > .dialog-container {
     width: 100%;
     height: 100%;
 }
 
-.ui-dialog.auto > .dialog-container {
+.ui-dialog[opt-size='auto'] > .dialog-container {
     width: auto;
     height: auto;
 }
 
-.ui-dialog.auto > .dialog-container > .dialog-view > section > .container {
+.ui-dialog[opt-size='auto'] > .dialog-container > .dialog-view > section > .container {
     position: relative;
     max-height: 600px;
 }
@@ -172,4 +192,25 @@
     opacity: 0;
     transform: scale(0.1);
     transition: all 0.2s;
+}
+
+
+@-webkit-keyframes ui-dialog-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-o-keyframes ui-dialog-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-moz-keyframes ui-dialog-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ui-dialog-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
