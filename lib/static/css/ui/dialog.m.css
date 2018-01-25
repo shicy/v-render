@@ -1,0 +1,132 @@
+
+.ui-dialog {
+	display: none;
+	position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2100;
+}
+
+.ui-dialog > .dialog-container {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 3.2rem;
+    transform: translate(-50%, -50%);
+    border-radius: 0.03rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > header {
+	height: 0.4rem;
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > header > .title {
+	line-height: 0.4rem;
+    padding: 0px 0px 0px 0.12rem;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > header > .closebtn {
+	display: none;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > section > .container {
+	min-height: 0.8rem;
+	max-height: 4rem;
+	padding: 0.1rem 0.12rem;
+	overflow: auto;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar {
+	border-top: 1px solid #ddd;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn {
+	display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    border-left: 1px solid #ddd;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn:first-child {
+	border-left: 0px;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn {
+	color: #333444;
+	border: 0px;
+	background-color: #fff;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn:active > .btn {
+	background-color: #f3f3f3;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn-primary {
+	color: #069bea;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar[opt-len='2'] > .btn {
+    width: 50%;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar[opt-len='3'] > .btn {
+    width: 33.333333%;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar[opt-len='4'] > .btn {
+    width: 25%;
+}
+
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar[opt-len='5'] > .btn {
+    width: 20%;
+}
+
+.ui-dialog.show-dialog {
+	display: block;
+}
+
+.ui-dialog[opt-fill='1'] > .dialog-container > .dialog-view > section > .container {
+    padding: 0px;
+}
+
+.ui-dialog-mask {
+	position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+}
+
+.ui-dialog.translate-open {
+    opacity: 0;
+    transform: scale(0.1);
+}
+
+.ui-dialog.translate-opened {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.2s;
+}
+
+.ui-dialog.translate-close {
+    display: block;
+    transform: scale(1);
+}
+
+.ui-dialog.translate-closed {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 0.2s;
+}
+

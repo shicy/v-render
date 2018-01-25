@@ -162,6 +162,10 @@
     max-height: 600px;
 }
 
+.ui-dialog[opt-fill='1'] > .dialog-container > .dialog-view > section > .container {
+    padding: 0px;
+}
+
 .ui-dialog-mask {
     position: fixed;
     left: 0px;
