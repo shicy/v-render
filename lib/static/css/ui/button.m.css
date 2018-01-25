@@ -20,6 +20,50 @@
     outline: none;
 }
 
+.ui-btn > .btn > .icon {
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    vertical-align: middle;
+    margin-top: -0.03rem;
+    margin-right: 0.05rem;
+    background-position: center;
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+}
+
+.ui-btn.waitting {
+    pointer-events: none;
+}
+
+.ui-btn.waitting:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.ui-btn.waitting:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.32rem;
+    height: 0.32rem;
+    margin: -0.16rem 0px 0px -0.16rem;
+    background-image: url(/VRender/icons/016b.png);
+    background-size: 0.16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: ui-btn-waitting 1s infinite;
+    -webkit-animation: ui-btn-waitting 1s infinite;
+    z-index: 1;
+}
+
 .ui-btn-primary {
     color: #fff;
     border-color: #000;
@@ -77,4 +121,24 @@
 .ui-btn[disabled] {
     opacity: 0.3;
     pointer-events: none;
+}
+
+@-webkit-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-o-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-moz-keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ui-btn-waitting {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
