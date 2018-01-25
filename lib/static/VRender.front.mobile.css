@@ -25,6 +25,6 @@ input, textarea, select, button, a, img {
 	display: none;
 }
 
-.ui-noscroll {
+.ui-scrollless {
 	overflow: hidden !important;
 }
