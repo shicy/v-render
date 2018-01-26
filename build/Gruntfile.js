@@ -30,6 +30,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/dateinput.js");
 	commonScripts.push("js/render/daterange.js");
 	commonScripts.push("js/ui/daterange.js");
+	commonScripts.push("js/render/radiogroup.js");
+	commonScripts.push("js/ui/radiogroup.js");
 	commonScripts.push("js/render/panel.js");
 	commonScripts.push("js/ui/panel.js");
 	commonScripts.push("js/render/container.js");
