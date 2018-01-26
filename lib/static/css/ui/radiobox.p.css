@@ -27,6 +27,7 @@
 }
 
 .ui-radbox > span {
+    display: inline-block;
     padding-left: 3px;
 }
 

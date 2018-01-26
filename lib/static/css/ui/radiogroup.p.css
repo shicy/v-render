@@ -1,0 +1,9 @@
+
+.ui-radgrp > .item {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.ui-radgrp > .item:first-child {
+	margin-left: 0px;
+}
