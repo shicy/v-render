@@ -88,6 +88,35 @@
     width: 20%;
 }
 
+.ui-dialog.waitting > .dialog-container:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+
+.ui-dialog.waitting > .dialog-container:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0.32rem;
+    height: 0.32rem;
+    margin: -16px 0px 0px -16px;
+    background-image: url(/VRender/icons/017a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.32rem;
+    animation: ui-btn-waitting 1s steps(8, end) infinite;
+    -webkit-animation: ui-btn-waitting 1s steps(8, end) infinite;
+    opacity: 0.75;
+    z-index: 1;
+}
+
 .ui-dialog.show-dialog {
 	display: block;
 }
