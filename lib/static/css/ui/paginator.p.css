@@ -1,5 +1,68 @@
 
-.ui-paginator > .pages {
+.ui-paginator {
+    height: 32px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.ui-paginator > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ui-paginator > .pagebar > .btn {
+    width: auto;
+    height: 32px;
+    min-width: 32px;
+    padding: 0px 8px;
+    margin: 0px 3px;
+    color: #383838;
+    font-size: 12px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+}
+
+.ui-paginator > .pagebar > .btn:first-child {
+    margin-left: 0px;
+}
+
+.ui-paginator > .pagebar > .btn:last-child {
+    margin-right: 0px;
+}
+
+.ui-paginator > .pagebar > .pages > ul {
+    display: none;
+}
+
+.ui-paginator > .pagebar > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ui-paginator > .sizebar > ul {
+    display: none;
+}
+
+.ui-paginator[opt-mode='normal'] > .pagebar > .pages {
+    padding: 0px 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page {
+    display: inline-block;
+    width: 32px;
+    margin: 0px 1px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*.ui-paginator > .pages {
 	display: inline-block;
 }
 
@@ -76,4 +139,4 @@
     opacity: .5;
     cursor: default;
     pointer-events: none;
-}
+}*/
