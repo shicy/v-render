@@ -36,6 +36,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/panel.js");
 	commonScripts.push("js/render/container.js");
 	commonScripts.push("js/ui/container.js");
+	commonScripts.push("js/render/paginator.js");
+	commonScripts.push("js/ui/paginator.js");
 	commonScripts.push("js/render/datagrid.js");
 	commonScripts.push("js/ui/datagrid.js");
 	commonScripts.push("js/render/tabbar.js");
