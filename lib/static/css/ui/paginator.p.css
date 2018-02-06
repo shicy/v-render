@@ -41,6 +41,14 @@
     vertical-align: middle;
 }
 
+.ui-paginator > .pagebar > .btn + .pages {
+    margin-left: 2px;
+}
+
+.ui-paginator > .pagebar > .pages + .btn {
+    margin-left: 5px;
+}
+
 .ui-paginator > .sizebar {
     min-width: 55px;
     margin-left: 10px;
@@ -72,7 +80,7 @@
 .ui-paginator > .sizebar > ul {
     display: none;
     position: absolute;
-    z-index: 1800;
+    z-index: 200;
     top: 33px;
     left: 0px;
     width: 100%;
@@ -87,6 +95,15 @@
     padding-left: 10px;
     line-height: 24px;
     cursor: pointer;
+}
+
+.ui-paginator > .sizebar.show-dropdown > ul {
+    display: block;
+}
+
+.ui-paginator > .sizebar.show-before > ul {
+    top: auto;
+    bottom: 33px;
 }
 
 .ui-paginator > .statusbar {
@@ -147,6 +164,34 @@
     background-color: #f3f3f3;
 }
 
+.ui-paginator.link {
+    color: #003cff;
+    font-size: 16px;
+}
+
+.ui-paginator.link > .pagebar > .btn {
+    border: 0px;
+    color: #003cff;
+    font-size: 14px;
+}
+
+.ui-paginator.link > .pagebar > .btn:hover {
+    text-decoration: underline;
+    background-color: inherit;
+}
+
+.ui-paginator.link > .sizebar {
+    display: none;
+}
+
+.ui-paginator.link > .statusbar {
+    display: none;
+}
+
+.ui-paginator.link > .skipbar {
+    display: none;
+}
+
 .ui-paginator.is-first > .pagebar > .btn.first,
 .ui-paginator.is-first > .pagebar > .btn.prev,
 .ui-paginator.is-last > .pagebar > .btn.next,
@@ -172,7 +217,8 @@
 
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page {
     display: inline-block;
-    width: 32px;
+    min-width: 32px;
+    vertical-align: middle;
     margin: 0px 1px;
     text-align: center;
     line-height: 28px;
@@ -181,12 +227,24 @@
     cursor: pointer;
 }
 
+.ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:first-child {
+    margin-left: 0px;
+}
+
+.ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:last-child {
+    margin-right: 0px;
+}
+
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:hover {
     background-color: #f3f3f3;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages {
-    margin: 0px 5px;
+.ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page.selected {
+    color: #fff;
+    font-size: 16px;
+    border-color: #333444;
+    background-color: #333444;
+    cursor: default;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .lbl {
@@ -219,7 +277,7 @@
     position: absolute;
     top: 33px;
     left: 0px;
-    z-index: 1800;
+    z-index: 200;
     width: 100%;
     max-height: 210px;
     overflow: auto;
@@ -234,36 +292,26 @@
     cursor: pointer;
 }
 
-.ui-paginator.link {
-    color: #003cff;
-    font-size: 16px;
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul > li:hover {
+    background-color: #f0f0f0;
 }
 
-.ui-paginator.link > .pagebar > .btn {
-    border: 0px;
-    color: #003cff;
-    font-size: 14px;
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul > li.selected {
+    color: #fff;
+    background-color: #333444;
 }
 
-.ui-paginator.link > .pagebar > .btn:hover {
-    text-decoration: underline;
-    background-color: inherit;
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages.show-dropdown > ul {
+    display: block;
 }
 
-.ui-paginator.link > .sizebar {
-    display: none;
-}
-
-.ui-paginator.link > .statusbar {
-    display: none;
-}
-
-.ui-paginator.link > .skipbar {
-    display: none;
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages.show-before > ul {
+    top: auto;
+    bottom: 33px;
 }
 
 .ui-paginator.link[opt-mode='normal'] > .pagebar > .pages {
-    color: #333;
+    color: #333444;
 }
 
 .ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page {
@@ -275,8 +323,17 @@
     background-color: inherit;
 }
 
+.ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page.selected {
+    color: #333444;
+    background-color: inherit;
+}
+
+.ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page.selected {
+    text-decoration: none;
+}
+
 .ui-paginator.link[opt-mode='dropdown'] > .pagebar > .pages {
-    color: #333;
+    color: #333444;
 }
 
 .ui-paginator.link[opt-mode='dropdown'] > .pagebar > .pages > .lbl {
