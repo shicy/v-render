@@ -38,10 +38,12 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/container.js");
 	commonScripts.push("js/render/paginator.js");
 	commonScripts.push("js/ui/paginator.js");
-	commonScripts.push("js/render/datagrid.js");
-	commonScripts.push("js/ui/datagrid.js");
+	// commonScripts.push("js/render/datagrid.js");
+	// commonScripts.push("js/ui/datagrid.js");
 	commonScripts.push("js/render/tabbar.js");
 	commonScripts.push("js/ui/tabbar.js");
+	// commonScripts.push("js/render/listview.js");
+	// commonScripts.push("js/ui/listview.js");
 	commonScripts.push("js/render/dialog.js");
 	commonScripts.push("js/ui/dialog.js");
 
