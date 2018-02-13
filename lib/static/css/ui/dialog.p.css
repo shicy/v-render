@@ -132,8 +132,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
-    animation: ui-btn-waitting 1s steps(8, end) infinite;
-    -webkit-animation: ui-btn-waitting 1s steps(8, end) infinite;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
     opacity: 0.75;
     z-index: 1;
 }

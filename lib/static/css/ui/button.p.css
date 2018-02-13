@@ -65,8 +65,8 @@
     background-size: 16px;
     background-position: center;
     background-repeat: no-repeat;
-    animation: ui-btn-waitting 1s infinite;
-    -webkit-animation: ui-btn-waitting 1s infinite;
+    animation: ui-loading-animate 1s infinite;
+    -webkit-animation: ui-loading-animate 1s infinite;
     z-index: 1;
 }
 
@@ -209,28 +209,6 @@
 .ui-btn-link[disabled]:hover > .btn {
     text-decoration: none;
 }
-
-
-@-webkit-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@-o-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@-moz-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 
 
 
