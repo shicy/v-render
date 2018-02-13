@@ -1,5 +1,6 @@
 
 .ui-listview {
+	min-height: 200px;
 	border: 1px solid #eee;
 }
 
@@ -18,6 +19,27 @@
 
 .ui-listview > ul > li.selected {
 	background-color: #fafafa;
+}
+
+.ui-listview > ul > li > .chkbox {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 10px;
+    top: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 1px #eee;
+}
+
+.ui-listview > ul > li.selected > .chkbox {
+    border-color: #333;
+    background-color: #333444 !important;
+    background-image: url(/VRender/icons/003b.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ui-listview > ul > li > .box {
@@ -106,27 +128,107 @@
 	margin-left: 10px;
 }
 
+.ui-listview > ul > li[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.ui-listview > ul > li[disabled] > .chkbox {
+    background-color: #ddd;
+}
+
+.ui-listview > .listview-empty {
+	display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.ui-listview > .listview-empty > .listview-emptydef {
+	position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0px);
+    color: #aaa;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 1px 2px #ddd;
+}
+
+.ui-listview > .listview-empty > .listview-emptydef:before {
+	content: "";
+    display: block;
+    height: 100px;
+    background-image: url(/VRender/icons/018a.png);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.45;
+}
+
+.ui-listview > .listview-load {
+	display: none;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.ui-listview > .listview-load > .listview-loaddef {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100px;
+    max-width: 50%;
+    padding: 64px 10px 0px;
+}
+
+.ui-listview > .listview-load > .listview-loaddef:before {
+	content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 16px;
+    margin-left: -16px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .ui-listview.show-chkbox > ul > li {
 	padding-left: 32px;
 }
 
-.ui-listview.show-chkbox > ul > li > .chkbox {
-	position: absolute;
-    width: 14px;
-    height: 14px;
-    left: 10px;
-    top: 13px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 0px 0px 1px 1px #eee;
+.ui-listview.is-empty > .listview-empty {
+	display: block;
 }
 
-.ui-listview.show-chkbox > ul > li.selected > .chkbox {
-	border-color: #333;
-    background-color: #333444;
-    background-image: url(/VRender/icons/003b.png);
-    background-size: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
+.ui-listview.is-loading > ul {
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+.ui-listview.is-loading > .listview-empty {
+	display: none;
+}
+
+.ui-listview.is-loading > .listview-load {
+	display: block;
+}
+
+.ui-listview.is-loading > .listview-load > .listview-loaddef:before {
+	animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }
