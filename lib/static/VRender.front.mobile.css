@@ -28,3 +28,23 @@ input, textarea, select, button, a, img {
 .ui-scrollless {
 	overflow: hidden !important;
 }
+
+@-webkit-keyframes ui-loading-animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-o-keyframes ui-loading-animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-moz-keyframes ui-loading-animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ui-loading-animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
