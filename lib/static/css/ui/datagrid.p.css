@@ -1,146 +1,130 @@
 
 .ui-datagrid {
-	border: 1px solid #e7e7eb;
-    font-size: 14px;
-    text-align: left;
-    color: #383838;
+	border: 1px solid #eee;
 }
 
-.ui-datagrid td.col-op {
-	text-align: right;
-	padding: 0px 12px 0px 0px;
-}
-
-.ui-datagrid td.col-op > a {
-	margin-left: 5px;
-}
-
-.ui-datagrid td.col-op > a:first-child {
-	margin-left: 0px;
-}
-
-.ui-datagrid td.col-type-chk {
-	width: 25px;
-    position: relative;
-}
-
-.ui-datagrid td.col-type-chk > .chkbox {
+.ui-datagrid > .table > header {
 	position: absolute;
-    width: 14px;
-    height: 14px;
-    left: 8px;
-    top: 50%;
-    margin-top: -7px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1;
 }
 
-.ui-datagrid td.col-type-date {
-	width: 110px;
-}
-
-.ui-datagrid tr.selected > td.col-type-chk > .chkbox {
-	background-color: #333444;
-    background-image: url(/VRender/icons/003b.png);
-    background-size: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.35);
-}
-
-.ui-datagrid thead td.col-type-chk > .chkbox {
-	display: none;
-}
-
-.ui-datagrid > table {
+.ui-datagrid > .table > header > table {
 	width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
 }
 
-.ui-datagrid > table > thead {
-	border-bottom: 1px solid #e7e7eb;
+.ui-datagrid > .table > header > table > thead > tr {
+	height: 35px;
+	color: #787878;
+	background-color: #f4f5f9;
 }
 
-.ui-datagrid > table > thead > tr {
-	height: 34px;
-    background-color: #f4f5f9;
+.ui-datagrid > .table > header > table > thead > tr > th {
+	font-weight: normal;
+	text-align: left;
 }
 
-.ui-datagrid > table > thead > tr > td {
-	padding: 0px 5px 0px 12px;
+.ui-datagrid > .table > header > table > thead > tr > th > .title {
+	padding-left: 12px;
 }
 
-.ui-datagrid > table > tbody > tr {
-	line-height: 16px;
+.ui-datagrid > .table > section > table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
-.ui-datagrid > table > tbody > tr:hover {
-	background-color: #f0f0f0;
+.ui-datagrid > .table > section > table > thead {
+	visibility: hidden;
 }
 
-.ui-datagrid > table > tbody > tr.selected {
-	background-color: #333444;
-	color: #fff;
+.ui-datagrid > .table > section > table > thead > tr {
+	height: 36px;
 }
 
-.ui-datagrid > table > tbody > tr.selected > td.col-op > a {
-	color: #fff;
+.ui-datagrid > .table > section > table > thead > tr > th {
+	min-width: 65px;
+	font-weight: normal;
 }
 
-.ui-datagrid > table > tbody > tr > td {
-	padding: 10px 12px;
-	border-top: 1px solid #e7e7eb;
+.ui-datagrid > .table > section > table > thead > tr > th.col-chk {
+	min-width: 0px;
 }
 
-.ui-datagrid > table > tbody > tr:first-child > td {
+.ui-datagrid > .table > section > table > tbody {
+	vertical-align: top;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr {
+	height: 42px;
+	border-top: 1px solid #f0f0f0;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr.selected {
+	background-color: #fafafa;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr:first-child {
 	border-top: 0px;
 }
 
-.ui-datagrid > .datagrid-emp {
+.ui-datagrid > .table > section > table > tbody > tr > td {
+	position: relative;
+	padding: 10px 12px;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr > td.col-chk {
+	width: 30px;
 	text-align: center;
-    font-size: 18px;
-    min-height: 100px;
-    padding: 26px 30px 10px;
-    color: #a0a0a0;
-    text-shadow: 1px 1px 3px #ccc;
-    display: none;
+	padding: 0px;
 }
 
-.ui-datagrid > .datagrid-emp > div {
-	text-shadow: none;
-}
-
-.ui-datagrid > .datagrid-emp > div img {
-	width: auto;
-	height: auto;
-}
-
-.ui-datagrid.multiple > table > thead > tr > td.col-type-chk > .chkbox {
-	display: block;
-}
-
-.ui-datagrid.no-head > table > thead {
-	display: none;
-}
-
-.ui-datagrid.no-data > .datagrid-emp {
-	display: block;
-}
-
-.ui-datagrid + .ui-paginator {
-	text-align: right;
-	margin-top: 10px;
-}
-
-.ui-datagrid + .ui-paginator button.disabled {
-	display: none;
-}
-
-.ui-datagrid + .ui-paginator > .status {
+.ui-datagrid > .table > header > table > thead > tr > th.col-chk > .chkbox,
+.ui-datagrid > .table > section > table > tbody > tr > td.col-chk > .chkbox {
 	position: absolute;
-    left: 0px;
-    top: 0px;
+	left: 10px;
+	top: 14px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 1px #eee;
 }
+
+.ui-datagrid > .table > header > table > thead > tr > th.col-chk > .chkbox {
+	top: 50%;
+	margin-top: -7px;
+}
+
+.ui-datagrid:not([multiple]) > .table > header > table > thead > tr > th.col-chk > .chkbox {
+	display: none;
+}
+
+.ui-datagrid > .table > header > table > thead > tr.selected > th.col-chk > .chkbox,
+.ui-datagrid > .table > section > table > tbody > tr.selected > td.col-chk > .chkbox {
+	border-color: #333;
+    background-color: #333444 !important;
+    background-image: url(/VRender/icons/003b.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
