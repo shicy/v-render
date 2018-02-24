@@ -25,6 +25,11 @@
 .ui-datagrid > .table > header > table > thead > tr > th {
 	font-weight: normal;
 	text-align: left;
+	transition: all 0.4s 0.2s;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th:hover {
+	background-color: #ececec;
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th > .title {
