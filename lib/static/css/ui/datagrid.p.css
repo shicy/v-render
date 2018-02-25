@@ -3,28 +3,46 @@
 	border: 1px solid #eee;
 }
 
-.ui-datagrid > .table > header {
-	position: absolute;
-    width: 100%;
-    border-bottom: 1px solid #f0f0f0;
-    z-index: 1;
+.ui-datagrid > .table {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.ui-datagrid > .table > header > table {
+.ui-datagrid > .table > * > table {
 	width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
 }
 
-.ui-datagrid > .table > header > table > thead > tr {
+.ui-datagrid > .table > * > table > thead > tr {
 	height: 35px;
+}
+
+.ui-datagrid > .table > * > table > thead > tr > th {
+	padding: 0px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.ui-datagrid > .table > * > table > thead > tr > th > .title {
+	display: inline-block;
+	padding: 0px 5px 0px 12px;
+}
+
+.ui-datagrid > .table > header {
+	flex: none;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1;
+}
+
+.ui-datagrid > .table > header > table > thead > tr {
 	color: #787878;
 	background-color: #f4f5f9;
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th {
-	font-weight: normal;
-	text-align: left;
 	transition: all 0.4s 0.2s;
 }
 
@@ -32,27 +50,66 @@
 	background-color: #ececec;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .title {
-	padding-left: 12px;
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar {
+	display: inline-block;
+	padding-right: 5px;
 }
 
-.ui-datagrid > .table > section > table {
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+    border-radius: 3px;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:hover {
+	border: 1px solid #ddd;
+    background-color: #ddd;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > i {
+	display: block;
 	width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 12px;
+	opacity: 0.15;
+	cursor: pointer;
 }
 
-.ui-datagrid > .table > section > table > thead {
-	visibility: hidden;
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:hover > i {
+	opacity: 0.5;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th[opt-sort] > .toolbar > * > i {
+	opacity: 1;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .sort > i {
+	background-image: url(/VRender/icons/019a.png);
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown {
+	display: none;
+	position: absolute;
+}
+
+.ui-datagrid > .table > section {
+	flex: auto;
+	overflow: auto;
+	clear: both;
 }
 
 .ui-datagrid > .table > section > table > thead > tr {
-	height: 36px;
+	height: 0px;
+	line-height: 0px;
 }
 
 .ui-datagrid > .table > section > table > thead > tr > th {
 	min-width: 65px;
-	font-weight: normal;
+	overflow: hidden;
 }
 
 .ui-datagrid > .table > section > table > thead > tr > th.col-chk {
