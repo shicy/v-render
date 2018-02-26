@@ -60,18 +60,13 @@
 	width: 22px;
 	height: 22px;
 	vertical-align: middle;
-    border-radius: 3px;
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:hover {
-	border: 1px solid #ddd;
-    background-color: #ddd;
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > i {
 	display: block;
 	width: 100%;
 	height: 100%;
+	border-radius: 3px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 12px;
@@ -80,6 +75,8 @@
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:hover > i {
+	border: 1px solid #ddd;
+    background-color: #ddd;
 	opacity: 0.5;
 }
 
@@ -94,6 +91,54 @@
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown {
 	display: none;
 	position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    padding: 1px 0px 2px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px 0px #ccc;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *.show-dropdown > .dropdown {
+	display: block;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown:before {
+	content: "";
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    margin-left: -5px;
+    border: 0px solid transparent;
+    border-width: 0px 5px 6px 5px;
+    border-bottom-color: #fff;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li {
+	padding: 0px 10px 0px 0px;
+    line-height: 24px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li:hover {
+	background-color: #f3f3f3;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li.selected {
+	background-color: #eee;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li > i {
+	display: inline-block;
+    width: 24px;
+    height: 20px;
+    vertical-align: middle;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ui-datagrid > .table > section {
