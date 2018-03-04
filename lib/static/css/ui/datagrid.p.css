@@ -104,6 +104,24 @@
     border-bottom-color: #fff;
 }
 
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt {
+    left: -25px;
+	padding: 1px;
+    transform: none;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt:before {
+	left: 35px;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt > input {
+	height: 32px;
+    padding: 0px 6px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li {
 	padding: 0px 10px 0px 0px;
     line-height: 24px;
@@ -122,8 +140,8 @@
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li > i {
 	display: inline-block;
     width: 24px;
-    height: 20px;
-    vertical-align: middle;
+    height: 24px;
+    vertical-align: top;
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
@@ -137,11 +155,20 @@
 	background-image: url(/VRender/icons/022a.png);
 }
 
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .sort > .dropdown > li > i {
+	background-image: url(/VRender/icons/023c.png);
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .filter > .dropdown > li > i {
+	background-image: url(/VRender/icons/024c.png);
+}
+
 .ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .show-dropdown > .dropdown {
 	display: block;
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th[opt-sort] > .toolbar > .sort > i {
+	background-image: url(/VRender/icons/019c.png);
 	opacity: 1;
 }
 
