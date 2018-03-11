@@ -23,11 +23,28 @@
 	padding: 0px;
 	font-weight: normal;
 	text-align: left;
+	white-space: nowrap;
+}
+
+.ui-datagrid > .table > * > table > thead > tr > th > i {
+	display: inline-block;
+    width: 20px;
+    height: 22px;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    margin-left: 12px;
 }
 
 .ui-datagrid > .table > * > table > thead > tr > th > .title {
 	display: inline-block;
-	padding: 0px 5px 0px 12px;
+	margin-right: 5px;
+	margin-left: 12px;
+}
+
+.ui-datagrid > .table > * > table > thead > tr > th > i + .title {
+	margin-left: 3px;
 }
 
 .ui-datagrid > .table > header {
@@ -191,6 +208,10 @@
 .ui-datagrid > .table > section > table > thead > tr > th {
 	min-width: 65px;
 	overflow: hidden;
+}
+
+.ui-datagrid > .table > section > table > thead > tr > th > i {
+	height: 0px;
 }
 
 .ui-datagrid > .table > section > table > thead > tr > th.col-chk {
