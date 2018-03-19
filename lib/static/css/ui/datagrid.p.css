@@ -5,16 +5,13 @@
 
 .ui-datagrid > .table {
     height: 100%;
+    padding-top: 36px;
 }
 
 .ui-datagrid > .table > * > table {
 	width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
-}
-
-.ui-datagrid > .table > * > table > thead > tr {
-	height: 35px;
 }
 
 .ui-datagrid > .table > * > table > thead > tr > th {
@@ -56,6 +53,7 @@
 }
 
 .ui-datagrid > .table > header > table > thead > tr {
+	height: 35px;
 	color: #787878;
 	background-color: #f4f5f9;
 }
@@ -215,13 +213,19 @@
 }
 
 .ui-datagrid > .table > section {
+	height: 100%;
 	overflow: auto;
-	clear: both;
-	padding-top: 1px;
 }
 
 .ui-datagrid > .table > section > table > thead > tr {
+	height: 0px;
+	line-height: 0px;
+	overflow: hidden;
 	visibility: hidden;
+}
+
+.ui-datagrid > .table > section > table > thead > tr * {
+	height: 0px !important;
 }
 
 .ui-datagrid > .table > section > table > thead > tr > th {
@@ -318,6 +322,15 @@
 	opacity: 1;
 }
 
+.ui-datagrid > .table > section > table > tbody > tr.expand > td.col-exp > .expbtn {
+	transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.ui-datagrid.no-head > .table {
+	padding-top: 0px;
+}
+
 .ui-datagrid.no-head > .table > header {
 	display: none;
 }
@@ -327,8 +340,56 @@
 }
 
 
+.ui-datagrid .datagrid-expand {
+	font-size: 14px;
+	margin-bottom: -10px;
+}
 
+.ui-datagrid .datagrid-expand > div {
+	display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
 
+.ui-datagrid .datagrid-expand[cols='2'] > div {
+	width: 50%;
+}
+
+.ui-datagrid .datagrid-expand[cols='3'] > div {
+	width: 33.333333%;
+}
+
+.ui-datagrid .datagrid-expand[cols='4'] > div {
+	width: 25%;
+}
+
+.ui-datagrid .datagrid-expand[cols='5'] > div {
+	width: 20%;
+}
+
+.ui-datagrid .datagrid-expand[cols='6'] > div {
+	width: 16.666667%;
+}
+
+.ui-datagrid .datagrid-expand > div > dl {
+	display: flex;
+}
+
+.ui-datagrid .datagrid-expand > div > dl > dt {
+	flex: none;
+	width: 90px;
+	padding-right: 10px;
+	color: #999;
+	word-wrap: break-word;
+    word-break: break-word;
+}
+
+.ui-datagrid .datagrid-expand > div > dl > dd {
+	flex: auto;
+	word-wrap: break-word;
+    word-break: break-word;
+}
 
 
 
