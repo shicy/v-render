@@ -327,6 +327,97 @@
     transition: all 0.5s;
 }
 
+.ui-datagrid > .datagrid-empty {
+	display: none;
+	height: 120px;
+}
+
+.ui-datagrid > .datagrid-empty > .datagrid-emptydef {
+	position: absolute;
+    min-width: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #aaa;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 0 1px 2px #ddd;
+}
+
+.ui-datagrid > .datagrid-empty > .datagrid-emptydef:before {
+	content: "";
+    display: block;
+    height: 50px;
+    background-image: url(/VRender/icons/018a.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    opacity: 0.5;
+}
+
+.ui-datagrid > .datagrid-load {
+	display: none;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.ui-datagrid > .datagrid-load > .datagrid-loaddef {
+	position: absolute;
+    min-width: 90px;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    padding-top: 45px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ui-datagrid > .datagrid-load > .datagrid-loaddef:before {
+	content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 0px;
+    margin-left: -16px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-datagrid.is-empty > .datagrid-empty {
+	display: block;
+}
+
+.ui-datagrid.is-loading {
+	min-height: 150px;
+}
+
+.ui-datagrid.is-loading > .table {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.ui-datagrid.is-loading > .datagrid-empty {
+	display: none;
+}
+
+.ui-datagrid.is-loading > .datagrid-load {
+	display: block;
+	top: 35px;
+}
+
+.ui-datagrid.is-loading > .datagrid-load > .datagrid-loaddef:before {
+	animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
 .ui-datagrid.no-head > .table {
 	padding-top: 0px;
 }
@@ -337,6 +428,10 @@
 
 .ui-datagrid.no-head > .table > section > table > thead {
 	display: none;
+}
+
+.ui-datagrid.no-head.is-loading > .datagrid-load {
+	top: 0px;
 }
 
 
