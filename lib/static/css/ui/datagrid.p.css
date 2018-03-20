@@ -386,7 +386,7 @@
     top: 0px;
     margin-left: -16px;
     background-image: url(/VRender/icons/017a.png);
-    background-size: 32px;
+    background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -437,6 +437,7 @@
 
 .ui-datagrid .datagrid-expand {
 	font-size: 14px;
+	padding: 0px 20px;
 	margin-bottom: -10px;
 }
 
