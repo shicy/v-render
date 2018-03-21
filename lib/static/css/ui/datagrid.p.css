@@ -437,7 +437,7 @@
 
 .ui-datagrid .datagrid-expand {
 	font-size: 14px;
-	padding: 0px 20px;
+	padding: 0px 20px 0px 10px;
 	margin-bottom: -10px;
 }
 
@@ -475,7 +475,7 @@
 .ui-datagrid .datagrid-expand > div > dl > dt {
 	flex: none;
 	width: 90px;
-	padding-right: 10px;
+	padding: 0px 10px;
 	color: #999;
 	word-wrap: break-word;
     word-break: break-word;
