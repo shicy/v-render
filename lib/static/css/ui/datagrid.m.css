@@ -1,0 +1,94 @@
+
+.ui-datagrid > .table {
+	height: 100%;
+    padding-top: 0.4rem;
+}
+
+.ui-datagrid > .table > * > table {
+	width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.ui-datagrid > .table > * > table > thead > tr {
+	height: 0.4rem;
+	padding: 0px 0.03rem;
+	color: #787878;
+	font-size: 0.15rem;
+	text-align: left;
+}
+
+.ui-datagrid > .table > * > table > thead > tr > th {
+	position: relative;
+	padding: 0px;
+	font-weight: normal;
+}
+
+.ui-datagrid > .table > * > table > * > tr > .col-chk {
+	width: 0.25rem;
+	padding: 0px;
+}
+
+.ui-datagrid > .table > * > table > * > tr > .col-chk > .chkbox {
+	position: absolute;
+    width: 0.18rem;
+    height: 0.18rem;
+    left: 0px;
+    top: 50%;
+    margin-top: -0.09rem;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0.03rem 0px #505050;
+}
+
+.ui-datagrid > .table > * > table > * > tr.selected > .col-chk > .chkbox {
+	background-color: #333444;
+    background-image: url(/VRender/icons/003b.png);
+    background-size: 0.1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 0.03rem 0px #222;
+}
+
+.ui-datagrid > .table > header {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown {
+	display: none;
+}
+
+.ui-datagrid > .table > section > table > thead > tr {
+	height: 0px;
+    line-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr {
+	height: 0.45rem;
+    border-bottom: 1px solid #eee;
+}
+
+.ui-datagrid > .table > section > table > tbody > tr > td {
+	position: relative;
+	padding: 0.1rem 0.03rem;
+}
+
+.ui-datagrid > .datagrid-empty {
+	display: none;
+}
+
+.ui-datagrid > .datagrid-load {
+	display: none;
+}
+
+.ui-datagrid:not([multiple]) > .table > * > table > thead > tr > .col-chk > .chkbox {
+	display: none;
+}
+
+

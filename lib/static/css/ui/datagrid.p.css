@@ -4,14 +4,9 @@
 }
 
 .ui-datagrid > .table {
+	display: flex;
+	flex-direction: column;
     height: 100%;
-    padding-top: 36px;
-}
-
-.ui-datagrid > .table > * > table {
-	width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0px;
 }
 
 .ui-datagrid > .table > * > table > thead > tr > th {
@@ -43,13 +38,15 @@
 }
 
 .ui-datagrid > .table > header {
-	position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+	flex: none;
     width: 100%;
     border-bottom: 1px solid #f0f0f0;
-    z-index: 1;
+}
+
+.ui-datagrid > .table > header > table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
 .ui-datagrid > .table > header > table > thead > tr {
@@ -213,62 +210,76 @@
 }
 
 .ui-datagrid > .table > section {
-	height: 100%;
+	flex: auto;
+}
+
+.ui-datagird > .table > section > div {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
 	overflow: auto;
 }
 
-.ui-datagrid > .table > section > table > thead > tr {
+.ui-datagird > .table > section > div > table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.ui-datagrid > .table > section > div > table > thead > tr {
 	height: 0px;
 	line-height: 0px;
 	overflow: hidden;
 	visibility: hidden;
 }
 
-.ui-datagrid > .table > section > table > thead > tr * {
+.ui-datagrid > .table > section > div > table > thead > tr * {
 	height: 0px !important;
 }
 
-.ui-datagrid > .table > section > table > thead > tr > th {
+.ui-datagrid > .table > section > div > table > thead > tr > th {
 	min-width: 65px;
 }
 
-.ui-datagrid > .table > section > table > thead > tr > th.col-chk {
+.ui-datagrid > .table > section > div > table > thead > tr > th.col-chk {
 	min-width: 0px;
 }
 
-.ui-datagrid > .table > section > table > thead > tr > th.col-exp {
+.ui-datagrid > .table > section > div > table > thead > tr > th.col-exp {
 	min-width: 0px;
 }
 
-.ui-datagrid > .table > section > table > tbody {
+.ui-datagrid > .table > section > div > table > tbody {
 	vertical-align: top;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr {
+.ui-datagrid > .table > section > div > table > tbody > tr {
 	height: 42px;
 	border-top: 1px solid #f0f0f0;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr.selected {
+.ui-datagrid > .table > section > div > table > tbody > tr.selected {
 	background-color: #fafafa;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr:first-child {
+.ui-datagrid > .table > section > div > table > tbody > tr:first-child {
 	border-top: 0px;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr > td {
+.ui-datagrid > .table > section > div > table > tbody > tr > td {
 	position: relative;
 	padding: 10px 12px;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr > td.col-chk {
+.ui-datagrid > .table > section > div > table > tbody > tr > td.col-chk {
 	width: 30px;
 	padding: 0px;
 }
 
 .ui-datagrid > .table > header > table > thead > tr > th.col-chk > .chkbox,
-.ui-datagrid > .table > section > table > tbody > tr > td.col-chk > .chkbox {
+.ui-datagrid > .table > section > div > table > tbody > tr > td.col-chk > .chkbox {
 	position: absolute;
 	left: 10px;
 	top: 14px;
@@ -290,7 +301,7 @@
 }
 
 .ui-datagrid > .table > header > table > thead > tr.selected > th.col-chk > .chkbox,
-.ui-datagrid > .table > section > table > tbody > tr.selected > td.col-chk > .chkbox {
+.ui-datagrid > .table > section > div > table > tbody > tr.selected > td.col-chk > .chkbox {
 	border-color: #333;
     background-color: #333444 !important;
     background-image: url(/VRender/icons/003b.png);
@@ -299,12 +310,12 @@
     background-position: center;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr > td.col-exp {
+.ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp {
 	width: 20px;
 	padding: 0px;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr > td.col-exp > .expbtn {
+.ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp > .expbtn {
 	position: absolute;
     width: 20px;
     height: 20px;
@@ -318,11 +329,11 @@
     opacity: 0.5;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr > td.col-exp > .expbtn:hover {
+.ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp > .expbtn:hover {
 	opacity: 1;
 }
 
-.ui-datagrid > .table > section > table > tbody > tr.expand > td.col-exp > .expbtn {
+.ui-datagrid > .table > section > div > table > tbody > tr.expand > td.col-exp > .expbtn {
 	transform: rotate(90deg);
     transition: all 0.5s;
 }
