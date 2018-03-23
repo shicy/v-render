@@ -9,7 +9,14 @@
     height: 100%;
 }
 
-.ui-datagrid > .table > * > table > thead > tr > th {
+/* commons */
+.ui-datagrid > .table > * > div > table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.ui-datagrid > .table > * > div > table > thead > tr > th {
 	position: relative;
 	padding: 0px;
 	font-weight: normal;
@@ -17,7 +24,7 @@
 	white-space: nowrap;
 }
 
-.ui-datagrid > .table > * > table > thead > tr > th > i {
+.ui-datagrid > .table > * > div > table > thead > tr > th > i {
 	display: inline-block;
     width: 20px;
     height: 22px;
@@ -27,43 +34,40 @@
     margin-left: 12px;
 }
 
-.ui-datagrid > .table > * > table > thead > tr > th > .title {
+/* commons title */
+.ui-datagrid > .table > * > div > table > thead > tr > th > .title {
 	display: inline-block;
 	margin-right: 5px;
 	margin-left: 12px;
 }
 
-.ui-datagrid > .table > * > table > thead > tr > th > i + .title {
+.ui-datagrid > .table > * > div > table > thead > tr > th > i + .title {
 	margin-left: 3px;
 }
 
+/* header */
 .ui-datagrid > .table > header {
 	flex: none;
     width: 100%;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.ui-datagrid > .table > header > table {
-	width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0px;
-}
-
-.ui-datagrid > .table > header > table > thead > tr {
+.ui-datagrid > .table > header tr {
 	height: 35px;
 	color: #787878;
 	background-color: #f4f5f9;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th {
+.ui-datagrid > .table > header th {
 	transition: all 0.4s 0.2s;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th:hover {
+.ui-datagrid > .table > header th:hover {
 	background-color: #ececec;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar {
+/* header toolbar */
+.ui-datagrid > .table > header .toolbar {
 	display: inline-block;
 	position: absolute;
 	top: 50%;
@@ -72,15 +76,7 @@
 	margin-top: -11px;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .title + .toolbar {
-	position: relative;
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .title + .toolbar > * {
-	background-color: transparent;
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * {
+.ui-datagrid > .table > header .toolbar > * {
 	display: inline-block;
 	width: 22px;
 	height: 22px;
@@ -90,11 +86,11 @@
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:first-child {
+.ui-datagrid > .table > header .toolbar > *:first-child {
 	margin-left: 0px;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > i {
+.ui-datagrid > .table > header .toolbar > * > i {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -106,13 +102,13 @@
 	cursor: pointer;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > *:hover > i {
+.ui-datagrid > .table > header .toolbar > *:hover > i {
 	border: 1px solid #ddd;
     background-color: #ddd;
 	opacity: 0.5;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown {
+.ui-datagrid > .table > header .toolbar > * > .dropdown {
 	display: none;
 	position: absolute;
     top: 28px;
@@ -123,9 +119,10 @@
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0px 1px 5px 0px #ccc;
+    z-index: 1;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown:before {
+.ui-datagrid > .table > header .toolbar > * > .dropdown:before {
 	content: "";
     position: absolute;
     left: 50%;
@@ -136,17 +133,17 @@
     border-bottom-color: #fff;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt {
+.ui-datagrid > .table > header .toolbar > * > .dropdown.ipt {
     left: -25px;
 	padding: 1px;
     transform: none;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt:before {
+.ui-datagrid > .table > header .toolbar > * > .dropdown.ipt:before {
 	left: 35px;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown.ipt > input {
+.ui-datagrid > .table > header .toolbar > * > .dropdown.ipt > input {
 	height: 32px;
     padding: 0px 6px;
     font-size: 14px;
@@ -154,22 +151,22 @@
     outline: none;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li {
+.ui-datagrid > .table > header .toolbar > * > .dropdown > li {
 	padding: 0px 10px 0px 0px;
     line-height: 24px;
     white-space: nowrap;
     cursor: pointer;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li:hover {
+.ui-datagrid > .table > header .toolbar > * > .dropdown > li:hover {
 	background-color: #f3f3f3;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li.selected {
+.ui-datagrid > .table > header .toolbar > * > .dropdown > li.selected {
 	background-color: #eee;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > * > .dropdown > li > i {
+.ui-datagrid > .table > header .toolbar > * > .dropdown > li > i {
 	display: inline-block;
     width: 24px;
     height: 24px;
@@ -179,55 +176,52 @@
     background-position: center;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .sort > i {
-	background-image: url(/VRender/icons/019a.png);
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .filter > i {
-	background-image: url(/VRender/icons/022a.png);
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .sort > .dropdown > li > i {
-	background-image: url(/VRender/icons/023c.png);
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .filter > .dropdown > li > i {
-	background-image: url(/VRender/icons/024c.png);
-}
-
-.ui-datagrid > .table > header > table > thead > tr > th > .toolbar > .show-dropdown > .dropdown {
+.ui-datagrid > .table > header .toolbar > .show-dropdown > .dropdown {
 	display: block;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th[opt-sort] > .toolbar > .sort > i {
+/* header toolbar sort */
+.ui-datagrid > .table > header .toolbar > .sort > i {
+	background-image: url(/VRender/icons/019a.png);
+}
+
+.ui-datagrid > .table > header .toolbar > .sort > .dropdown > li > i {
+	background-image: url(/VRender/icons/023c.png);
+}
+
+.ui-datagrid > .table > header th[opt-sort] > .toolbar > .sort > i {
 	background-image: url(/VRender/icons/019c.png);
 	opacity: 1;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th[opt-filter] > .toolbar > .filter > i {
+/* header toolbar filter */
+.ui-datagrid > .table > header .toolbar > .filter > i {
+	background-image: url(/VRender/icons/022a.png);
+}
+
+.ui-datagrid > .table > header .toolbar > .filter > .dropdown > li > i {
+	background-image: url(/VRender/icons/024c.png);
+}
+
+.ui-datagrid > .table > header th[opt-filter] > .toolbar > .filter > i {
 	background-image: url(/VRender/icons/022c.png);
 	opacity: 1;
 }
 
+.ui-datagrid > .table > header .title + .toolbar {
+	position: relative;
+}
+
+.ui-datagrid > .table > header .title + .toolbar > * {
+	background-color: transparent;
+}
+
+/* section */
 .ui-datagrid > .table > section {
 	flex: auto;
 }
 
-.ui-datagird > .table > section > div {
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	top: 0px;
-	bottom: 0px;
-	overflow: auto;
-}
-
-.ui-datagird > .table > section > div > table {
-	width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0px;
-}
-
+/* section head */
 .ui-datagrid > .table > section > div > table > thead > tr {
 	height: 0px;
 	line-height: 0px;
@@ -251,6 +245,7 @@
 	min-width: 0px;
 }
 
+/* section body */
 .ui-datagrid > .table > section > div > table > tbody {
 	vertical-align: top;
 }
@@ -278,7 +273,8 @@
 	padding: 0px;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th.col-chk > .chkbox,
+/* checkbox */
+.ui-datagrid > .table > header .chkbox,
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-chk > .chkbox {
 	position: absolute;
 	left: 10px;
@@ -291,16 +287,17 @@
     box-shadow: 0px 0px 1px 1px #eee;
 }
 
-.ui-datagrid > .table > header > table > thead > tr > th.col-chk > .chkbox {
+.ui-datagrid > .table > header th.col-chk > .chkbox {
+	display: none;
 	top: 50%;
 	margin-top: -7px;
 }
 
-.ui-datagrid:not([multiple]) > .table > header > table > thead > tr > th.col-chk > .chkbox {
-	display: none;
+.ui-datagrid[multiple] > .table > header th.col-chk > .chkbox {
+	display: block;
 }
 
-.ui-datagrid > .table > header > table > thead > tr.selected > th.col-chk > .chkbox,
+.ui-datagrid > .table > header tr.selected .chkbox,
 .ui-datagrid > .table > section > div > table > tbody > tr.selected > td.col-chk > .chkbox {
 	border-color: #333;
     background-color: #333444 !important;
@@ -310,6 +307,7 @@
     background-position: center;
 }
 
+/* expand column */
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp {
 	width: 20px;
 	padding: 0px;
@@ -338,6 +336,60 @@
     transition: all 0.5s;
 }
 
+/* expand view（不用全路径了，冲突也不要紧，况且概率很小） */
+.ui-datagrid tr.row-expand .datagrid-expand {
+	font-size: 14px;
+	padding: 0px 20px 0px 10px;
+	margin-bottom: -10px;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand > div {
+	display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='2'] > div {
+	width: 50%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='3'] > div {
+	width: 33.333333%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='4'] > div {
+	width: 25%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='5'] > div {
+	width: 20%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='6'] > div {
+	width: 16.666667%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand > div > dl {
+	display: flex;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand > div > dl > dt {
+	flex: none;
+	width: 90px;
+	padding: 0px 10px;
+	color: #999;
+	word-wrap: break-word;
+    word-break: break-word;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand > div > dl > dd {
+	flex: auto;
+	word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* empty view */
 .ui-datagrid > .datagrid-empty {
 	display: none;
 	height: 120px;
@@ -366,6 +418,11 @@
     opacity: 0.5;
 }
 
+.ui-datagrid.is-empty > .datagrid-empty {
+	display: block;
+}
+
+/* load view */
 .ui-datagrid > .datagrid-load {
 	display: none;
 	position: absolute;
@@ -402,10 +459,6 @@
     background-position: center;
 }
 
-.ui-datagrid.is-empty > .datagrid-empty {
-	display: block;
-}
-
 .ui-datagrid.is-loading {
 	min-height: 150px;
 }
@@ -429,6 +482,7 @@
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }
 
+/* hide grid header */
 .ui-datagrid.no-head > .table {
 	padding-top: 0px;
 }
@@ -446,57 +500,6 @@
 }
 
 
-.ui-datagrid .datagrid-expand {
-	font-size: 14px;
-	padding: 0px 20px 0px 10px;
-	margin-bottom: -10px;
-}
-
-.ui-datagrid .datagrid-expand > div {
-	display: inline-block;
-    width: 100%;
-    vertical-align: top;
-    margin-bottom: 10px;
-}
-
-.ui-datagrid .datagrid-expand[cols='2'] > div {
-	width: 50%;
-}
-
-.ui-datagrid .datagrid-expand[cols='3'] > div {
-	width: 33.333333%;
-}
-
-.ui-datagrid .datagrid-expand[cols='4'] > div {
-	width: 25%;
-}
-
-.ui-datagrid .datagrid-expand[cols='5'] > div {
-	width: 20%;
-}
-
-.ui-datagrid .datagrid-expand[cols='6'] > div {
-	width: 16.666667%;
-}
-
-.ui-datagrid .datagrid-expand > div > dl {
-	display: flex;
-}
-
-.ui-datagrid .datagrid-expand > div > dl > dt {
-	flex: none;
-	width: 90px;
-	padding: 0px 10px;
-	color: #999;
-	word-wrap: break-word;
-    word-break: break-word;
-}
-
-.ui-datagrid .datagrid-expand > div > dl > dd {
-	flex: auto;
-	word-wrap: break-word;
-    word-break: break-word;
-}
 
 
 
