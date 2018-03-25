@@ -274,7 +274,7 @@
 }
 
 /* checkbox */
-.ui-datagrid > .table > header .chkbox,
+.ui-datagrid > .table > header th.col-chk > .chkbox,
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-chk > .chkbox {
 	position: absolute;
 	left: 10px;
@@ -297,7 +297,11 @@
 	display: block;
 }
 
-.ui-datagrid > .table > header tr.selected .chkbox,
+.ui-datagrid > .table > section > div > table > thead th.col-chk > .chkbox {
+	display: none;
+}
+
+.ui-datagrid > .table > header tr.selected th.col-chk > .chkbox,
 .ui-datagrid > .table > section > div > table > tbody > tr.selected > td.col-chk > .chkbox {
 	border-color: #333;
     background-color: #333444 !important;
@@ -500,6 +504,16 @@
 }
 
 
+/* fixed */
+.ui-datagrid[opt-fixed] > .table > section > div {
+	position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+}
 
 
 
