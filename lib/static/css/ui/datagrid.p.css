@@ -329,6 +329,7 @@
     background-position: center;
     cursor: pointer;
     opacity: 0.5;
+    transition: all 0.5s;
 }
 
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp > .expbtn:hover {
@@ -337,7 +338,6 @@
 
 .ui-datagrid > .table > section > div > table > tbody > tr.expand > td.col-exp > .expbtn {
 	transform: rotate(90deg);
-    transition: all 0.5s;
 }
 
 /* expand view（不用全路径了，冲突也不要紧，况且概率很小） */

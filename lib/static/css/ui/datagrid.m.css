@@ -110,6 +110,10 @@
     border-bottom: 1px solid #eee;
 }
 
+.ui-datagrid > .table > section > div > table > tbody > tr.selected {
+    background-color: #fafafa;
+}
+
 .ui-datagrid > .table > section > div > table > tbody > tr > td {
 	position: relative;
 	padding: 0.05rem 0.03rem;
@@ -140,6 +144,11 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.45;
+    transition: all 0.5s;
+}
+
+.ui-datagrid > .table > section > div > table > tbody > tr.expand > td.col-exp > .expbtn:before {
+    transform: rotate(180deg);
 }
 
 .ui-datagrid tr.row-expand .datagrid-expand {
@@ -152,6 +161,14 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 0.05rem;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='2'] > div {
+    width: 50%;
+}
+
+.ui-datagrid tr.row-expand .datagrid-expand[cols='3'] > div {
+    width: 33.333333%;
 }
 
 .ui-datagrid tr.row-expand .datagrid-expand > div > dl {
