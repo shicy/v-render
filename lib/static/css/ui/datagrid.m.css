@@ -310,15 +310,16 @@
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0);
     z-index: 2000;
-    transition: background-color 0.2s;
+    transition: background-color 0.26s;
+    overflow: hidden;
 }
 
 .ui-datagrid > .sort-and-filter > .container {
     position: absolute;
     left: 0.15rem;
     right: 0.15rem;
-    bottom: -4rem;
-    transition: bottom 0.2s;
+    bottom: -8rem;
+    transition: bottom 0.25s;
 }
 
 .ui-datagrid > .sort-and-filter > .container > * {
@@ -333,6 +334,11 @@
     left: 0.03rem;
     color: #999;
     font-size: 0.12rem;
+}
+
+.ui-datagrid > .sort-and-filter > .container > * > .content {
+    max-height: 2.26rem;
+    overflow: auto;
 }
 
 .ui-datagrid > .sort-and-filter > .container > * > .content > .item {
@@ -361,6 +367,20 @@
     background-color: #eee;
 }
 
+.ui-datagrid > .sort-and-filter > .container > * > .content > .item.selected:after {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    top: 50%;
+    right: 0.1rem;
+    margin-top: -0.1rem;
+    background-image: url(/VRender/icons/007c.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .ui-datagrid > .sort-and-filter > .container > .sort > .content > .item > i {
     background-image: url(/VRender/icons/023c.png);
 }
@@ -371,6 +391,7 @@
 
 .ui-datagrid > .sort-and-filter > .container > .filter > .content > .filterinput {
     padding: 0.07rem 0.15rem;
+    transition: all 0.2s;
 }
 
 .ui-datagrid > .sort-and-filter > .container > .filter > .content > .filterinput > input {
@@ -393,12 +414,8 @@
     display: none;
 }
 
-.ui-datagrid > .sort-and-filter.inputing > .container > * > .title {
-    display: none;
-}
-
-.ui-datagrid > .sort-and-filter.inputing > .container > .sort {
-    display: none;
+.ui-datagrid > .sort-and-filter.inputing > .container {
+    bottom: -8rem !important;
 }
 
 .ui-datagrid > .sort-and-filter.inputing > .container > .filter > .content > .filterinput {
