@@ -16,6 +16,14 @@
     border-spacing: 0px;
 }
 
+.ui-datagrid > .table > * > div > table > * > tr > .col-chk {
+	width: 30px;
+}
+
+.ui-datagrid > .table > * > div > table > * > tr > .col-exp {
+	width: 20px;
+}
+
 .ui-datagrid > .table > * > div > table > thead > tr > th {
 	position: relative;
 	padding: 0px;
@@ -269,7 +277,6 @@
 }
 
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-chk {
-	width: 30px;
 	padding: 0px;
 }
 
@@ -313,7 +320,6 @@
 
 /* expand column */
 .ui-datagrid > .table > section > div > table > tbody > tr > td.col-exp {
-	width: 20px;
 	padding: 0px;
 }
 
