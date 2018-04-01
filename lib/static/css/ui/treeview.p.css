@@ -1,0 +1,125 @@
+
+
+.ui-treeview {
+	max-height: 400px;
+	overflow: auto;
+}
+
+.ui-treeview .tree-node {
+	display: flex;
+	align-items: center;
+}
+
+.ui-treeview .tree-node:hover {
+	background-color: #fafafa;
+}
+
+.ui-treeview .tree-node.active {
+	background-color: #f5f6f9;
+}
+
+.ui-treeview .tree-node .ep {
+	flex: none;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.ui-treeview .tree-node .ep:before {
+	content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    background-image: url(/VRender/icons/025a.png);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.35;
+    transition: transform 0.2s;
+}
+
+.ui-treeview .tree-node .ic {
+	flex: none;
+	display: none;
+}
+
+.ui-treeview .tree-node .chkbox {
+	width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.ui-treeview .tree-node .chkbox > i {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    left: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 1px 1px #eee;
+    box-sizing: border-box;
+}
+
+.ui-treeview .tree-node .lbl {
+	flex: auto;
+}
+
+
+.ui-treeview ul {
+	display: none;
+}
+
+.ui-treeview ul.root {
+	display: block;
+}
+
+.ui-treeview ul.animate-in {
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.2s;
+}
+
+.ui-treeview ul.animate-out {
+	overflow: hidden;
+	transition: height 0.2s;
+}
+
+.ui-treeview li {
+	line-height: 24px;
+}
+
+.ui-treeview li.open > ul {
+	display: block;
+}
+
+.ui-treeview li.open > .tree-node > .ep:before {
+	transform: rotate(90deg);
+}
+
+.ui-treeview li.selected_ > .tree-node > .chkbox > i {
+	border-color: #333444;
+	background-color: #333444;
+	background-image: url(/VRender/icons/027b.png);
+}
+
+.ui-treeview li.selected > .tree-node > .chkbox > i {
+	border-color: #333444;
+	background-color: #333444;
+	background-image: url(/VRender/icons/003b.png);
+}
+
+.ui-treeview ul[level='1'] > li > .tree-node {
+	padding-left: 15px;
+}
+
+.ui-treeview ul[level='2'] > li > .tree-node {
+	padding-left: 30px;
+}
+
