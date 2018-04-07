@@ -1,7 +1,7 @@
 
 
 .ui-treeview {
-	max-height: 400px;
+	/*max-height: 400px;*/
 	overflow: auto;
 }
 
@@ -15,7 +15,8 @@
 }
 
 .ui-treeview .tree-node.active {
-	background-color: #f5f6f9;
+	color: #fff;
+	background-color: #333444;
 }
 
 .ui-treeview .tree-node .ep {
@@ -40,13 +41,31 @@
     transition: transform 0.2s;
 }
 
+.ui-treeview .tree-node.active .ep:before {
+	 background-image: url(/VRender/icons/025b.png);
+	 opacity: 0.75;
+}
+
 .ui-treeview .tree-node .ic {
 	flex: none;
-	display: none;
+	width: 18px;
+	height: 20px;
+}
+
+.ui-treeview .tree-node .ic > i {
+	position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    top: 2px;
+    background-image: url(/VRender/icons/0000.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ui-treeview .tree-node .chkbox {
-	width: 25px;
+	width: 20px;
     height: 20px;
     cursor: pointer;
 }
@@ -67,8 +86,13 @@
     box-sizing: border-box;
 }
 
+.ui-treeview .tree-node.active .chkbox > i {
+	box-shadow: none;
+}
+
 .ui-treeview .tree-node .lbl {
 	flex: auto;
+	padding-left: 2px;
 }
 
 
@@ -103,10 +127,23 @@
 	transform: rotate(90deg);
 }
 
+.ui-treeview li.is-leaf > .tree-node > .ep {
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.ui-treeview li.is-leaf > .tree-node > .ep:before {
+	display: none;
+}
+
 .ui-treeview li.selected_ > .tree-node > .chkbox > i {
 	border-color: #333444;
 	background-color: #333444;
 	background-image: url(/VRender/icons/027b.png);
+}
+
+.ui-treeview li.selected_ > .tree-node.active > .chkbox > i {
+	border-color: #999;
 }
 
 .ui-treeview li.selected > .tree-node > .chkbox > i {
@@ -115,11 +152,116 @@
 	background-image: url(/VRender/icons/003b.png);
 }
 
+.ui-treeview li.selected > .tree-node.active > .chkbox > i {
+	border-color: #999;
+}
+
+.ui-treeview li.loading {
+	color: #333444;
+    font-size: 14px;
+}
+
+.ui-treeview li.loading > div {
+	padding-left: 22px;
+}
+
+.ui-treeview li.loading > div:before {
+	content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-treeview li.more > div {
+	display: inline-block;
+    vertical-align: top;
+    padding-left: 22px;
+    color: #0454f7;
+    font-size: 14px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.ui-treeview li.more > div:hover {
+	text-decoration: underline;
+}
+
+.ui-treeview li.more > div:active {
+	color: #013eb9;
+}
+
 .ui-treeview ul[level='1'] > li > .tree-node {
 	padding-left: 15px;
 }
-
 .ui-treeview ul[level='2'] > li > .tree-node {
 	padding-left: 30px;
+}
+.ui-treeview ul[level='3'] > li > .tree-node {
+	padding-left: 45px;
+}
+.ui-treeview ul[level='4'] > li > .tree-node {
+	padding-left: 60px;
+}
+.ui-treeview ul[level='5'] > li > .tree-node {
+	padding-left: 75px;
+}
+.ui-treeview ul[level='6'] > li > .tree-node {
+	padding-left: 90px;
+}
+.ui-treeview ul[level^='6-'] > li > .tree-node {
+	padding-left: 105px;
+}
+
+.ui-treeview ul[level='1'] > li.loading {
+	padding-left: 15px;
+}
+.ui-treeview ul[level='2'] > li.loading {
+	padding-left: 30px;
+}
+.ui-treeview ul[level='3'] > li.loading {
+	padding-left: 45px;
+}
+.ui-treeview ul[level='4'] > li.loading {
+	padding-left: 60px;
+}
+.ui-treeview ul[level='5'] > li.loading {
+	padding-left: 75px;
+}
+.ui-treeview ul[level='6'] > li.loading {
+	padding-left: 90px;
+}
+.ui-treeview ul[level^='6-'] > li.loading {
+	padding-left: 150px;
+}
+
+.ui-treeview ul[level='1'] > li.more {
+	padding-left: 15px;
+}
+.ui-treeview ul[level='2'] > li.more {
+	padding-left: 30px;
+}
+.ui-treeview ul[level='3'] > li.more {
+	padding-left: 45px;
+}
+.ui-treeview ul[level='4'] > li.more {
+	padding-left: 60px;
+}
+.ui-treeview ul[level='5'] > li.more {
+	padding-left: 75px;
+}
+.ui-treeview ul[level='6'] > li.more {
+	padding-left: 90px;
+}
+.ui-treeview ul[level^='6-'] > li.more {
+	padding-left: 150px;
 }
 
