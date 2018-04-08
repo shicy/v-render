@@ -128,12 +128,18 @@
 }
 
 .ui-treeview li.is-leaf > .tree-node > .ep {
-	visibility: hidden;
 	pointer-events: none;
 }
 
 .ui-treeview li.is-leaf > .tree-node > .ep:before {
-	display: none;
+	background-image: url(/VRender/icons/027a.png);
+    background-size: 6px;
+    opacity: 0.25;
+}
+
+.ui-treeview li.is-leaf > .tree-node.active > .ep:before {
+	background-image: url(/VRender/icons/027b.png);
+	opacity: 0.75;
 }
 
 .ui-treeview li.selected_ > .tree-node > .chkbox > i {
