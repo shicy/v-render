@@ -19,14 +19,14 @@
 	background-color: #333444;
 }
 
-.ui-treeview .tree-node .ep {
+.ui-treeview .tree-node > .ep {
 	flex: none;
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
 }
 
-.ui-treeview .tree-node .ep:before {
+.ui-treeview .tree-node > .ep:before {
 	content: "";
     position: absolute;
     width: 16px;
@@ -41,18 +41,18 @@
     transition: transform 0.2s;
 }
 
-.ui-treeview .tree-node.active .ep:before {
+.ui-treeview .tree-node.active > .ep:before {
 	 background-image: url(/VRender/icons/025b.png);
 	 opacity: 0.75;
 }
 
-.ui-treeview .tree-node .ic {
+.ui-treeview .tree-node > .ic {
 	flex: none;
 	width: 18px;
 	height: 20px;
 }
 
-.ui-treeview .tree-node .ic > i {
+.ui-treeview .tree-node > .ic > i {
 	position: absolute;
     width: 16px;
     height: 16px;
@@ -64,13 +64,13 @@
     background-position: center;
 }
 
-.ui-treeview .tree-node .chkbox {
+.ui-treeview .tree-node > .chkbox {
 	width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-.ui-treeview .tree-node .chkbox > i {
+.ui-treeview .tree-node > .chkbox > i {
     position: absolute;
     width: 14px;
     height: 14px;
@@ -86,11 +86,11 @@
     box-sizing: border-box;
 }
 
-.ui-treeview .tree-node.active .chkbox > i {
+.ui-treeview .tree-node.active > .chkbox > i {
 	box-shadow: none;
 }
 
-.ui-treeview .tree-node .lbl {
+.ui-treeview .tree-node > .lbl {
 	flex: auto;
 	padding-left: 2px;
 }
@@ -246,7 +246,7 @@
 	padding-left: 90px;
 }
 .ui-treeview ul[level^='6-'] > li.loading {
-	padding-left: 150px;
+	padding-left: 105px;
 }
 
 .ui-treeview ul[level='1'] > li.more {
@@ -268,6 +268,6 @@
 	padding-left: 90px;
 }
 .ui-treeview ul[level^='6-'] > li.more {
-	padding-left: 150px;
+	padding-left: 105px;
 }
 

@@ -1,0 +1,257 @@
+
+
+.ui-treeview {
+	overflow: auto;
+}
+
+.ui-treeview .tree-node {
+	display: flex;
+    align-items: center;
+    height: 0.4rem;
+}
+
+.ui-treeview .tree-node > .ep {
+	flex: none;
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.ui-treeview .tree-node > .ep:before {
+	content: "";
+    position: absolute;
+    width: 0.16rem;
+    height: 0.16rem;
+    top: 0.02rem;
+    left: 0.02rem;
+    background-image: url(/VRender/icons/025a.png);
+    background-size: 0.08rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.35;
+    transition: transform 0.2s;
+}
+
+.ui-treeview .tree-node > .chkbox {
+	flex: none;
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.ui-treeview .tree-node > .chkbox > i {
+	position: absolute;
+    width: 0.14rem;
+    height: 0.14rem;
+    left: 0.01rem;
+    top: 0.03rem;
+    border-radius: 0.02rem;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 0.03rem 0px #505050;
+}
+
+.ui-treeview .tree-node > .ic {
+	flex: none;
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.ui-treeview .tree-node > .ic > i {
+	position: absolute;
+    width: 0.16rem;
+    height: 0.16rem;
+    left: 0.02rem;
+    top: 0.02rem;
+    background-image: url(/VRender/icons/0000.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-treeview .tree-node > .lbl {
+	flex: auto;
+}
+
+.ui-treeview .tree-node.active {
+	color: #fff;
+	background-color: #333444;
+}
+
+.ui-treeview .tree-node.active > .ep:before {
+	background-image: url(/VRender/icons/025b.png);
+    opacity: 0.75;
+}
+
+.ui-treeview ul {
+	display: none;
+}
+
+.ui-treeview ul.root {
+	display: block;
+}
+
+.ui-treeview ul.animate-in {
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.2s;
+}
+
+.ui-treeview ul.animate-out {
+	overflow: hidden;
+	transition: height 0.2s;
+}
+
+.ui-treeview li.open > ul {
+	display: block;
+}
+
+.ui-treeview li.open > .tree-node > .ep:before {
+	transform: rotate(90deg);
+}
+
+.ui-treeview li.is-leaf > .tree-node > .ep:before {
+	background-image: url(/VRender/icons/027a.png);
+    background-size: 0.06rem;
+    opacity: 0.25;
+}
+
+.ui-treeview li.is-leaf > .tree-node.active > .ep:before {
+	background-image: url(/VRender/icons/027b.png);
+    opacity: 0.75;
+}
+
+.ui-treeview li.selected_ > .tree-node > .chkbox > i {
+	background-color: #333444;
+    background-image: url(/VRender/icons/027b.png);
+    background-size: 0.1rem;
+    box-shadow: 0px 0px 0.03rem 0px #222;
+}
+
+.ui-treeview li.selected > .tree-node > .chkbox > i {
+	background-color: #333444;
+    background-image: url(/VRender/icons/003b.png);
+    background-size: 0.1rem;
+    box-shadow: 0px 0px 0.03rem 0px #222;
+}
+
+.ui-treeview li > .tree-node.active > .chkbox > i {
+	border: 1px solid #ccc;
+    box-shadow: none;
+}
+
+.ui-treeview li.loading > div {
+	color: #333444;
+	padding-left: 0.25rem;
+}
+
+.ui-treeview li.loading > div:before {
+	content: "";
+    position: absolute;
+    width: 0.16rem;
+    height: 0.16rem;
+    left: 0.03rem;
+    top: 50%;
+    margin-top: -0.08rem;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 0.14rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-treeview li.more:active {
+	background-color: #f0f0f0;
+}
+
+.ui-treeview li.more > div {
+	color: #0048ff;
+    font-size: 0.14rem;
+    font-style: italic;
+    line-height: 0.32rem;
+    padding-left: 0.2rem;
+}
+
+.ui-treeview ul[level='1'] > li > .tree-node {
+	padding-left: 0.15rem;
+}
+
+.ui-treeview ul[level='2'] > li > .tree-node {
+	padding-left: 0.30rem;
+}
+
+.ui-treeview ul[level='3'] > li > .tree-node {
+	padding-left: 0.45rem;
+}
+
+.ui-treeview ul[level='4'] > li > .tree-node {
+	padding-left: 0.60rem;
+}
+
+.ui-treeview ul[level='5'] > li > .tree-node {
+	padding-left: 0.75rem;
+}
+
+.ui-treeview ul[level='6'] > li > .tree-node {
+	padding-left: 0.90rem;
+}
+
+.ui-treeview ul[level^='6-'] > li > .tree-node {
+	padding-left: 1.05rem;
+}
+
+.ui-treeview ul[level='1'] > li.loading {
+	padding-left: 0.15rem;
+}
+.ui-treeview ul[level='2'] > li.loading {
+	padding-left: 0.30rem;
+}
+.ui-treeview ul[level='3'] > li.loading {
+	padding-left: 0.45rem;
+}
+.ui-treeview ul[level='4'] > li.loading {
+	padding-left: 0.60rem;
+}
+.ui-treeview ul[level='5'] > li.loading {
+	padding-left: 0.75rem;
+}
+.ui-treeview ul[level='6'] > li.loading {
+	padding-left: 0.90rem;
+}
+.ui-treeview ul[level^='6-'] > li.loading {
+	padding-left: 1.05rem;
+}
+
+.ui-treeview ul[level='1'] > li.more {
+	padding-left: 0.15rem;
+}
+.ui-treeview ul[level='2'] > li.more {
+	padding-left: 0.30rem;
+}
+.ui-treeview ul[level='3'] > li.more {
+	padding-left: 0.45rem;
+}
+.ui-treeview ul[level='4'] > li.more {
+	padding-left: 0.60rem;
+}
+.ui-treeview ul[level='5'] > li.more {
+	padding-left: 0.75rem;
+}
+.ui-treeview ul[level='6'] > li.more {
+	padding-left: 0.90rem;
+}
+.ui-treeview ul[level^='6-'] > li.more {
+	padding-left: 1.05rem;
+}
+
+
+
+
+
+
+
+
+
