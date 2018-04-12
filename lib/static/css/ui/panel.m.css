@@ -1,0 +1,123 @@
+
+
+.ui-panel {
+	border: 1px solid #ddd;
+}
+
+.ui-panel > header {
+	display: flex;
+    align-items: center;
+    height: 0.4rem;
+    padding-left: 0.1rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #fcfcfc;
+}
+
+.ui-panel > header > .title {
+	flex: none;
+    padding-right: 0.15rem;
+}
+
+.ui-panel > header > .tabbar {
+	flex: auto;
+	padding: 0.04rem 0px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.ui-panel > header > .tabbar > .tab {
+	display: inline-block;
+    min-width: 0.5rem;
+    padding: 0px 0.05rem;
+    color: #999;
+    font-size: 0.14rem;
+    text-align: center;
+    line-height: 0.32rem;
+}
+
+.ui-panel > header > .tabbar > .tab.selected {
+	color: #000;
+}
+
+.ui-panel > header > .tabbar > .thumb {
+	position: absolute;
+	bottom: 0px;
+    border-bottom: 2px solid #333444;
+}
+
+.ui-panel > header > .btnbar {
+	flex: auto;
+    text-align: right;
+}
+
+.ui-panel > header > .btnbar > .popbtn {
+	width: 0.32rem;
+    height: 0.4rem;
+    padding: 0px;
+    border: 0px;
+    background: none;
+    background-image: url(/VRender/icons/028a.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: 0.12rem center;
+    outline: none;
+    opacity: 0.5;
+}
+
+.ui-panel > section {
+	height: 100%;
+    padding: 0.1rem;
+    overflow: auto;
+}
+
+.ui-panel > section > .container {
+	height: 100%;
+    min-height: 1rem;
+}
+
+.ui-panel > section > .container > div {
+	display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.ui-panel > section > .container > .selected {
+	display: block;
+    position: relative;
+}
+
+.ui-panel > section > .container > .animate-in {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.ui-panel > section > .container > .animate-in-left {
+    left: -100%;
+    opacity: 0;
+}
+
+.ui-panel > section > .container > .animate-in-right {
+    left: 100%;
+    opacity: 0;
+}
+
+.ui-panel > section > .container > .animate-out {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.ui-panel > section > .container > .animate-out-left {
+    left: -100%;
+    opacity: 0;
+}
+
+.ui-panel > section > .container > .animate-out-right {
+    left: 100%;
+    opacity: 0;
+}

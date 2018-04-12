@@ -25,6 +25,7 @@
 
 .ui-panel > header > .tabbar {
 	flex: auto;
+    border-left: 1px solid #e7e7eb;
 }
 
 .ui-panel > header > .tabbar > .tab {
@@ -38,10 +39,6 @@
     border-right: 1px solid #e7e7eb;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.ui-panel > header > .tabbar > .tab:first-child {
-	border-left: 1px solid #e7e7eb;
 }
 
 .ui-panel > header > .tabbar > .tab:hover {
