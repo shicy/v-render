@@ -1,0 +1,73 @@
+
+
+.ui-popupmenu {
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #333;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.ui-popupmenu .menu-container {
+	position: absolute;
+    min-width: 80px;
+    border: 1px solid #ddd;
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgba(244, 245, 247, 0.98);
+    box-shadow: 0px 3px 5px 0px #ddd;
+    white-space: nowrap;
+}
+
+.ui-popupmenu .menu-container > .menus {
+	padding: 3px 0px 5px;
+}
+
+.ui-popupmenu .menu-container > .menus > .menu > .box {
+	padding: 0px 20px 0px 22px;
+    line-height: 24px;
+    cursor: default;
+}
+
+.ui-popupmenu .menu-container > .menus > .menu > .box:hover {
+	color: #fff;
+    background-color: #333444;
+}
+
+.ui-popupmenu .menu-container > .menus > .has-child > .box:after {
+	content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url(/VRender/icons/025a.png);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.ui-popupmenu .menu-container > .menus > .has-child > .box:hover:after {
+	background-image: url(/VRender/icons/025b.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
