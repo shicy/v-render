@@ -9,32 +9,48 @@
     z-index: 100;
 }
 
-.ui-popupmenu .menu-container {
+.ui-popupmenu > .menu-container {
 	position: absolute;
     min-width: 80px;
-    border: 1px solid #ddd;
-    border-radius: 0px 0px 5px 5px;
+	padding: 3px 0px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background-color: rgba(244, 245, 247, 0.98);
     box-shadow: 0px 3px 5px 0px #ddd;
     white-space: nowrap;
+    overflow: hidden;
 }
 
-.ui-popupmenu .menu-container > .menus {
-	padding: 3px 0px 5px;
+.ui-popupmenu > .menu-container > .btn {
+    display: none;
 }
 
-.ui-popupmenu .menu-container > .menus > .menu > .box {
-	padding: 0px 20px 0px 22px;
-    line-height: 24px;
+.ui-popupmenu > .menu-container > .menus {
+}
+
+.ui-popupmenu > .menu-container > .menus > .menu > .box {
+	display: flex;
+    align-items: center;
+    height: 24px;
+    padding: 0px 20px;
     cursor: default;
 }
 
-.ui-popupmenu .menu-container > .menus > .menu > .box:hover {
-	color: #fff;
-    background-color: #333444;
+.ui-popupmenu > .menu-container > .menus > .menu > .box > i {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.ui-popupmenu .menu-container > .menus > .has-child > .box:after {
+.ui-popupmenu > .menu-container > .menus > .menu > .box > div {
+    flex: auto;
+}
+
+.ui-popupmenu > .menu-container > .menus > .menu.has-child > .box:after {
 	content: "";
     position: absolute;
     width: 16px;
@@ -49,13 +65,78 @@
     opacity: 0.75;
 }
 
-.ui-popupmenu .menu-container > .menus > .has-child > .box:hover:after {
+.ui-popupmenu > .menu-container > .menus > .menu.hover > .box {
+    color: #fff;
+    background-color: #333444;
+}
+
+.ui-popupmenu > .menu-container > .menus > .menu.hover.has-child > .box:after {
 	background-image: url(/VRender/icons/025b.png);
 }
 
+.ui-popupmenu > .menu-container > .menus > .menu[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
 
+.ui-popupmenu > .menu-container.scroll {
+    padding: 12px 0px;
+}
 
+.ui-popupmenu > .menu-container.scroll > .btn {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 14px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    z-index: 1;
+}
 
+.ui-popupmenu > .menu-container.scroll > .btn:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0px 0px -5px;
+    background-image: url(/VRender/icons/006a.png);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn:hover {
+    background-color: #eee;
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn:hover:before {
+    opacity: 1;
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn.up {
+    top: 0px;
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn.up:before {
+    transform: rotate(-90deg);
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn.down {
+    bottom: 0px;
+}
+
+.ui-popupmenu > .menu-container.scroll > .btn.down:before {
+    transform: rotate(90deg);
+}
+
+.ui-popupmenu > .menu-container:first-child {
+    border-top: 0px;
+    border-radius: 0px 0px 5px 5px;
+}
 
 
 
