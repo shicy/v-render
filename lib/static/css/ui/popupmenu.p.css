@@ -79,6 +79,17 @@
     pointer-events: none;
 }
 
+.ui-popupmenu > .menu-container > .menus > .sep {
+    margin: 3px 0px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ui-popupmenu .menu-container > .menus > .title {
+    padding: 0px 12px;
+    color: #999;
+    font-size: 12px;
+}
+
 .ui-popupmenu > .menu-container.scroll {
     padding: 12px 0px;
 }
