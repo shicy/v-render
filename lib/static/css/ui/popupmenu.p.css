@@ -6,15 +6,16 @@
     top: 0px;
     color: #333;
     font-size: 14px;
-    z-index: 100;
+    z-index: 1200;
 }
 
 .ui-popupmenu > .menu-container {
 	position: absolute;
     min-width: 80px;
+    /*min-height: 80px;*/
 	padding: 3px 0px 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px 3px 5px 5px;
     background-color: rgba(244, 245, 247, 0.98);
     box-shadow: 0px 3px 5px 0px #ddd;
     white-space: nowrap;
@@ -65,6 +66,21 @@
     opacity: 0.75;
 }
 
+.ui-popupmenu > .menu-container > .menus > .menu.checked > .box:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url(/VRender/icons/003a.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
 .ui-popupmenu > .menu-container > .menus > .menu.hover > .box {
     color: #fff;
     background-color: #333444;
@@ -72,6 +88,10 @@
 
 .ui-popupmenu > .menu-container > .menus > .menu.hover.has-child > .box:after {
 	background-image: url(/VRender/icons/025b.png);
+}
+
+.ui-popupmenu > .menu-container > .menus > .menu.hover.checked > .box:before {
+    background-image: url(/VRender/icons/003b.png);
 }
 
 .ui-popupmenu > .menu-container > .menus > .menu[disabled] {
@@ -84,10 +104,35 @@
     border-top: 1px solid #e0e0e0;
 }
 
-.ui-popupmenu .menu-container > .menus > .title {
+.ui-popupmenu > .menu-container > .menus > .title {
     padding: 0px 12px;
     color: #999;
     font-size: 12px;
+}
+
+.ui-popupmenu > .menu-container > .menus > .loading {
+    color: #333444;
+    font-size: 14px;
+}
+
+.ui-popupmenu > .menu-container > .menus > .loading > div {
+    padding: 0px 15px 0px 22px;
+}
+
+.ui-popupmenu > .menu-container > .menus > .loading > div:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }
 
 .ui-popupmenu > .menu-container.scroll {
@@ -143,12 +188,6 @@
 .ui-popupmenu > .menu-container.scroll > .btn.down:before {
     transform: rotate(90deg);
 }
-
-.ui-popupmenu > .menu-container:first-child {
-    border-top: 0px;
-    border-radius: 0px 0px 5px 5px;
-}
-
 
 
 
