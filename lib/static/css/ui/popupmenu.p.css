@@ -116,7 +116,7 @@
 }
 
 .ui-popupmenu > .menu-container > .menus > .loading > div {
-    padding: 0px 15px 0px 22px;
+    padding: 0px 15px 0px 20px;
 }
 
 .ui-popupmenu > .menu-container > .menus > .loading > div:before {
@@ -133,6 +133,19 @@
     background-position: center;
     animation: ui-loading-animate 1s steps(8, end) infinite;
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-popupmenu > .menu-container > .menus > .more {
+    padding: 0px 20px;
+    color: #0454f7;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.ui-popupmenu > .menu-container > .menus > .more:hover {
+    text-decoration: underline;
 }
 
 .ui-popupmenu > .menu-container.scroll {
