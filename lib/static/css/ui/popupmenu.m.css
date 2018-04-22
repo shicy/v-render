@@ -1,0 +1,170 @@
+
+.ui-popupmenu {
+	display: none;
+	position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2000;
+    transition: background-color 0.25s;
+}
+
+.ui-popupmenu > .menu-container {
+	display: none;
+	position: absolute;
+	max-height: 80%;
+	overflow: auto;
+	left: 0.15rem;
+	right: 0.15rem;
+	bottom: 0.1rem;
+	transition: height 0.1s;
+}
+
+.ui-popupmenu > .menu-container:last-child {
+	display: block;
+}
+
+.ui-popupmenu > .menu-container > .btn {
+	display: none;
+}
+
+.ui-popupmenu > .menu-container > .back {
+	margin-bottom: 0.1rem;
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.4rem;
+    border-radius: 0.03rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp {
+	margin-top: 0.1rem;
+    border-radius: 0.03rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .title {
+	position: absolute;
+    left: 0.03rem;
+    top: -0.22rem;
+    color: #999;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .title + .menu {
+	margin-top: 0.25rem;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.45rem;
+	font-size: 0.14rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu > i {
+	width: 0.24rem;
+    height: 0.2rem;
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu:last-child {
+	border-bottom: 0px;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.checked:before {
+	content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 0.1rem;
+    top: 50%;
+    margin-top: -0.1rem;
+    background-image: url(/VRender/icons/003a.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.has-child:after {
+	content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    right: 0.1rem;
+    top: 50%;
+    margin-top: -0.1rem;
+    background-image: url(/VRender/icons/006a.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu:active {
+	background-color: #ddd;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu[disabled] {
+	pointer-events: none;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu[disabled] > * {
+	opacity: 0.5;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .more {
+	font-size: 0.16rem;
+	text-align: center;
+	line-height: 0.4rem;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .loading {
+	text-align: center;
+    line-height: 0.4rem;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .loading:before {
+	content: "";
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    margin-right: 0.05rem;
+    vertical-align: -0.04rem;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp:first-child {
+	margin-top: 0px;
+}
+
+.ui-popupmenu.animate-open {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

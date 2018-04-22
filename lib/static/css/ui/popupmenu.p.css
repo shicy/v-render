@@ -1,18 +1,18 @@
 
 
 .ui-popupmenu {
+    display: none;
 	position: absolute;
     left: 0px;
     top: 0px;
     color: #333;
     font-size: 14px;
-    z-index: 1200;
+    z-index: 100;
 }
 
 .ui-popupmenu > .menu-container {
 	position: absolute;
     min-width: 80px;
-    /*min-height: 80px;*/
 	padding: 3px 0px 5px;
     border: 1px solid #ccc;
     border-radius: 3px 3px 5px 5px;
@@ -26,10 +26,19 @@
     display: none;
 }
 
-.ui-popupmenu > .menu-container > .menus {
+.ui-popupmenu > .menu-container > .menus > .grp {
+    padding-top: 3px;
+    margin-top: 3px;
+    border-top: 1px solid #e3e3e3;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu > .box {
+.ui-popupmenu > .menu-container > .menus > .grp:first-child {
+    padding-top: 0px;
+    margin-top: 0px;
+    border-top: 0px;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .menu {
 	display: flex;
     align-items: center;
     height: 24px;
@@ -37,7 +46,7 @@
     cursor: default;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu > .box > i {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu > i {
     flex: none;
     width: 16px;
     height: 16px;
@@ -47,11 +56,11 @@
     background-position: center;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu > .box > div {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu > div {
     flex: auto;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu.has-child > .box:after {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.has-child:after {
 	content: "";
     position: absolute;
     width: 16px;
@@ -66,7 +75,7 @@
     opacity: 0.75;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu.checked > .box:before {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.checked:before {
     content: "";
     position: absolute;
     width: 16px;
@@ -81,45 +90,50 @@
     opacity: 0.75;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu.hover > .box {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.hover {
     color: #fff;
     background-color: #333444;
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu.hover.has-child > .box:after {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.hover.has-child:after {
 	background-image: url(/VRender/icons/025b.png);
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu.hover.checked > .box:before {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu.hover.checked:before {
     background-image: url(/VRender/icons/003b.png);
 }
 
-.ui-popupmenu > .menu-container > .menus > .menu[disabled] {
+.ui-popupmenu > .menu-container > .menus > .grp > .menu[disabled] {
     opacity: 0.5;
     pointer-events: none;
 }
 
-.ui-popupmenu > .menu-container > .menus > .sep {
-    margin: 3px 0px;
-    border-top: 1px solid #e0e0e0;
-}
-
-.ui-popupmenu > .menu-container > .menus > .title {
+.ui-popupmenu > .menu-container > .menus > .grp > .title {
     padding: 0px 12px;
     color: #999;
     font-size: 12px;
 }
 
-.ui-popupmenu > .menu-container > .menus > .loading {
+.ui-popupmenu > .menu-container > .menus > .grp > .more {
+    padding: 0px 20px;
+    color: #0454f7;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .more:hover {
+    text-decoration: underline;
+}
+
+.ui-popupmenu > .menu-container > .menus > .grp > .loading {
+    padding: 0px 15px 0px 20px;
     color: #333444;
     font-size: 14px;
 }
 
-.ui-popupmenu > .menu-container > .menus > .loading > div {
-    padding: 0px 15px 0px 20px;
-}
-
-.ui-popupmenu > .menu-container > .menus > .loading > div:before {
+.ui-popupmenu > .menu-container > .menus > .grp > .loading:before {
     content: "";
     position: absolute;
     width: 16px;
@@ -133,19 +147,6 @@
     background-position: center;
     animation: ui-loading-animate 1s steps(8, end) infinite;
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
-}
-
-.ui-popupmenu > .menu-container > .menus > .more {
-    padding: 0px 20px;
-    color: #0454f7;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 24px;
-    cursor: pointer;
-}
-
-.ui-popupmenu > .menu-container > .menus > .more:hover {
-    text-decoration: underline;
 }
 
 .ui-popupmenu > .menu-container.scroll {
