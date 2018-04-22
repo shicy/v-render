@@ -48,6 +48,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/treeview.js");
 	commonScripts.push("js/render/datagrid.js");
 	commonScripts.push("js/ui/datagrid.js");
+	commonScripts.push("js/render/scrollbox.js");
+	commonScripts.push("js/ui/scrollbox.js");
 	commonScripts.push("js/render/dialog.js");
 	commonScripts.push("js/ui/dialog.js");
 
