@@ -1,0 +1,23 @@
+
+
+.ui-scrollbox {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #eee;
+}
+
+.ui-scrollbox > .container {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.ui-scrollbox > .container > .ui-listview {
+	border: 0px;
+}
+
+
+
+
+
+
