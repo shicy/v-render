@@ -11,11 +11,34 @@
 }
 
 .ui-scrollbox > .container > .ui-listview {
+	min-height: 0px;
 	border: 0px;
 }
 
+.ui-scrollbox > .container > .ui-listview > ul {
+	opacity: 1;
+	pointer-events: inherit;
+}
 
+.ui-scrollbox > .container > .ui-listview > .listview-load {
+	display: none;
+}
 
+.ui-scrollbox > .bottom {
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+}
 
+.ui-scrollbox > .bottom > * {
+	display: none;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-load {
+	border-top: 1px solid #eee;
+}
+
+.ui-scrollbox.is-loading > .bottom > .scrollbox-load {
+	display: block;
+}
 
