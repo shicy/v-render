@@ -114,6 +114,45 @@
     cursor: default;
 }
 
+.ui-combobox > .dropdown > .box > .grp > .item.disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+.ui-combobox > .dropdown > .ui-load > .ui-loaddef {
+    padding-left: 30px;
+    line-height: 26px;
+    border-top: 1px solid #eee;
+}
+
+.ui-combobox > .dropdown > .ui-load > .ui-loaddef:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-combobox > .dropdown > .ui-more > .ui-moredef {
+    padding-left: 10px;
+    color: #1976D2;
+    line-height: 26px;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+}
+
+.ui-combobox > .dropdown > .ui-more > .ui-moredef:hover {
+    text-decoration: underline;
+}
+
 .ui-combobox.has-val > .ipt > .prompt {
 	display: none;
 }
