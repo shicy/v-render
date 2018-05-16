@@ -32,11 +32,11 @@
     background-repeat: no-repeat;
 }
 
-.ui-btn.waitting {
+.ui-btn.waiting {
     pointer-events: none;
 }
 
-.ui-btn.waitting:before {
+.ui-btn.waiting:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -47,7 +47,7 @@
     z-index: 1;
 }
 
-.ui-btn.waitting:after {
+.ui-btn.waiting:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -59,8 +59,8 @@
     background-size: 0.16rem;
     background-position: center;
     background-repeat: no-repeat;
-    animation: ui-btn-waitting 1s infinite;
-    -webkit-animation: ui-btn-waitting 1s infinite;
+    animation: ui-loading-animate 1s infinite;
+    -webkit-animation: ui-loading-animate 1s infinite;
     z-index: 1;
 }
 
@@ -121,24 +121,4 @@
 .ui-btn[disabled] {
     opacity: 0.3;
     pointer-events: none;
-}
-
-@-webkit-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@-o-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@-moz-keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes ui-btn-waitting {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }

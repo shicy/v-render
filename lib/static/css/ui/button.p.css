@@ -38,11 +38,11 @@
     background-position: center;
 }
 
-.ui-btn.waitting {
+.ui-btn.waiting {
     pointer-events: none;
 }
 
-.ui-btn.waitting:before {
+.ui-btn.waiting:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -53,7 +53,7 @@
     z-index: 1;
 }
 
-.ui-btn.waitting:after {
+.ui-btn.waiting:after {
     content: "";
     position: absolute;
     width: 16px;
@@ -113,7 +113,7 @@
     height: 22px;
 }
 
-.ui-btn.tiny.waitting:after {
+.ui-btn.tiny.waiting:after {
     background-size: 12px;
 }
 
@@ -126,7 +126,7 @@
     height: 26px;
 }
 
-.ui-btn.small.waitting:after {
+.ui-btn.small.waiting:after {
     background-size: 14px;
 }
 
@@ -139,7 +139,7 @@
     height: 38px;
 }
 
-.ui-btn.big.waitting:after {
+.ui-btn.big.waiting:after {
     width: 18px;
     height: 18px;
     margin: -9px 0px 0px -9px;
@@ -155,7 +155,7 @@
     height: 46px;
 }
 
-.ui-btn.bigger.waitting:after {
+.ui-btn.bigger.waiting:after {
     width: 20px;
     height: 20px;
     margin: -10px 0px 0px -10px;
