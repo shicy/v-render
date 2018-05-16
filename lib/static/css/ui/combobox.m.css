@@ -56,23 +56,30 @@
     top: 0px;
     right: 0px;
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 2000;
+    transition: background-color 0.25s;
 }
 
 .ui-combobox > .dropdown > .box {
     position: absolute;
-    max-height: 80%;
+    max-height: 0px;
     left: 0.15rem;
     right: 0.15rem;
     bottom: 0.1rem;
     overflow: auto;
+    border-radius: 0.03rem;
+    transition: max-height 0.25s;
 }
 
 .ui-combobox > .dropdown > .box > .grp {
     margin-top: 0.1rem;
     border-radius: 0.03rem;
     background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-combobox > .dropdown > .box > .grp:first-child {
+    margin-top: 0px;
 }
 
 .ui-combobox > .dropdown > .box > .grp > .item {
@@ -86,24 +93,110 @@
     border-top: 0px;
 }
 
-.ui-combobox > select {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    appearance: none;
-    -webkit-appearance: none;
-    opacity: 0;
-    z-index: 2;
+.ui-combobox > .dropdown > .box > .grp > .item:active {
+    background-color: #ddd;
 }
 
-.ui-combobox.editable > select {
+.ui-combobox > .dropdown > .box > .grp > .item.selected:before {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 0.1rem;
+    top: 50%;
+    margin-top: -0.1rem;
+    background-image: url(/VRender/icons/003a.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.ui-combobox > .dropdown > .box > .grp > .item.disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+.ui-combobox > .dropdown > .box > .ui-load {
+    height: 0.4rem;
+    margin-top: 0.05rem;
+    overflow: hidden;
+}
+
+.ui-combobox > .dropdown > .box > .ui-load > .ui-loaddef {
+    font-size: 0.14rem;
+    text-align: center;
+    line-height: 0.4rem;
+    border-radius: 0.03rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-combobox > .dropdown > .box > .ui-load > .ui-loaddef > p {
+    display: inline-block;
+    position: relative;
+    padding-left: 0.25rem;
+}
+
+.ui-combobox > .dropdown > .box > .ui-load > .ui-loaddef > p:before {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 0px;
+    top: 50%;
+    margin-top: -0.1rem;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-combobox > .dropdown > .box > .ui-more {
+    height: 0.4rem;
+    margin-top: 0.05rem;
+    overflow: hidden;
+}
+
+.ui-combobox > .dropdown > .box > .ui-more > .ui-moredef {
+    font-size: 0.14rem;
+    text-align: center;
+    line-height: 0.4rem;
+    border-radius: 0.03rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-combobox.has-more > .dropdown > .box {
+    /*bottom: 0.55rem;*/
+}
+
+.ui-combobox[opt-native] > .dropdown {
+    display: block;
+    position: absolute;
+}
+
+.ui-combobox[opt-native] > .dropdown > .box {
+    max-height: none;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.ui-combobox[opt-native] > .dropdown > .box > select {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+
+.ui-combobox.editable[opt-native] > .dropdown {
+    width: 0.32rem;
     left: auto;
-    width: 0.3rem;
 }
 
 .ui-combobox.has-val > .ipt > .prompt {
@@ -122,4 +215,12 @@
 
 .ui-combobox[disabled] > select {
     display: none;
+}
+
+.ui-combobox.animate > .dropdown {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ui-combobox.animate > .dropdown > .box {
+    max-height: 80%;
 }
