@@ -6,7 +6,6 @@
     border: 1px solid #ddd;
     border-radius: 3px;
     background-color: #fff;
-    overflow: hidden;
 }
 
 .ui-btn > .btn {
@@ -38,36 +37,54 @@
     background-position: center;
 }
 
-.ui-btn.waiting {
-    pointer-events: none;
-}
-
-.ui-btn.waiting:before {
-    content: "";
+.ui-btn > .dropdownbtn {
     position: absolute;
-    left: 0px;
+    width: 24px;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1;
+    background-image: url(/VRender/icons/005a.png);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.45;
+    pointer-events: none;
 }
 
-.ui-btn.waiting:after {
-    content: "";
+.ui-btn > .dropdown {
+    display: none;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    left: 50%;
-    margin: -8px 0px 0px -8px;
-    background-image: url(/VRender/icons/016b.png);
-    background-size: 16px;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: ui-loading-animate 1s infinite;
-    -webkit-animation: ui-loading-animate 1s infinite;
-    z-index: 1;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    padding-top: 3px;
+    color: #383838;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.ui-btn > .dropdown > ul {
+    max-height: 0px;
+    padding: 2px 0px 3px;
+    overflow: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.ui-btn > .dropdown > ul > li {
+    padding: 0px 10px;
+    line-height: 26px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.5s;
+}
+
+.ui-btn > .dropdown > ul > li:hover {
+    background-color: #eee;
 }
 
 .ui-btn-primary {
@@ -113,10 +130,6 @@
     height: 22px;
 }
 
-.ui-btn.tiny.waiting:after {
-    background-size: 12px;
-}
-
 .ui-btn.tiny > .btn {
     font-size: 12px;
     padding: 0px 3px 1px;
@@ -124,10 +137,6 @@
 
 .ui-btn.small {
     height: 26px;
-}
-
-.ui-btn.small.waiting:after {
-    background-size: 14px;
 }
 
 .ui-btn.small > .btn {
@@ -139,13 +148,6 @@
     height: 38px;
 }
 
-.ui-btn.big.waiting:after {
-    width: 18px;
-    height: 18px;
-    margin: -9px 0px 0px -9px;
-    background-size: 18px;
-}
-
 .ui-btn.big > .btn {
     font-size: 16px;
     padding: 0px 20px 2px;
@@ -155,16 +157,127 @@
     height: 46px;
 }
 
-.ui-btn.bigger.waiting:after {
+.ui-btn.bigger > .btn {
+    font-size: 20px;
+    padding: 0px 25px 2px;
+}
+
+.ui-btn.waiting {
+    pointer-events: none;
+}
+
+.ui-btn.waiting > .btn:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.ui-btn.waiting > .btn:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0px 0px -8px;
+    background-image: url(/VRender/icons/016b.png);
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: ui-loading-animate 1s infinite;
+    -webkit-animation: ui-loading-animate 1s infinite;
+    z-index: 1;
+}
+
+.ui-btn.waiting.tiny > .btn:after {
+    background-size: 12px;
+}
+
+.ui-btn.waiting.small > .btn:after {
+    background-size: 14px;
+}
+
+.ui-btn.waiting.big > .btn:after {
+    width: 18px;
+    height: 18px;
+    margin: -9px 0px 0px -9px;
+    background-size: 18px;
+}
+
+.ui-btn.waiting.bigger > .btn:after {
     width: 20px;
     height: 20px;
     margin: -10px 0px 0px -10px;
     background-size: 20px;
 }
 
-.ui-btn.bigger > .btn {
-    font-size: 20px;
-    padding: 0px 25px 2px;
+.ui-btn.has-items > .btn {
+    padding-right: 25px;
+}
+
+.ui-btn.has-items.tiny > .btn {
+    padding-right: 12px;
+}
+
+.ui-btn.has-items.tiny > .dropdownbtn {
+    width: 12px;
+    background-size: 6px;
+}
+
+.ui-btn.has-items.small > .btn {
+    padding-right: 20px;
+}
+
+.ui-btn.has-items.small > .dropdownbtn {
+    width: 20px;
+}
+
+.ui-btn.has-items.big > .btn {
+    padding-right: 30px;
+}
+
+.ui-btn.has-items.big > .dropdownbtn {
+    width: 30px;
+    background-size: 10px;
+}
+
+.ui-btn.has-items.bigger > .btn {
+    padding-right: 34px;
+}
+
+.ui-btn.has-items.bigger > .dropdownbtn {
+    width: 34px;
+    background-size: 12px;
+}
+
+.ui-btn-primary.has-items > .dropdownbtn {
+    background-image: url(/VRender/icons/005b.png);
+    opacity: 0.8;
+}
+
+.ui-btn-success.has-items > .dropdownbtn {
+    background-image: url(/VRender/icons/005b.png);
+    opacity: 0.8;
+}
+
+.ui-btn-warn.has-items > .dropdownbtn {
+    background-image: url(/VRender/icons/005b.png);
+    opacity: 0.8;
+}
+
+.ui-btn-danger.has-items > .dropdownbtn {
+    background-image: url(/VRender/icons/005b.png);
+    opacity: 0.8;
+}
+
+.ui-btn-info.has-items > .dropdownbtn {
+    background-image: url(/VRender/icons/005b.png);
+    opacity: 0.8;
 }
 
 .ui-btn:hover > .btn {
@@ -181,9 +294,154 @@
 }
 
 .ui-btn > .btn:active {
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    box-shadow: 0 0 0 4px rgba(238, 238, 238, 0.5);
+}
+
+.ui-btn-primary > .btn:active {
+    box-shadow: 0px 0px 0px 4px rgba(51, 52, 68, 0.15);
+}
+
+.ui-btn-success > .btn:active {
+    box-shadow: 0px 0px 0px 4px rgba(101, 187, 92, 0.25);
+}
+
+.ui-btn-warn > .btn:active {
+    box-shadow: 0px 0px 0px 4px rgba(236, 169, 17, 0.25);
+}
+
+.ui-btn-danger > .btn:active {
+    box-shadow: 0px 0px 0px 4px rgba(245, 88, 88, 0.25);
+}
+
+.ui-btn-info > .btn:active {
+    box-shadow: 0px 0px 0px 4px rgba(17, 201, 244, 0.25);
+}
+
+.ui-btn-text > .btn:active {
+    border-radius: 0px;
+}
+
+.ui-btn[opt-toggle] > .dropdownbtn {
+    pointer-events: inherit;
+}
+
+.ui-btn[opt-toggle] > .dropdownbtn:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    /*background-color: #ddd;*/
+}
+
+.ui-btn[opt-toggle] > .dropdownbtn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ui-btn-default[opt-toggle] > .dropdownbtn:before {
+    background-color: #ddd;
+}
+
+.ui-btn-primary[opt-toggle] > .dropdownbtn:before {
+    background-color: #616375;
+}
+
+.ui-btn-success[opt-toggle] > .dropdownbtn:before {
+    background-color: #56a24c;
+}
+
+.ui-btn-warn[opt-toggle] > .dropdownbtn:before {
+    background-color: #d4970d;
+}
+
+.ui-btn-danger[opt-toggle] > .dropdownbtn:before {
+    background-color: #de4b4b;
+}
+
+.ui-btn-info[opt-toggle] > .dropdownbtn:before {
+    background-color: #12bae0;
+}
+
+.ui-btn-text[opt-toggle] > .dropdownbtn:before {
+    height: 22px;
+    top: 50%;
+    bottom: auto;
+    margin-top: -11px;
+    background-color: #ddd;
+}
+
+.ui-btn-link[opt-toggle] > .dropdownbtn:before {
+    height: 22px;
+    top: 50%;
+    bottom: auto;
+    margin-top: -11px;
+    background-color: #ddd;
+}
+
+.ui-btn.has-items[opt-toggle] > .btn {
+    padding-right: 36px;
+}
+
+.ui-btn.has-items.tiny[opt-toggle] > .btn {
+    padding-right: 15px;
+}
+
+.ui-btn.has-items.small[opt-toggle] > .btn {
+    padding-right: 26px;
+}
+
+.ui-btn.has-items.big[opt-toggle] > .btn {
+    padding-right: 50px;
+}
+
+.ui-btn.has-items.bigger[opt-toggle] > .btn {
+    padding-right: 59px;
+}
+
+.ui-btn[active]:after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+    bottom: -3px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.ui-btn[active] > .btn {
     padding-top: 2px;
+}
+
+.ui-btn-primary[active]:after {
+    border-color: #333444;
+}
+
+.ui-btn-success[active]:after {
+    border-color: #65bb5c;
+}
+
+.ui-btn-warn[active]:after {
+    border-color: #eca911;
+}
+
+.ui-btn-danger[active]:after {
+    border-color: #f55858;
+}
+
+.ui-btn-info[active]:after {
+    border-color: #11c9f4;
+}
+
+.ui-btn-text[active] {
+    background-color: #f0f0f0;
+}
+
+.ui-btn-link:after {
+    display: none;
 }
 
 .ui-btn-link > .btn:active {
@@ -210,6 +468,18 @@
     text-decoration: none;
 }
 
+.ui-btn.show-dropdown > .dropdown {
+    display: block;
+}
 
+.ui-btn.animate-in > .dropdown > ul {
+    max-height: 220px;
+    opacity: 1;
+}
+
+.ui-btn.animate-out > .dropdown > ul {
+    max-height: 0px;
+    opacity: 0;
+}
 
 
