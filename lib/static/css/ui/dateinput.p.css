@@ -86,11 +86,15 @@
 }
 
 .ui-dateipt > .picker {
+    display: none;
     position: absolute;
+    overflow: hidden;
+    max-height: 0px;
     left: 0px;
     top: 34px;
+    opacity: 0;
+    transition: all 0.25s;
     z-index: 1000;
-    display: none;
 }
 
 .ui-dateipt.show-picker > .picker {
@@ -117,4 +121,14 @@
 
 .ui-dateipt[disabled] > .ipt > input {
     background-color: #f0f0f0;
+}
+
+.ui-dateipt.animate-in > .picker {
+    max-height: 220px;
+    opacity: 1;
+}
+
+.ui-dateipt.animate-out > .picker {
+    max-height: 0px;
+    opacity: 0;
 }

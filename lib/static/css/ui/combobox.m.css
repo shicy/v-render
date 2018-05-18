@@ -217,10 +217,18 @@
     display: none;
 }
 
-.ui-combobox.animate > .dropdown {
+.ui-combobox.animate-in > .dropdown {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.ui-combobox.animate > .dropdown > .box {
+.ui-combobox.animate-in > .dropdown > .box {
     max-height: 80%;
+}
+
+.ui-combobox.animate-out > .dropdown {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-combobox.animate-out > .dropdown > .box {
+    max-height: 0px;
 }

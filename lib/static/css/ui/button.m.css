@@ -17,6 +17,7 @@
     background: none;
     padding: 0px 0.12rem;
     outline: none;
+    transition: all 0.1s;
 }
 
 .ui-btn > .btn > .icon {
@@ -175,16 +176,42 @@
     z-index: 1;
 }
 
-.ui-btn > .btn:active {
-    background-color: rgba(0, 0, 0, 0.15);
+.ui-btn-default > .btn:active {
+    background-color: #eee;
+    box-shadow: 0px 0px 0px 0.03rem rgba(221, 221, 221, 0.35);
 }
 
 .ui-btn-primary > .btn:active {
-    background-color: #444;
+    background-color: #5d5e73;
+    box-shadow: 0px 0px 0px 0.03rem rgba(51, 52, 68, 0.35);
+}
+
+.ui-btn-success > .btn:active {
+    background-color: #60d654;
+    box-shadow: 0px 0px 0px 0.04rem rgba(101, 187, 92, 0.35);
+}
+
+.ui-btn-warn > .btn:active {
+    background-color: #ffb202;
+    box-shadow: 0px 0px 0px 0.03rem rgba(236, 169, 17, 0.35);
+}
+
+.ui-btn-danger > .btn:active {
+    background-color: #fb7b7b;
+    box-shadow: 0px 0px 0px 0.03rem rgba(245, 88, 88, 0.35);
+}
+
+.ui-btn-info > .btn:active {
+    background-color: #4edafb;
+    box-shadow: 0px 0px 0px 0.03rem rgba(17, 201, 244, 0.35);
 }
 
 .ui-btn-text > .btn:active {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
+}
+
+.ui-btn-link > .btn:active {
+    text-decoration: underline;
 }
 
 .ui-btn.has-items[opt-toggle] > .btn {
@@ -227,40 +254,42 @@
     border-left: 1px solid #aaa;
 }
 
-
 .ui-btn-link > .btn:active {
     background-color: #f6f6f6;
 }
 
+.ui-btn[active] > .btn {
+    /*padding-top: 0.01rem;*/
+    text-shadow: 0px 0px 0.1rem #fff;
+}
+
 .ui-btn-default[active] > .btn {
-    background-color: #fafafa;
-    box-shadow: 0 0 0 0.02rem rgba(221, 221, 221, 0.5);
+    background-color: #eee;
 }
 
 .ui-btn-primary[active] > .btn {
-    box-shadow: 0 0 0 0.025rem rgba(51, 52, 68, 0.5);
+    background-color: #4e4f5f;
 }
 
 .ui-btn-success[active] > .btn {
-    box-shadow: 0 0 0 0.025rem rgba(101, 187, 92, 0.5);
+    background-color: #53984c;
 }
 
 .ui-btn-danger[active] > .btn {
-    box-shadow: 0 0 0 0.025rem rgba(245, 88, 88, 0.5);
+    background-color: #cc4444;
 }
 
 .ui-btn-warn[active] > .btn {
-    box-shadow: 0 0 0 0.025rem rgba(236, 169, 17, 0.5);
+    background-color: #bf880a;
 }
 
 .ui-btn-info[active] > .btn {
-    box-shadow: 0 0 0 0.025rem rgba(17, 201, 244, 0.5);
+    background-color: #0bb6de;
 }
 
 .ui-btn-text[active] > .btn {
     border: 1px solid #ddd;
-    background-color: #fafafa;
-    box-shadow: 0 0 0 0.02rem rgba(221, 221, 221, 0.5);
+    background-color: #eee;
 }
 
 .ui-btn[disabled] {
