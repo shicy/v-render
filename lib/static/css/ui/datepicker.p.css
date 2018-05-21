@@ -140,8 +140,9 @@
     height: 22px;
     left: 3px;
     top: 3px;
-    border: 1px solid #333444;
+    border: 1px solid #787878;
     border-radius: 100px;
+    z-index: 1;
 }
 
 .ui-datepicker > section > .table table.body td.selected span {
