@@ -45,7 +45,7 @@
     border: 1px solid #ddd;
     border-top-color: #999;
     border-left-color: #999;
-    padding: 2px 3px 3px 10px;
+    padding: 4px 3px 3px 10px;
     margin: 0px;
     vertical-align: top;
     resize: none;
@@ -162,6 +162,10 @@
 
 .ui-textview.multi > .ipt {
     min-width: 400px;
+}
+
+.ui-textview.multi > .ipt > .prompt {
+    top: 0px;
 }
 
 .ui-textview.readonly > .ipt > input,
