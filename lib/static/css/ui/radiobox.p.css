@@ -20,6 +20,20 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 1px 1px #eee;
     background-color: #fff;
+    transition: box-shadow 0.25s;
+}
+
+.ui-radbox:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 4px;
+    top: 50%;
+    margin-top: -4px;
+    background-color: #fff;
+    border-radius: 100px;
+    transition: background-color 0.5s;
 }
 
 .ui-radbox > input {
@@ -36,15 +50,15 @@
 }
 
 .ui-radbox.checked:after {
-	content: "";
-	position: absolute;
-	width: 8px;
-    height: 8px;
-    left: 4px;
-    top: 50%;
-    margin-top: -4px;
     background-color: #333444;
-    border-radius: 100px;
+}
+
+.ui-radbox:active:before {
+    box-shadow: 0px 0px 0px 2px #ddd;
+}
+
+.ui-radbox.checked:active:before {
+    box-shadow: 0px 0px 0px 2px #ccc;
 }
 
 .ui-radbox[disabled] {

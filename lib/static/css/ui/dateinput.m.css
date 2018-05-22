@@ -139,6 +139,10 @@
     right: 0.6rem;
 }
 
+.ui-dateipt > .picker > .ui-datepicker[cur-month] > header > button.today {
+    display: none;
+}
+
 .ui-dateipt > .picker > .ui-datepicker > header > button > label {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.25);
