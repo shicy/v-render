@@ -92,8 +92,9 @@
     width: 100%;
     height: 100%;
     font-size: 0.14rem;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 2000;
+    transition: background-color 0.25s;
 }
 
 .ui-daterange > .ipt > .picker > .ui-datepicker {
@@ -101,9 +102,10 @@
     left: 50%;
     top: 50%;
     width: 3.2rem;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     border: 0px;
     background-color: #fff;
+    transition: transform 0.25s;
 }
 
 .ui-daterange > .ipt > .picker > .ui-datepicker > header {
@@ -227,4 +229,20 @@
 
 .ui-daterange[disabled] > .ipt > .clear {
 	display: none;
+}
+
+.ui-daterange.animate-in > .ipt > .picker {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ui-daterange.animate-in > .ipt > .picker > .ui-datepicker {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.ui-daterange.animate-out > .ipt > .picker {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-daterange.animate-out > .ipt > .picker > .ui-datepicker {
+    transform: translate(-50%, -50%) scale(0);
 }

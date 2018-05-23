@@ -98,6 +98,7 @@
     height: 0.28rem;
     border: 1px solid #0030ff;
     border-radius: 100px;
+    z-index: 1;
 }
 
 .ui-datepicker > section > .table table.body td.today span {
@@ -113,6 +114,10 @@
     font-size: 0.14rem;
     border-radius: 100%;
     background-color: #333444;
+}
+
+.ui-datepicker > section > .table table.body td.selected.today:before {
+    border-color: #ccc;
 }
 
 .ui-datepicker > section > .table table.body td.disabled {
