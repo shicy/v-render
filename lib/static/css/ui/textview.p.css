@@ -14,6 +14,7 @@
     padding: 0px 3px 0px 10px;
     margin: 0px;
     border: 1px solid #ddd;
+    border-radius: 3px;
     border-top-color: #999;
     border-left-color: #999;
     background-color: #fff;
@@ -43,6 +44,7 @@
     min-height: 65px;
     color: #383838;
     border: 1px solid #ddd;
+    border-radius: 3px;
     border-top-color: #999;
     border-left-color: #999;
     padding: 4px 3px 3px 10px;
@@ -130,28 +132,40 @@
 }
 
 .ui-textview > .errmsg {
+    display: none;
     position: absolute;
-    font-size: 12px;
-    color: #f00;
-    line-height: 18px;
-    border: 1px solid #ff7878;
-    background-color: #fff0f0;
-    border-radius: 3px;
-    padding: 0px 5px;
-    z-index: 100;
     top: 40px;
     left: 0px;
-    display: none;
+    padding: 0px 5px;
+    color: #f00;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid #ff7878;
+    border-radius: 3px;
+    background-color: #fff0f0;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .ui-textview > .errmsg:before {
     content: "";
     position: absolute;
-    border: 0px solid transparent;
-    border-bottom-color: #ff7878;
-    border-width: 0px 6px 8px 6px;
     left: 10px;
     top: -8px;
+    border: 0px solid transparent;
+    border-width: 0px 6px 8px 6px;
+    border-bottom-color: #ff7878;
+}
+
+.ui-textview > .errmsg:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -7px;
+    border: 0px solid transparent;
+    border-width: 0px 6px 8px;
+    border-bottom-color: #fff1f0;
 }
 
 .ui-textview > .desc {
@@ -166,16 +180,6 @@
 
 .ui-textview.multi > .ipt > .prompt {
     top: 0px;
-}
-
-.ui-textview.readonly > .ipt > input,
-.ui-textview.readonly > .ipt > textarea {
-    background-color: #fffcf4;
-    padding-right: 3px;
-}
-
-.ui-textview.readonly > .ipt > .clear {
-    display: none;
 }
 
 .ui-textview.has-val > .ipt > .prompt {
@@ -194,16 +198,34 @@
     display: none;
 }
 
-.ui-textview.show-error > .ipt > input,
-.ui-textview.show-error > .ipt > textarea {
+.ui-textview.is-error > .ipt > input,
+.ui-textview.is-error > .ipt > textarea {
     border-color: #f00;
 }
 
-.ui-textview.show-error > .errmsg {
+.ui-textview.is-error > .errmsg {
     display: block;
 }
 
-.ui-textview.display-as-pwd > .ipt > input {
+.ui-textview.is-error > .errmsg.animate-in {
+    opacity: 1;
+}
+
+.ui-textview.is-error > .errmsg.animate-out {
+    opacity: 0;
+}
+
+.ui-textview[opt-readonly] > .ipt > input,
+.ui-textview[opt-readonly] > .ipt > textarea {
+    background-color: #fffcf4;
+    padding-right: 3px;
+}
+
+.ui-textview[opt-readonly] > .ipt > .clear {
+    display: none;
+}
+
+.ui-textview[opt-pwd] > .ipt > input {
     -webkit-text-security: disc;
     text-security: disc;
 }
