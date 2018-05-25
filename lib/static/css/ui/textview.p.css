@@ -123,6 +123,26 @@
     color: #383838;
 }
 
+.ui-textview > .ipt > .preview {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    visibility: hidden;
+    border: 1px solid #ddd;
+    pointer-events: none;
+}
+
+.ui-textview > .ipt > .preview > pre {
+    padding: 4px 3px 3px 10px;
+    margin: 0px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 20px;
+    white-space: pre-wrap;
+}
+
 .ui-textview > .ipt:hover > input {
     padding-right: 30px;
 }
@@ -145,6 +165,7 @@
     background-color: #fff0f0;
     z-index: 100;
     opacity: 0;
+    white-space: nowrap;
     transition: opacity 0.5s;
 }
 
@@ -200,7 +221,7 @@
 
 .ui-textview.is-error > .ipt > input,
 .ui-textview.is-error > .ipt > textarea {
-    border-color: #f00;
+    border-color: #fb4040;
 }
 
 .ui-textview.is-error > .errmsg {
@@ -223,6 +244,10 @@
 
 .ui-textview[opt-readonly] > .ipt > .clear {
     display: none;
+}
+
+.ui-textview[opt-fixed] > .ipt {
+    width: 100%;
 }
 
 .ui-textview[opt-pwd] > .ipt > input {
