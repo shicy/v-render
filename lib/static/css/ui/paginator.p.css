@@ -28,6 +28,10 @@
     background-color: #f3f3f3;
 }
 
+.ui-paginator > .pagebar > .btn:active {
+    box-shadow: 0px 0px 0px 3px rgba(221, 221, 221, 0.5);
+}
+
 .ui-paginator > .pagebar > .btn:first-child {
     margin-left: 0px;
 }
@@ -77,33 +81,50 @@
     border-top-color: #ccc;
 }
 
-.ui-paginator > .sizebar > ul {
+.ui-paginator > .sizebar > .dropdown {
     display: none;
     position: absolute;
     z-index: 200;
     top: 33px;
     left: 0px;
     width: 100%;
-    max-height: 120px;
+    max-height: 0px;
     overflow: auto;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px #ccc;
+    opacity: 0;
+    transition: all 0.2s;
 }
 
-.ui-paginator > .sizebar > ul > li {
+.ui-paginator > .sizebar > .dropdown > ul > li {
     padding-left: 10px;
     line-height: 24px;
     cursor: pointer;
 }
 
-.ui-paginator > .sizebar.show-dropdown > ul {
+.ui-paginator > .sizebar > .dropdown > ul > li:active {
+    color: #fff;
+    background-color: #333444;
+}
+
+.ui-paginator > .sizebar.show-dropdown > .dropdown {
     display: block;
 }
 
-.ui-paginator > .sizebar.show-before > ul {
+.ui-paginator > .sizebar.show-before > .dropdown {
     top: auto;
     bottom: 33px;
+}
+
+.ui-paginator > .sizebar.animate-in > .dropdown {
+    max-height: 210px;
+    opacity: 1;
+}
+
+.ui-paginator > .sizebar.animate-out > .dropdown {
+    max-height: 0px;
+    opacity: 0;
 }
 
 .ui-paginator > .statusbar {
@@ -164,6 +185,10 @@
     background-color: #f3f3f3;
 }
 
+.ui-paginator > .skipbar > .btn:active {
+    box-shadow: 0px 0px 0px 3px rgba(221, 221, 221, 0.5);
+}
+
 .ui-paginator.link {
     color: #003cff;
     font-size: 16px;
@@ -178,6 +203,11 @@
 .ui-paginator.link > .pagebar > .btn:hover {
     text-decoration: underline;
     background-color: inherit;
+}
+
+.ui-paginator.link > .pagebar > .btn:active {
+    background-color: #f0f0f0;
+    box-shadow: none;
 }
 
 .ui-paginator.link > .sizebar {
@@ -225,6 +255,7 @@
     border: 1px solid #ddd;
     border-radius: 3px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:first-child {
@@ -237,6 +268,10 @@
 
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:hover {
     background-color: #f3f3f3;
+}
+
+.ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page:active {
+    box-shadow: 0px 0px 0px 3px rgba(221, 221, 221, 0.5);
 }
 
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages > .page.selected {
@@ -272,42 +307,54 @@
     border-top-color: #ccc;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul {
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown {
     display: none;
     position: absolute;
+    z-index: 200;
     top: 33px;
     left: 0px;
-    z-index: 200;
     width: 100%;
-    max-height: 210px;
+    max-height: 0px;
     overflow: auto;
     text-align: center;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px #ccc;
+    opacity: 0;
+    transition: all 0.2s;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul > li {
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul > li {
     line-height: 24px;
     cursor: pointer;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul > li:hover {
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul > li:hover {
     background-color: #f0f0f0;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > ul > li.selected {
+.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul > li.selected {
     color: #fff;
     background-color: #333444;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages.show-dropdown > ul {
+.ui-paginator[opt-mode='dropdown'] > .pagebar.show-dropdown > .pages > .dropdown {
     display: block;
 }
 
-.ui-paginator[opt-mode='dropdown'] > .pagebar > .pages.show-before > ul {
+.ui-paginator[opt-mode='dropdown'] > .pagebar.show-before > .pages > .dropdown {
     top: auto;
     bottom: 33px;
+}
+
+.ui-paginator[opt-mode='dropdown'] > .pagebar.animate-in > .pages > .dropdown {
+    max-height: 210px;
+    opacity: 1;
+}
+
+.ui-paginator[opt-mode='dropdown'] > .pagebar.animate-out > .pages > .dropdown {
+    max-height: 0px;
+    opacity: 0;
 }
 
 .ui-paginator.link[opt-mode='normal'] > .pagebar > .pages {
@@ -323,9 +370,14 @@
     background-color: inherit;
 }
 
+.ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page:active {
+    background-color: #f0f0f0;
+    box-shadow: none;
+}
+
 .ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page.selected {
     color: #333444;
-    background-color: inherit;
+    background-color: #f0f0f0;
 }
 
 .ui-paginator.link[opt-mode='spread'] > .pagebar > .pages > .page.selected {
