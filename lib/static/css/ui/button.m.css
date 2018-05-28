@@ -48,26 +48,24 @@
 .ui-btn > .dropdown {
     display: none;
     position: fixed;
+    z-index: 2000;
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
     color: #333;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 2000;
-    transition: background-color 0.2s;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .ui-btn > .dropdown > ul {
     position: absolute;
-    max-height: 0px;
+    overflow: auto;
+    max-height: 80%;
     left: 0.15rem;
     right: 0.15rem;
     bottom: 0.1rem;
-    overflow: auto;
     border-radius: 0.03rem;
     background-color: rgba(255, 255, 255, 0.95);
-    transition: max-height 0.15s;
 }
 
 .ui-btn > .dropdown > ul > li {
@@ -298,6 +296,13 @@
 
 .ui-btn.show-dropdown > .dropdown {
     display: block;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s;
+}
+
+.ui-btn.show-dropdown > .dropdown > ul {
+    max-height: 0px;
+    transition: max-height 0.2s;
 }
 
 .ui-btn.animate-in > .dropdown {

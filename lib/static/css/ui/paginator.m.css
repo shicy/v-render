@@ -134,21 +134,19 @@
     right: 0px;
     top: 0px;
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.25s;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul {
 	position: absolute;
 	overflow: auto;
-    max-height: 0px;
+	max-height: 80%;
     left: 0.12rem;
     right: 0.12rem;
     bottom: 0.1rem;
     margin-bottom: -0.04rem;
     font-size: 0.12rem;
     text-align: left;
-    transition: max-height 0.25s;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul > li {
@@ -191,6 +189,13 @@
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar.show-dropdown > .pages > .dropdown {
 	display: block;
+	background-color: rgba(0, 0, 0, 0);
+	transition: background-color 0.25s;
+}
+
+.ui-paginator[opt-mode='dropdown'] > .pagebar.show-dropdown > .pages > .dropdown > ul {
+	max-height: 0px;
+	transition: max-height 0.25s;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar.animate-in > .pages > .dropdown {

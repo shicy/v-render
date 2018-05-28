@@ -80,16 +80,14 @@
 .ui-daterange > .ipt > .picker {
     display: none;
     position: absolute;
+    z-index: 200;
     overflow: hidden;
-    max-height: 0px;
+    max-height: 300px;
     left: 0px;
     top: 100%;
-    margin-top: 2px;
+    margin-top: 3px;
     border-radius: 3px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: all 0.25s;
-    z-index: 1000;
 }
 
 .ui-daterange > .ipt:hover > input {
@@ -189,16 +187,30 @@
 
 .ui-daterange.show-picker > .ipt > .picker {
 	display: block;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.25s;
 }
 
 .ui-daterange.show-before > .ipt > .picker {
 	top: auto;
-	bottom: 35px;
+	bottom: 100%;
+    margin-bottom: 3px;
 }
 
 .ui-daterange.show-right > .ipt > .picker {
 	left: auto;
 	right: 0px;
+}
+
+.ui-daterange.animate-in > .ipt > .picker {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.ui-daterange.animate-out > .ipt > .picker {
+    max-height: 0px;
+    opacity: 0;
 }
 
 .ui-daterange.has-val > .ipt > .prompt {
@@ -229,12 +241,3 @@
     background-color: #f0f0f0;
 }
 
-.ui-daterange.animate-in > .ipt > .picker {
-    max-height: 300px;
-    opacity: 1;
-}
-
-.ui-daterange.animate-out > .ipt > .picker {
-    max-height: 0px;
-    opacity: 0;
-}

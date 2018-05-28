@@ -159,6 +159,10 @@
     pointer-events: none;
 }
 
+.ui-datepicker > section > .table table.body td.disabled:before {
+    display: none;
+}
+
 .ui-datepicker > section > .table table.body td.over {
     color: #fff;
 }

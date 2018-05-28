@@ -85,16 +85,15 @@
     display: none;
     position: absolute;
     z-index: 200;
-    top: 33px;
-    left: 0px;
-    width: 100%;
-    max-height: 0px;
     overflow: auto;
+    width: 100%;
+    max-height: 210px;
+    top: 100%;
+    left: 0px;
+    margin-top: 3px;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px #ccc;
-    opacity: 0;
-    transition: all 0.2s;
 }
 
 .ui-paginator > .sizebar > .dropdown > ul > li {
@@ -110,11 +109,15 @@
 
 .ui-paginator > .sizebar.show-dropdown > .dropdown {
     display: block;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.2s;
 }
 
 .ui-paginator > .sizebar.show-before > .dropdown {
     top: auto;
-    bottom: 33px;
+    bottom: 100%;
+    margin-bottom: 3px;
 }
 
 .ui-paginator > .sizebar.animate-in > .dropdown {
@@ -311,17 +314,16 @@
     display: none;
     position: absolute;
     z-index: 200;
-    top: 33px;
-    left: 0px;
-    width: 100%;
-    max-height: 0px;
     overflow: auto;
+    width: 100%;
+    max-height: 210px;
+    top: 100%;
+    left: 0px;
+    margin-top: 3px;
     text-align: center;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px #ccc;
-    opacity: 0;
-    transition: all 0.2s;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar > .pages > .dropdown > ul > li {
@@ -340,11 +342,15 @@
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar.show-dropdown > .pages > .dropdown {
     display: block;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.2s;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar.show-before > .pages > .dropdown {
     top: auto;
-    bottom: 33px;
+    bottom: 100%;
+    margin-bottom: 3px;
 }
 
 .ui-paginator[opt-mode='dropdown'] > .pagebar.animate-in > .pages > .dropdown {

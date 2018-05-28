@@ -62,23 +62,21 @@
 .ui-combobox > .dropdown {
     display: none;
     position: absolute;
+    z-index: 200;
+    overflow: auto;
     width: 100%;
+    max-height: 210px;
     left: 0px;
     top: 100%;
-    padding-top: 3px;
+    margin-top: 3px;
     font-size: 14px;
-    z-index: 1000;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px #ddd;
 }
 
 .ui-combobox > .dropdown > .box {
-    max-height: 0px;
     padding: 0px 0px 1px;
-    overflow: auto;
-    border-radius: 3px;
     background-color: #fff;
-    box-shadow: 0px 0px 6px 0px #ddd;
-    opacity: 0;
-    transition: max-height 0.15s, opacity 0.15s;
 }
 
 .ui-combobox > .dropdown > .box > .grp {
@@ -179,11 +177,25 @@
 
 .ui-combobox.show-dropdown > .dropdown {
 	display: block;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.25s;
 }
 
 .ui-combobox.show-before > .dropdown {
 	top: auto;
-	bottom: 35px;
+	bottom: 100%;
+    margin-bottom: 3px;
+}
+
+.ui-combobox.animate-in > .dropdown {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.ui-combobox.animate-out > .dropdown {
+    max-height: 0px;
+    opacity: 0;
 }
 
 .ui-combobox[disabled] {
@@ -199,12 +211,3 @@
     background-color: #f0f0f0;
 }
 
-.ui-combobox.animate-in > .dropdown > .box {
-    max-height: 300px;
-    opacity: 1;
-}
-
-.ui-combobox.animate-out > .dropdown > .box {
-    max-height: 0px;
-    opacity: 0;
-}
