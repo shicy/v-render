@@ -150,18 +150,18 @@
 }
 
 .ui-panel > header > .btnbar > .item > ul {
+    display: none;
     position: absolute;
-    height: 0px;
-    top: 25px;
-    right: 2px;
     z-index: 10;
+    overflow: hidden;
+    max-height: 210px;
+    top: 26px;
+    right: 2px;
     color: #999;
     font-size: 14px;
     text-align: left;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px #ccc;
-    transition: height 0.1s;
-    overflow: hidden;
 }
 
 .ui-panel > header > .btnbar > .item > ul > li {
@@ -218,6 +218,23 @@
 
 .ui-panel > header > .btnbar > .item[opt-toggle] > ul > li {
 	padding-right: 25px;
+}
+
+.ui-panel > header > .btnbar > .item.show-dropdown > ul {
+    display: block;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.ui-panel > header > .btnbar > .item.animate-in > ul {
+    max-height: 210px;
+    opacity: 1;
+}
+
+.ui-panel > header > .btnbar > .item.animate-out > ul {
+    max-height: 0px;
+    opacity: 0;
 }
 
 .ui-panel > section {

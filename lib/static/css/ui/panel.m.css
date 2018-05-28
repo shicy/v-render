@@ -64,6 +64,10 @@
     opacity: 0.5;
 }
 
+.ui-panel > header > .btnbar > .popbtn:active {
+    background-color: #ddd;
+}
+
 .ui-panel > section {
 	height: 100%;
     padding: 0.1rem;
