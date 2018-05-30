@@ -113,6 +113,11 @@
     border: 1px solid #ccc;
     border-radius: 100px;
     box-shadow: 0px 0px 0.03rem 0px #ccc;
+    transition: background-color 0.25s, box-shadow 0.25s;
+}
+
+.ui-listview > ul > li:active > .chkbox:before {
+    box-shadow: 0px 0px 0px 0.03rem #ddd;
 }
 
 .ui-listview > ul > li.selected > .chkbox:before {
@@ -122,6 +127,10 @@
     background-size: 0.12rem;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.ui-listview > ul > li.selected:active > .chkbox:before {
+    box-shadow: 0px 0px 0px 0.03rem #ccc;
 }
 
 .ui-listview > ul > li[disabled] {

@@ -64,8 +64,9 @@
 	background-color: #fff;
 }
 
-.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn:active > .btn {
+.ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn > .btn:active {
 	background-color: #f3f3f3;
+    box-shadow: none;
 }
 
 .ui-dialog > .dialog-container > .dialog-view > footer > .btnbar > .btn > .ui-btn-primary {
@@ -88,7 +89,7 @@
     width: 20%;
 }
 
-.ui-dialog.waitting > .dialog-container:before {
+.ui-dialog.waiting > .dialog-container:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -99,7 +100,7 @@
     z-index: 1;
 }
 
-.ui-dialog.waitting > .dialog-container:after {
+.ui-dialog.waiting > .dialog-container:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -111,8 +112,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0.32rem;
-    animation: ui-btn-waitting 1s steps(8, end) infinite;
-    -webkit-animation: ui-btn-waitting 1s steps(8, end) infinite;
+    animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
     opacity: 0.75;
     z-index: 1;
 }

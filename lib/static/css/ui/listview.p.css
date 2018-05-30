@@ -1,6 +1,5 @@
 
 .ui-listview {
-	min-height: 200px;
 	border: 1px solid #eee;
 }
 
@@ -213,8 +212,16 @@
 	padding-left: 32px;
 }
 
+.ui-listview.is-empty {
+    min-height: 200px;
+}
+
 .ui-listview.is-empty > .listview-empty {
 	display: block;
+}
+
+.ui-listview.is-loading {
+    min-height: 200px;
 }
 
 .ui-listview.is-loading > ul {
