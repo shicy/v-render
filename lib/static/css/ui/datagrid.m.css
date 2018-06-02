@@ -62,6 +62,7 @@
     border-radius: 100px;
     background-color: #fff;
     box-shadow: 0px 0px 0.03rem 0px #505050;
+    transition: background-color 0.25s, box-shadow 0.25s;
 }
 
 .ui-datagrid > .table > * > div > table > thead > tr > .col-chk > .chkbox {
@@ -310,16 +311,18 @@
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0);
     z-index: 2000;
-    transition: background-color 0.26s;
+    transition: background-color 0.25s;
     overflow: hidden;
 }
 
 .ui-datagrid > .sort-and-filter > .container {
     position: absolute;
+    max-height: 0px;
+    overflow: auto;;
     left: 0.15rem;
     right: 0.15rem;
-    bottom: -8rem;
-    transition: bottom 0.25s;
+    bottom: 0.1rem;
+    transition: max-height 0.25s;
 }
 
 .ui-datagrid > .sort-and-filter > .container > * {
@@ -407,7 +410,16 @@
 }
 
 .ui-datagrid > .sort-and-filter > .container > .filter > .content > .filterinput > .clearbtn {
-    display: none;
+    position: absolute;
+    width: 0.32rem;
+    top: 0.07rem;
+    right: 0.15rem;
+    bottom: 0.07rem;
+    background-image: url(/VRender/icons/002a.png);
+    background-size: 0.12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
 }
 
 .ui-datagrid > .sort-and-filter > .container > .filter > .content > .filterinput > .submitbtn {
@@ -415,7 +427,7 @@
 }
 
 .ui-datagrid > .sort-and-filter.inputing > .container {
-    bottom: -8rem !important;
+    max-height: 0px !important;
 }
 
 .ui-datagrid > .sort-and-filter.inputing > .container > .filter > .content > .filterinput {
@@ -433,17 +445,9 @@
 }
 
 .ui-datagrid > .sort-and-filter.inputing > .container > .filter > .content > .filterinput > .clearbtn {
-    display: block;
-    position: absolute;
-    width: 0.32rem;
-    height: 0.32rem;
-    top: 0.07rem;
     right: 0.7rem;
     background-image: url(/VRender/icons/001a.png);
     background-size: 0.1rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5;
 }
 
 .ui-datagrid > .sort-and-filter.inputing > .container > .filter > .content > .filterinput > .submitbtn {
@@ -465,7 +469,7 @@
 }
 
 .ui-datagrid > .sort-and-filter.show > .container {
-    bottom: 0.1rem;
+    max-height: 80%;
 }
 
 /* load view */

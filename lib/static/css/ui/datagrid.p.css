@@ -91,7 +91,7 @@
 	margin-left: 1px;
 	vertical-align: top;
 	border-radius: 3px;
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .ui-datagrid > .table > header .toolbar > *:first-child {
@@ -292,6 +292,7 @@
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0px 0px 1px 1px #eee;
+    transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
 .ui-datagrid > .table > header th.col-chk > .chkbox {
