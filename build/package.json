@@ -1,9 +1,10 @@
 {
   "name": "vrender-build",
   "version": "1.0.0",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "grunt": "^1.0.2",
-    "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0"
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.3.0"
   }
 }

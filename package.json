@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/shicy/v-render#readme",
   "dependencies": {
-    "clean-css": "^3.4.20",
-    "dot": "^1.0.3",
+    "clean-css": "^4.1.11",
+    "dot": "^1.1.2",
     "htmlparser2": "^3.9.2",
-    "log4js": "^0.6.38",
-    "prismjs": "^1.6.0",
-    "uglify-js": "^2.7.4"
+    "log4js": "^2.8.0",
+    "prismjs": "^1.14.0",
+    "uglify-js": "^3.4.0"
   },
   "devDependencies": {}
 }
