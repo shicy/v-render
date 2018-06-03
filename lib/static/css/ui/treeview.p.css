@@ -38,7 +38,7 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.35;
-    transition: transform 0.2s;
+    /*transition: transform 0.2s;*/ /* 影响性能了 */
 }
 
 .ui-treeview .tree-node.active > .ep:before {
@@ -84,10 +84,19 @@
     background-position: center;
     box-shadow: 0 0 1px 1px #eee;
     box-sizing: border-box;
+    transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.ui-treeview .tree-node > .chkbox:active > i {
+	box-shadow: 0px 0px 0px 2px #ddd;
 }
 
 .ui-treeview .tree-node.active > .chkbox > i {
 	box-shadow: none;
+}
+
+.ui-treeview .tree-node.active > .chkbox:active > i {
+	box-shadow: 0px 0px 0px 2px #787878;
 }
 
 .ui-treeview .tree-node > .lbl {
@@ -97,22 +106,19 @@
 
 
 .ui-treeview ul {
-	display: none;
+	overflow: hidden;
+	height: 0px;
+	transition: height 0.3s;
 }
 
 .ui-treeview ul.root {
-	display: block;
+	height: auto;
 }
 
 .ui-treeview ul.animate-in {
-	height: 0px;
-	overflow: hidden;
-	transition: height 0.2s;
 }
 
 .ui-treeview ul.animate-out {
-	overflow: hidden;
-	transition: height 0.2s;
 }
 
 .ui-treeview li {
@@ -120,7 +126,7 @@
 }
 
 .ui-treeview li.open > ul {
-	display: block;
+	height: auto;
 }
 
 .ui-treeview li.open > .tree-node > .ep:before {

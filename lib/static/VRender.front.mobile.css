@@ -29,6 +29,78 @@ input, textarea, select, button, a, img {
 	overflow: hidden !important;
 }
 
+
+.ui-empty {
+	display: none;
+    border-bottom: 1px solid #eee;
+}
+
+.ui-empty > .ui-emptydef {
+    color: #aaa;
+    font-size: 0.12rem;
+    text-align: center;
+}
+
+.ui-empty > .ui-emptydef:before {
+    content: "";
+    display: block;
+    height: 0.4rem;
+    background-image: url(/VRender/icons/018a.png);
+    background-size: 0.35rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+}
+
+.is-empty > .ui-empty {
+	display: block;
+}
+
+
+.ui-load {
+	display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.ui-load > .ui-loaddef {
+    position: absolute;
+    min-width: 1rem;
+    max-width: 80%;
+    left: 50%;
+    top: 50%;
+    padding-top: 0.35rem;
+    color: #787878;
+    font-size: 0.14rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.ui-load > .ui-loaddef:before {
+    content: "";
+    position: absolute;
+    width: 0.32rem;
+    height: 0.32rem;
+    top: 0.1px;
+    left: 50%;
+    margin-left: -0.16rem;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 0.22rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.is-loading > .ui-load {
+	display: block;
+}
+
+
 @-webkit-keyframes ui-loading-animate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

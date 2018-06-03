@@ -7,9 +7,6 @@
 	overflow: auto;
 }
 
-.ui-scrollbox > .container {
-}
-
 .ui-scrollbox > .container > .ui-listview {
 	min-height: 0px;
 	border: 0px;
@@ -20,7 +17,11 @@
 	pointer-events: inherit;
 }
 
-.ui-scrollbox > .container > .ui-listview > .listview-load {
+.ui-scrollbox > .container > .ui-listview > .ui-load {
+	display: none;
+}
+
+.ui-scrollbox > .container > .ui-listview > .ui-empty {
 	display: none;
 }
 
@@ -140,6 +141,15 @@
 	text-align: center;
 }
 
+.ui-scrollbox > .ui-empty {
+    position: absolute;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
 .ui-scrollbox.is-loading > .bottom > .scrollbox-load {
 	display: block;
 }
@@ -149,6 +159,22 @@
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }
 
+.ui-scrollbox.is-empty {
+	min-height: 120px;
+}
+
+.ui-scrollbox.is-empty > .ui-empty {
+	/*display: block;*/
+}
+
 .ui-scrollbox.no-more > .bottom > .scrollbox-bottom {
 	display: block;
+}
+
+.ui-scrollbox.is-loading > .ui-empty {
+	display: none;
+}
+
+.ui-scrollbox.is-refresh > .ui-empty {
+	display: none;
 }

@@ -1,16 +1,197 @@
 
 
+.ui-scrollbox {
+	width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.ui-scrollbox > .container > .ui-listview {
+	min-height: 0px;
+	border: 0px;
+}
+
+.ui-scrollbox > .container > .ui-listview > ul {
+	opacity: 1;
+	pointer-events: inherit;
+}
+
+.ui-scrollbox > .container > .ui-listview > .ui-load {
+	display: none;
+}
+
+.ui-scrollbox > .container > .ui-listview > .ui-empty {
+	display: none;
+}
+
+.ui-scrollbox > .top {
+	height: 0px;
+	overflow: hidden;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef {
+	height: 100%;
+	color: #999;
+	overflow: hidden;
+	font-size: 0.14rem;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef > * {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding-left: 0.2rem;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef > *:before {
+	content: "";
+	position: absolute;
+	width: 0.16rem;
+	height: 0.16rem;
+	left: 0px;
+	top: 50%;
+	margin-top: -0.08rem;
+	background-size: 0.12rem;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='pull'] > .pull {
+	display: block;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='pull'] > .pull:before {
+	background-image: url(/VRender/icons/029a.png);
+	opacity: 0.35;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='drop'] > .drop {
+	display: block;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='drop'] > .drop:before {
+	background-image: url(/VRender/icons/029a.png);
+	transform: rotate(180deg);
+	opacity: 0.5;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='load'] > .load {
+	display: block;
+}
+
+.ui-scrollbox > .top > .scrollbox-refreshdef[state='load'] > .load:before {
+	background-image: url(/VRender/icons/017a.png);
+	animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-scrollbox > .top.animate {
+	transition: height 0.2s;
+}
 
 
+.ui-scrollbox > .bottom {
+	font-size: 0.14rem;
+}
 
+.ui-scrollbox > .bottom > * {
+	display: none;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-load {
+	border-top: 1px solid #eee;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-load > .scrollbox-loaddef {
+	padding: 0.2rem 0px;
+	color: #999;
+	text-align: center;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-load > .scrollbox-loaddef > p {
+	display: inline-block;
+    position: relative;
+    padding-left: 0.25rem;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-load > .scrollbox-loaddef > p:before {
+	content: "";
+    position: absolute;
+    width: 0.16rem;
+    height: 0.16rem;
+    left: 0px;
+    top: 50%;
+    margin-top: -0.08rem;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 0.14rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-bottom {
+	border-top: 1px solid #eee;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-bottom > .scrollbox-bottomdef {
+	padding: 0.2rem 0px;
+	color: #999;
+	text-align: center;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-bottom {
+	border-top: 1px solid #eee;
+}
 
+.ui-scrollbox > .bottom > .scrollbox-bottom > .scrollbox-bottomdef {
+	padding: 0.2rem 0px;
+	color: #999;
+	text-align: center;
+}
+
+.ui-scrollbox > .ui-empty {
+    position: absolute;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.ui-scrollbox > .ui-empty > .ui-emptydef {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 1rem;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.ui-scrollbox.is-empty {
+	min-height: 1.2rem;
+}
+
+.ui-scrollbox.is-loading > .bottom > .scrollbox-load {
+	display: block;
+}
+
+.ui-scrollbox.is-loading > .bottom > .scrollbox-load > .scrollbox-loaddef > p:before {
+	animation: ui-loading-animate 1s steps(8, end) infinite;
+    -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
+}
+
+.ui-scrollbox.no-more > .bottom > .scrollbox-bottom {
+	display: block;
+}
+
+.ui-scrollbox.is-loading > .ui-empty {
+	display: none;
+}
+
+.ui-scrollbox.is-refresh > .ui-empty {
+	display: none;
+}
 
 
 

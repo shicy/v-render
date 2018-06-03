@@ -26,6 +26,84 @@ body {
 	overflow: hidden !important;
 }
 
+
+.ui-empty {
+	display: none;
+	height: 120px;
+}
+
+.ui-empty > .ui-emptydef {
+	position: absolute;
+    min-width: 80px;
+    max-width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #aaa;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 0 1px 2px #ddd;
+}
+
+.ui-empty > .ui-emptydef:before {
+	content: "";
+    display: block;
+    height: 50px;
+    background-image: url(/VRender/icons/018a.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    opacity: 0.35;
+}
+
+.is-empty > .ui-empty {
+	display: block;
+}
+
+
+.ui-load {
+	display: none;
+	position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ui-load > .ui-loaddef {
+	position: absolute;
+    min-width: 90px;
+    max-width: 80%;
+    left: 50%;
+    top: 50%;
+    padding-top: 40px;
+    color: #787878;
+    font-size: 14px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.ui-load > .ui-loaddef:before {
+	content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 0px;
+    margin-left: -16px;
+    background-image: url(/VRender/icons/017a.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.is-loading > .ui-load {
+	display: block;
+}
+
+
 @-webkit-keyframes ui-loading-animate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

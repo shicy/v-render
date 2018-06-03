@@ -142,85 +142,29 @@
     background-color: #ddd;
 }
 
-.ui-listview > .listview-empty {
-	display: none;
+.ui-listview > .ui-empty {
     position: absolute;
+    height: auto;
     left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    width: 100%;
-    height: 100%;
+    border-bottom: 0px;
     background-color: #fff;
-    z-index: 100;
+    z-index: 1;
 }
 
-.ui-listview > .listview-empty > .listview-emptydef {
+.ui-listview > .ui-empty > .ui-emptydef {
 	position: absolute;
     top: 50%;
     left: 50%;
     min-width: 1rem;
     max-width: 80%;
     transform: translate(-50%, -50%);
-    font-size: 0.12rem;
-    text-align: center;
-}
-
-.ui-listview > .listview-empty > .listview-emptydef:before {
-	content: "";
-    display: block;
-    height: 0.5rem;
-    background-image: url(/VRender/icons/018a.png);
-    background-size: 0.4rem;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ui-listview > .listview-load {
-	display: none;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
-    z-index: 100;
-}
-
-.ui-listview > .listview-load > .listview-loaddef {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 1rem;
-    max-width: 80%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 0.14rem;
-    padding-top: 0.35rem;
-}
-
-.ui-listview > .listview-load > .listview-loaddef:before {
-	content: "";
-    position: absolute;
-    width: 0.32rem;
-    height: 0.32rem;
-    top: 0.1px;
-    left: 50%;
-    margin-left: -0.16rem;
-    background-image: url(/VRender/icons/017a.png);
-    background-size: 0.22rem;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .ui-listview.show-chkbox > ul > li {
 	padding-right: 0.4rem;
-}
-
-.ui-listview.is-empty > .listview-empty {
-	display: block;
 }
 
 .ui-listview.is-loading > ul {
@@ -228,15 +172,11 @@
 	pointer-events: none;
 }
 
-.ui-listview.is-loading > .listview-empty {
+.ui-listview.is-loading > .ui-empty {
 	display: none;
 }
 
-.ui-listview.is-loading > .listview-load {
-	display: block;
-}
-
-.ui-listview.is-loading > .listview-load > .listview-loaddef:before {
+.ui-listview.is-loading > .ui-load > .ui-loaddef:before {
 	animation: ui-loading-animate 1s steps(8, end) infinite;
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }

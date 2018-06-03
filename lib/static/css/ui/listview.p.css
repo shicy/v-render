@@ -136,76 +136,13 @@
     background-color: #ddd;
 }
 
-.ui-listview > .listview-empty {
-	display: none;
+.ui-listview > .ui-empty {
     position: absolute;
+    height: auto;
     left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-.ui-listview > .listview-empty > .listview-emptydef {
-	position: absolute;
-    left: 50%;
-    top: 15%;
-    min-width: 100px;
-    max-width: 80%;
-    transform: translate(-50%, 0px);
-    color: #aaa;
-    font-size: 16px;
-    text-align: center;
-    text-shadow: 0 1px 2px #ddd;
-}
-
-.ui-listview > .listview-empty > .listview-emptydef:before {
-	content: "";
-    display: block;
-    height: 100px;
-    background-image: url(/VRender/icons/018a.png);
-    background-size: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.45;
-}
-
-.ui-listview > .listview-load {
-	display: none;
-	position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: 1;
-}
-
-.ui-listview > .listview-load > .listview-loaddef {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100px;
-    max-width: 50%;
-    padding: 64px 10px 0px;
-}
-
-.ui-listview > .listview-load > .listview-loaddef:before {
-	content: "";
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    left: 50%;
-    top: 16px;
-    margin-left: -16px;
-    background-image: url(/VRender/icons/017a.png);
-    background-size: 32px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .ui-listview.show-chkbox > ul > li {
@@ -213,15 +150,11 @@
 }
 
 .ui-listview.is-empty {
-    min-height: 200px;
-}
-
-.ui-listview.is-empty > .listview-empty {
-	display: block;
+    min-height: 120px;
 }
 
 .ui-listview.is-loading {
-    min-height: 200px;
+    min-height: 120px;
 }
 
 .ui-listview.is-loading > ul {
@@ -229,15 +162,11 @@
 	pointer-events: none;
 }
 
-.ui-listview.is-loading > .listview-empty {
+.ui-listview.is-loading > .ui-empty {
 	display: none;
 }
 
-.ui-listview.is-loading > .listview-load {
-	display: block;
-}
-
-.ui-listview.is-loading > .listview-load > .listview-loaddef:before {
+.ui-listview.is-loading > .ui-load > .ui-loaddef:before {
 	animation: ui-loading-animate 1s steps(8, end) infinite;
     -webkit-animation: ui-loading-animate 1s steps(8, end) infinite;
 }
