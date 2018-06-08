@@ -1,0 +1,49 @@
+
+
+.ui-notification-wrap {
+	position: fixed;
+    z-index: 1800;
+    top: 50px;
+    right: 10px;
+}
+
+.ui-notification > .container {
+	max-width: 320px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.ui-notification > .container > .title {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ui-notification > .container > .content {
+	margin-top: 5px;
+    color: #505050;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.ui-notification > .container > .closebtn {
+	position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    right: 5px;
+    background-image: url(/VRender/icons/001a.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.ui-notification > .container > .closebtn:hover {
+	background-size: 12px;
+	opacity: 1;
+}

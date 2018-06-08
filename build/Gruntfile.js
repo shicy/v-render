@@ -50,6 +50,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/scrollbox.js");
 	commonScripts.push("js/render/dialog.js");
 	commonScripts.push("js/ui/dialog.js");
+	commonScripts.push("js/render/notification.js");
+	commonScripts.push("js/ui/notification.js");
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
