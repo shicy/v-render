@@ -52,6 +52,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/dialog.js");
 	commonScripts.push("js/render/notice.js");
 	commonScripts.push("js/ui/notice.js");
+	commonScripts.push("js/render/tooltip.js");
+	commonScripts.push("js/ui/tooltip.js");
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),

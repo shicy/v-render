@@ -1,0 +1,131 @@
+
+.ui-tooltip-wrap {
+	position: fixed;
+    z-index: 2100;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+.ui-tooltip {
+	position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translate(-50%, 0px);
+    transition: top 0.5s;
+}
+
+.ui-tooltip > .container {
+	padding: 12px 30px 12px 20px;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.ui-tooltip > .container > .img {
+	display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 12px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-tooltip > .container > .content {
+	vertical-align: top;
+	min-width: 150px;
+	max-width: 400px;
+	max-height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-width 0.25s, max-height 0.25s;
+}
+
+.ui-tooltip > .container > .content:hover {
+	text-decoration: underline;
+	cursor: default;
+}
+
+.ui-tooltip > .container > .closebtn {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    right: 5px;
+    background-image: url(/VRender/icons/001a.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.ui-tooltip > .container > .closebtn:hover {
+	opacity: 1;
+}
+
+.ui-tooltip.show-icon > .container {
+	padding-left: 35px;
+}
+
+.ui-tooltip.show-icon > .container > .img {
+	display: block;
+}
+
+.ui-tooltip.active > .container > .content {
+	overflow: auto;
+	max-width: 800px;
+	max-height: 400px;
+	text-decoration: none;
+	white-space: normal;
+}
+
+.ui-tooltip[opt-type='success'] > .container {
+	color: #57ad4c;
+}
+
+.ui-tooltip[opt-type='success'] > .container > .img {
+	background-image: url(/VRender/icons/030c.png);
+}
+
+.ui-tooltip[opt-type='danger'] > .container {
+	color: #f90e0d;
+}
+
+.ui-tooltip[opt-type='danger'] > .container > .img {
+	background-image: url(/VRender/icons/031c.png);
+}
+
+.ui-tooltip[opt-type='warn'] > .container {
+	color: #faa202;
+}
+
+.ui-tooltip[opt-type='warn'] > .container > .img {
+	background-image: url(/VRender/icons/032c.png);
+}
+
+.ui-tooltip[opt-type='info'] > .container {
+	color: #04aff8;
+}
+
+.ui-tooltip[opt-type='info'] > .container > .img {
+	background-image: url(/VRender/icons/033c.png);
+}
+
+.ui-tooltip.animate-in {
+	top: 20px;
+}
+
+.ui-tooltip.animate-out {
+	top: -100px;
+}

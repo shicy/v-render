@@ -1,0 +1,89 @@
+
+.ui-tooltip-wrap {
+	position: fixed;
+    z-index: 2100;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.ui-tooltip {
+	position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.ui-tooltip > .container {
+	position: absolute;
+	width: 1.6rem;
+    left: 50%;
+    top: 50%;
+    padding: 0.2rem 0.1rem;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 0.14rem;
+    text-align: center;
+    border-radius: 0.05rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.ui-tooltip > .container > .img {
+	display: none;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 0.2rem;
+    left: 50%;
+    margin-left: -0.25rem;
+    background-size: 0.36rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-tooltip > .container > .content {
+	max-height: 4rem;
+    overflow: auto;
+}
+
+.ui-tooltip > .container > .closebtn {
+	display: none;
+}
+
+.ui-tooltip.show-icon > .container {
+	padding: 0.8rem 0.1rem 0.1rem;
+}
+
+.ui-tooltip.show-icon > .container > .img {
+	display: block;
+}
+
+.ui-tooltip[opt-type='success'] > .container > .img {
+	background-image: url(/VRender/icons/034b.png);
+}
+
+.ui-tooltip[opt-type='danger'] > .container > .img {
+	background-image: url(/VRender/icons/035b.png);
+}
+
+.ui-tooltip[opt-type='warn'] > .container > .img {
+	background-image: url(/VRender/icons/036b.png);
+}
+
+.ui-tooltip[opt-type='info'] > .container > .img {
+	background-image: url(/VRender/icons/037b.png);
+}
+
+.ui-tooltip.animate-in > .container {
+	opacity: 1;
+}
+
+.ui-tooltip.animate-out > .container {
+	opacity: 0;
+}
+
+
