@@ -2,7 +2,7 @@
 
 .ui-notice-wrap {
 	position: fixed;
-    z-index: 1800;
+    z-index: 2100;
     top: 50px;
     right: 0px;
 }
@@ -88,7 +88,7 @@
 }
 
 .ui-notice[opt-type='success'] > .container {
-    box-shadow: 0px 0px 5px 0px rgba(87, 173, 76, 0.5);
+    /*background-color: #f3f9f2;*/
 }
 
 .ui-notice[opt-type='success'] > .container > .img {
@@ -100,7 +100,7 @@
 }
 
 .ui-notice[opt-type='danger'] > .container {
-    box-shadow: 0px 0px 5px 0px rgba(249, 14, 13, 0.3);
+    /*background-color: #fbf4f4;*/
 }
 
 .ui-notice[opt-type='danger'] > .container > .img {
@@ -112,7 +112,7 @@
 }
 
 .ui-notice[opt-type='warn'] > .container {
-    box-shadow: 0px 0px 5px 0px rgba(250, 162, 2, 0.5);
+    /*background-color: #f9f5ee;*/
 }
 
 .ui-notice[opt-type='warn'] > .container > .img {
@@ -124,7 +124,7 @@
 }
 
 .ui-notice[opt-type='info'] > .container {
-    box-shadow: 0px 0px 5px 0px rgba(4, 175, 248, 0.5);
+    /*background-color: #eef7fb;*/
 }
 
 .ui-notice[opt-type='info'] > .container > .img {

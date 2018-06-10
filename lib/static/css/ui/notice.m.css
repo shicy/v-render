@@ -1,6 +1,7 @@
 
 .ui-notice-wrap {
 	position: fixed;
+    z-index: 2100;
     left: 0px;
     right: 0px;
     bottom: 0px;
