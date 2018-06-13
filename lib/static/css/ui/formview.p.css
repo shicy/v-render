@@ -1,0 +1,67 @@
+
+.ui-formview > .items > .form-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+.ui-formview > .items > .form-item:last-child {
+	margin-bottom: 0px;
+}
+
+.ui-formview > .items > .form-item > .content {
+	display: flex;
+	align-items: flex-start;
+    min-height: 32px;
+}
+
+.ui-formview > .items > .form-item > .content > dt {
+	flex: none;
+    width: 110px;
+    padding: 5px 10px 0px 0px;
+    color: #787878;
+    line-height: 22px;
+}
+
+.ui-formview > .items > .form-item > .content > dd {
+	flex: auto;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div {
+	padding: 5px 10px 0px 0px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > .ui-textview {
+	margin-top: -5px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > .ui-combobox {
+	margin-top: -5px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > .ui-dateinput {
+	margin-top: -5px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > .ui-daterange {
+	margin-top: -5px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > .ui-radgrp {
+	margin-top: -1px;
+}
+
+.ui-formview > .btnbar {
+	padding-left: 110px;
+    margin-top: 30px;
+}
+
+.ui-formview > .btnbar > div {
+	display: inline-block;
+    margin-right: 10px;
+}
+
+.ui-formview > .btnbar > div:last-child {
+	margin-right: 0px;
+}
