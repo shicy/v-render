@@ -147,6 +147,10 @@
 	border-color: #fb4040;
 }
 
+.ui-formview > .items > .form-item.is-error > .content > dd > div > .ui-textview > .ipt > input {
+	border-color: #fb4040;
+}
+
 .ui-formview > .items > .form-item[opt-required] > .content > dt:after {
 	content: "*";
     display: inline-block;
