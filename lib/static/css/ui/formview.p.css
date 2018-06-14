@@ -29,7 +29,43 @@
 }
 
 .ui-formview > .items > .form-item > .content > dd > div {
-	padding: 5px 10px 0px 0px;
+	padding: 5px 0px 0px 0px;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > input {
+	width: 200px;
+    height: 32px;
+    padding: 0px 10px;
+    margin: -5px 0px 0px 0px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    border-top-color: #999;
+    border-left-color: #999;
+    background-color: #fff;
+    outline: none;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > input:focus {
+	border-color: #66afe9;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > textarea {
+	display: block;
+	width: 400px;
+    height: 65px;
+    padding: 4px 3px 3px 10px;
+    margin: -5px 0px 0px 0px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    border-top-color: #999;
+    border-left-color: #999;
+    outline: none;
+}
+
+.ui-formview > .items > .form-item > .content > dd > div > textarea:focus {
+	border-color: #66afe9;
 }
 
 .ui-formview > .items > .form-item > .content > dd > div > .ui-textview {
@@ -50,6 +86,65 @@
 
 .ui-formview > .items > .form-item > .content > dd > div > .ui-radgrp {
 	margin-top: -1px;
+}
+
+.ui-formview > .items > .form-item > .errmsg {
+	display: none;
+	position: absolute;
+    left: 110px;
+    top: 100%;
+    padding: 0px 5px;
+    margin-top: 10px;
+    color: #f00;
+    font-size: 12px;
+    line-height: 18px;
+    white-space: nowrap;
+    border: 1px solid #ff7878;
+    border-radius: 3px;
+    background-color: #fff0f0;
+    z-index: 10;
+    opacity: 0;
+}
+
+.ui-formview > .items > .form-item > .errmsg:before {
+	content: "";
+    position: absolute;
+    left: 10px;
+    top: -8px;
+    border: 0px solid transparent;
+    border-width: 0px 6px 8px 6px;
+    border-bottom-color: #ff7878;
+}
+
+.ui-formview > .items > .form-item > .errmsg:after {
+	content: "";
+    position: absolute;
+    left: 10px;
+    top: -7px;
+    border: 0px solid transparent;
+    border-width: 0px 6px 8px;
+    border-bottom-color: #fff1f0;
+}
+
+.ui-formview > .items > .form-item.is-error > .errmsg {
+	display: block;
+	transition: opacity 0.5s;
+}
+
+.ui-formview > .items > .form-item.is-error > .errmsg.animate-in {
+	opacity: 1;
+}
+
+.ui-formview > .items > .form-item.is-error > .errmsg.animate-out {
+	opacity: 0;
+}
+
+.ui-formview > .items > .form-item.is-error > .content > dd > div > input {
+	border-color: #fb4040;
+}
+
+.ui-formview > .items > .form-item.is-error > .content > dd > div > textarea {
+	border-color: #fb4040;
 }
 
 .ui-formview > .items > .form-item[opt-required] > .content > dt:after {
@@ -73,4 +168,25 @@
 
 .ui-formview > .btnbar > div:last-child {
 	margin-right: 0px;
+}
+
+.ui-formview[opt-la='center'] > .items > .form-item > .content > dt {
+	text-align: center;
+}
+
+.ui-formview[opt-la='right'] > .items > .form-item > .content > dt {
+	text-align: right;
+}
+
+.ui-formview[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:before {
+	content: "*";
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 5px 0px 0px;
+	color: #f00;
+	font-size: 22px;
+}
+
+.ui-formview[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:after {
+	display: none;
 }
