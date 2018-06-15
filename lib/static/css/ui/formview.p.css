@@ -147,7 +147,7 @@
 	border-color: #fb4040;
 }
 
-.ui-formview > .items > .form-item.is-error > .content > dd > div > .ui-textview > .ipt > input {
+.ui-formview > .items > .form-item.is-error > .content > dd > div > * > .ipt > input {
 	border-color: #fb4040;
 }
 

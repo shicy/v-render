@@ -1,4 +1,9 @@
 
+
+.ui-radgrp {
+	display: inline-block;
+}
+
 .ui-radgrp > .item {
 	display: inline-block;
 	margin-right: 10px;

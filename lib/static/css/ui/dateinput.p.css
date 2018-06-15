@@ -22,6 +22,7 @@
     height: 32px;
     font-size: 16px;
     border: 1px solid #ddd;
+    border-radius: 3px;
     border-top-color: #999;
     border-left-color: #999;
     padding: 0px 3px 0px 30px;

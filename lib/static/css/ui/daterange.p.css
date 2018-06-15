@@ -26,6 +26,7 @@
     height: 32px;
     font-size: 16px;
     border: 1px solid #ddd;
+    border-radius: 3px;
     border-left-color: #999;
     border-top-color: #999;
     background-color: #fff;
