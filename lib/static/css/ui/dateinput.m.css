@@ -8,6 +8,7 @@
 .ui-dateipt > .ipt {
 	height: 0.44rem;
     border: 1px solid #ddd;
+    border-radius: 0.03rem;
 }
 
 .ui-dateipt > .ipt:before {

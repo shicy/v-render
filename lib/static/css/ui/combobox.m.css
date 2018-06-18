@@ -4,8 +4,9 @@
 }
 
 .ui-combobox > .ipt {
-	border: 1px solid #ddd;
     height: 0.44rem;
+	border: 1px solid #ddd;
+    border-radius: 0.03rem;
 }
 
 .ui-combobox > .ipt > input {
