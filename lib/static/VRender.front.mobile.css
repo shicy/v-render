@@ -21,6 +21,11 @@ input, textarea, select, button, a, img {
 	-webkit-tap-highlight-color: transparent;
 }
 
+/* 与 textarea 显示不一致 */
+input {
+    letter-spacing: 1px;
+}
+
 .ui-hidden, .ui-fn {
 	display: none;
 }

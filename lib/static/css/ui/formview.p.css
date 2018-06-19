@@ -3,40 +3,23 @@
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
-	margin-bottom: 24px;
+    margin-bottom: 15px;
 }
 
 .ui-formview > .items > .form-item:last-child {
 	margin-bottom: 0px;
 }
 
-.ui-formview > .items > .form-item > .content {
-	display: flex;
-	align-items: flex-start;
-    min-height: 32px;
-}
-
 .ui-formview > .items > .form-item > .content > dt {
-	flex: none;
-    width: 110px;
-    padding: 5px 10px 0px 0px;
+    margin-bottom: 3px;
     color: #787878;
     line-height: 22px;
-}
-
-.ui-formview > .items > .form-item > .content > dd {
-	flex: auto;
-}
-
-.ui-formview > .items > .form-item > .content > dd > div {
-	padding: 5px 0px 0px 0px;
 }
 
 .ui-formview > .items > .form-item > .content > dd > div > input {
 	width: 200px;
     height: 32px;
     padding: 0px 10px;
-    margin: -5px 0px 0px 0px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -55,7 +38,6 @@
 	width: 400px;
     height: 65px;
     padding: 4px 3px 3px 10px;
-    margin: -5px 0px 0px 0px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -68,30 +50,10 @@
 	border-color: #66afe9;
 }
 
-.ui-formview > .items > .form-item > .content > dd > div > .ui-textview {
-	margin-top: -5px;
-}
-
-.ui-formview > .items > .form-item > .content > dd > div > .ui-combobox {
-	margin-top: -5px;
-}
-
-.ui-formview > .items > .form-item > .content > dd > div > .ui-dateipt {
-	margin-top: -5px;
-}
-
-.ui-formview > .items > .form-item > .content > dd > div > .ui-daterange {
-	margin-top: -5px;
-}
-
-.ui-formview > .items > .form-item > .content > dd > div > .ui-radgrp {
-	margin-top: -1px;
-}
-
 .ui-formview > .items > .form-item > .errmsg {
 	display: none;
 	position: absolute;
-    left: 110px;
+    left: 0px;
     top: 100%;
     padding: 0px 5px;
     margin-top: 10px;
@@ -161,7 +123,6 @@
 }
 
 .ui-formview > .btnbar {
-	padding-left: 110px;
     margin-top: 30px;
 }
 
@@ -174,15 +135,80 @@
 	margin-right: 0px;
 }
 
-.ui-formview[opt-la='center'] > .items > .form-item > .content > dt {
+.ui-formview.horizontial > .items > .form-item {
+    margin-bottom: 24px;
+}
+
+.ui-formview.horizontial > .items > .form-item:last-child {
+    margin-bottom: 0px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content {
+    display: flex;
+    align-items: flex-start;
+    min-height: 32px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dt {
+    flex: none;
+    width: 110px;
+    padding: 5px 10px 5px 0px;
+    margin-bottom: 0px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd {
+    flex: auto;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div {
+    padding: 5px 0px 0px 0px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > input {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > textarea {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-textview {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-combobox {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-dateipt {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-daterange {
+    margin-top: -5px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-radgrp {
+    margin-top: -1px;
+}
+
+.ui-formview.horizontial > .items > .form-item > .errmsg {
+    left: 110px;
+}
+
+.ui-formview.horizontial > .btnbar {
+    padding-left: 110px;
+}
+
+.ui-formview.horizontial[opt-la='center'] > .items > .form-item > .content > dt {
 	text-align: center;
 }
 
-.ui-formview[opt-la='right'] > .items > .form-item > .content > dt {
+.ui-formview.horizontial[opt-la='right'] > .items > .form-item > .content > dt {
 	text-align: right;
 }
 
-.ui-formview[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:before {
+.ui-formview.horizontial[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:before {
 	content: "*";
 	display: inline-block;
 	vertical-align: middle;
@@ -191,6 +217,6 @@
 	font-size: 22px;
 }
 
-.ui-formview[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:after {
+.ui-formview.horizontial[opt-la='right'] > .items > .form-item[opt-required] > .content > dt:after {
 	display: none;
 }
