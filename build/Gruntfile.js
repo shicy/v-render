@@ -30,6 +30,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/formview.js");
 	commonScripts.push("js/render/popupmenu.js");
 	commonScripts.push("js/ui/popupmenu.js");
+	commonScripts.push("js/render/checkgroup.js");
+	commonScripts.push("js/ui/checkgroup.js");
 	commonScripts.push("js/render/radiogroup.js");
 	commonScripts.push("js/ui/radiogroup.js");
 	commonScripts.push("js/render/group.js");

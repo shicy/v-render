@@ -1,0 +1,14 @@
+
+.ui-chkgrp {
+	display: inline-block;
+}
+
+.ui-chkgrp > .item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.ui-chkgrp > .item:last-child {
+	margin-right: 0px;
+}
+
