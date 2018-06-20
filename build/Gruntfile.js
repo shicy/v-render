@@ -26,6 +26,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/dateinput.js");
 	commonScripts.push("js/render/daterange.js");
 	commonScripts.push("js/ui/daterange.js");
+	commonScripts.push("js/render/fileupload.js");
+	commonScripts.push("js/ui/fileupload.js");
 	commonScripts.push("js/render/formview.js");
 	commonScripts.push("js/ui/formview.js");
 	commonScripts.push("js/render/popupmenu.js");
