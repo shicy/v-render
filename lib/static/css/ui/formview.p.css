@@ -188,10 +188,6 @@
     margin-top: -5px;
 }
 
-.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-radgrp {
-    margin-top: -1px;
-}
-
 .ui-formview.horizontial > .items > .form-item > .errmsg {
     left: 110px;
 }

@@ -4,7 +4,7 @@
     position: relative;
     min-height: 16px;
     padding-left: 16px;
-    vertical-align: middle;
+    vertical-align: baseline;
 }
 
 .ui-chkbox:before {

@@ -157,6 +157,14 @@
 	margin-top: -0.11rem;
 }
 
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-radbox {
+	margin-top: -0.11rem;
+}
+
+.ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-chkbox {
+	margin-top: -0.11rem;
+}
+
 .ui-formview.horizontial > .items > .form-item > .content > dd > div > .ui-radgrp {
 	margin-top: -0.11rem;
 }
