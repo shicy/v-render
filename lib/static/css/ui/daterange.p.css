@@ -137,10 +137,12 @@
 
 .ui-daterange.has-tools > .ipt > input {
     border-left-color: #ddd;
+    border-radius: 0px 3px 3px 0px;
 }
 
 .ui-daterange.tools-dropdown > .tools {
     min-width: 100px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 .ui-daterange.tools-dropdown > .tools > .label {
