@@ -65,6 +65,11 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON("package.json"),
 
 		uglify: {
+			options: {
+				output: {
+					max_line_len: 10240
+				}
+			},
 			pc: {
 				files: [{
 					src: ["VRender.front.js"].concat(commonScripts),
