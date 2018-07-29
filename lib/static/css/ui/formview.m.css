@@ -85,6 +85,10 @@
     font-size: 0.2rem;
 }
 
+.ui-formview > .items > .form-item[opt-hide] {
+	display: none;
+}
+
 .ui-formview > .btnbar {
 	margin-top: 0.25rem;
 }

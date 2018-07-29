@@ -113,6 +113,10 @@
 	border-color: #fb4040;
 }
 
+.ui-formview > .items > .form-item.is-error > .content > dd > div > * > .ipt > textarea {
+    border-color: #fb4040;
+}
+
 .ui-formview > .items > .form-item[opt-required] > .content > dt:after {
 	content: "*";
     display: inline-block;
@@ -120,6 +124,10 @@
     padding: 0px 0px 0px 5px;
     color: #f00;
     font-size: 22px;
+}
+
+.ui-formview > .items > .form-item[opt-hide] {
+    display: none;
 }
 
 .ui-formview > .btnbar {
