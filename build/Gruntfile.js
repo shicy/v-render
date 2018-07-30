@@ -60,6 +60,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/notice.js");
 	commonScripts.push("js/render/tooltip.js");
 	commonScripts.push("js/ui/tooltip.js");
+	commonScripts.push("js/render/confirm.js");
+	commonScripts.push("js/ui/confirm.js");
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
