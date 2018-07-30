@@ -12,7 +12,6 @@
 .ui-confirm {
 	position: absolute;
 	min-width: 400px;
-	min-height: 160px;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
@@ -28,8 +27,18 @@
     line-height: 40px;
 }
 
+.ui-confirm > .container > .btnbar {
+	padding: 20px;
+	text-align: center;
+}
 
+.ui-confirm > .container > .btnbar > div {
+	display: inline-block;
+	padding: 0px 10px;
+	vertical-align: top;
+}
 
-
-
+.ui-confirm > .container > .btnbar > div > .ui-btn {
+	min-width: 80px;
+}
 
