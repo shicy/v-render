@@ -67,7 +67,7 @@
 }
 
 .ui-datagrid > .table > header th {
-	transition: all 0.4s 0.2s;
+	transition: background-color 0.4s 0.2s, width 0.2s;
 }
 
 .ui-datagrid > .table > header th:hover {
