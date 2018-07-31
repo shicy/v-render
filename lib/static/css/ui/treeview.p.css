@@ -8,6 +8,7 @@
 .ui-treeview .tree-node {
 	display: flex;
 	align-items: center;
+	cursor: default;
 }
 
 .ui-treeview .tree-node:hover {
