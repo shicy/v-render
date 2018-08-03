@@ -63,8 +63,10 @@
 .ui-textview > .ipt > .prompt {
     position: absolute;
     left: 10px;
-    top: 2px;
     right: 3px;
+    top: 50%;
+    padding-top: 1px;
+    margin-top: -15px;
     line-height: 30px;
     font-size: 14px;
     color: #999;
@@ -77,8 +79,9 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 1px;
     right: 1px;
+    top: 50%;
+    margin-top: -15px;
     background-color: #fff;
     background-image: url(/VRender/icons/002a.png);
     background-size: 14px;
