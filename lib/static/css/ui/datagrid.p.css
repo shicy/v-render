@@ -473,7 +473,12 @@
     overflow: auto;
 }
 
-
+.ui-datagrid[opt-fixed] > .ui-empty {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 36px;
+}
 
 
 

@@ -237,6 +237,7 @@
     padding: 0px 10px;
     font-size: 16px;
     text-align: center;
+    line-height: 32px;
 }
 
 .ui-paginator[opt-mode='spread'] > .pagebar > .pages.has-prev:before,
