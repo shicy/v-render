@@ -50,6 +50,8 @@ module.exports = function (grunt) {
 	commonScripts.push("js/ui/tabbar.js");
 	commonScripts.push("js/render/treeview.js");
 	commonScripts.push("js/ui/treeview.js");
+	commonScripts.push("js/render/treecombobox.js");
+	commonScripts.push("js/ui/treecombobox.js");
 	commonScripts.push("js/render/datagrid.js");
 	commonScripts.push("js/ui/datagrid.js");
 	commonScripts.push("js/render/scrollbox.js");
