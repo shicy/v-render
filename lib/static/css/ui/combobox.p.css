@@ -1,6 +1,7 @@
 
 .ui-combobox {
-	display: inline-table;
+	display: inline-block;
+    width: 200px;
 }
 
 .ui-combobox > .ipt > input {
@@ -54,10 +55,6 @@
     overflow: hidden;
     white-space: nowrap;
     pointer-events: none;
-}
-
-.ui-combobox {
-    width: 200px;
 }
 
 .ui-combobox > .dropdown {
