@@ -12,3 +12,8 @@
 .ui-radgrp > .item:last-child {
 	margin-right: 0px;
 }
+
+.ui-radgrp[disabled] {
+	opacity: 0.35;
+	pointer-events: none;
+}

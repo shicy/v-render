@@ -12,3 +12,7 @@
 	margin-right: 0px;
 }
 
+.ui-chkgrp[disabled] {
+	opacity: 0.35;
+	pointer-events: none;
+}
