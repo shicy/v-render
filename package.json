@@ -1,6 +1,6 @@
 {
   "name": "v-render",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "a web framework is component based for NodeJS applications.",
   "main": "index.js",
   "scripts": {
