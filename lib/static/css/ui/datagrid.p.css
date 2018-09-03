@@ -317,7 +317,7 @@
 .ui-datagrid > .table > header tr.selected th.col-chk .chkbox,
 .ui-datagrid > .table > section .datagrid-row.selected > td.col-chk .chkbox {
 	border-color: #333;
-    background-color: #333444 !important;
+    background-color: #333444;
     background-image: url(/VRender/icons/003b.png);
     background-size: 10px;
     background-repeat: no-repeat;
