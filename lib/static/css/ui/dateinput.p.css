@@ -9,7 +9,9 @@
     position: absolute;
     width: 30px;
     height: 32px;
-    background-image: url(/VRender/icons/004a.png);
+    left: 0px;
+    top: 0px;
+    background-image: url(/VRender/icons/040a.png);
     background-repeat: no-repeat;
     background-size: 16px;
     background-position: center;
@@ -65,15 +67,6 @@
     outline: none;
 }
 
-.ui-dateipt > .ipt:hover > input {
-    padding-right: 32px;
-}
-
-.ui-dateipt > .ipt:hover > .clear {
-	display: block;
-	opacity: .5;
-}
-
 .ui-dateipt > .ipt > .clear:hover {
 	opacity: .75;
 }
@@ -95,6 +88,8 @@
     left: 0px;
     top: 100%;
     margin-top: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px #ddd;
 }
 
 .ui-dateipt.show-picker > .picker {
@@ -122,6 +117,15 @@
 
 .ui-dateipt.has-val > .ipt > .prompt {
     display: none;
+}
+
+.ui-dateipt.has-val > .ipt:hover > input {
+    padding-right: 32px;
+}
+
+.ui-dateipt.has-val > .ipt:hover > .clear {
+    display: block;
+    opacity: .5;
 }
 
 .ui-dateipt[disabled] {

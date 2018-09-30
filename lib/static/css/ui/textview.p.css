@@ -204,6 +204,7 @@
 
 .ui-textview.multi > .ipt > .prompt {
     top: 0px;
+    margin-top: 0px;
 }
 
 .ui-textview.has-val > .ipt > .prompt {
