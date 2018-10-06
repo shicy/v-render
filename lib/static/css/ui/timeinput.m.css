@@ -1,0 +1,202 @@
+
+.ui-timeipt {
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ui-timeipt > .ipt {
+	height: 0.44rem;
+    border: 1px solid #ddd;
+    border-radius: 0.03rem;
+}
+
+.ui-timeipt > .ipt:before {
+	content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 100%;
+    left: 0.12rem;
+    background-image: url(/VRender/icons/039a.png);
+    background-size: 0.16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .7;
+}
+
+.ui-timeipt > .ipt > input {
+	width: 100%;
+    height: 100%;
+    color: inherit;
+    font-size: inherit;
+    border: 0px;
+    background: none;
+    padding: 0px 0px 0px 0.4rem;
+    margin: 0px;
+    outline: none;
+    pointer-events: none;
+}
+
+.ui-timeipt > .ipt > .clear {
+	display: none;
+	position: absolute;
+    width: .4rem;
+    height: .42rem;
+    top: .01rem;
+    right: 0;
+    background-image: url(/VRender/icons/002a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: .16rem;
+    opacity: .25;
+    z-index: 1;
+}
+
+.ui-timeipt > .ipt > .prompt {
+    position: absolute;
+    left: 0.4rem;
+    right: 0px;
+    top: 50%;
+    color: #999;
+    line-height: 0.2rem;
+    margin-top: -0.1rem;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ui-timeipt > .picker {
+	display: none;
+	position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ui-timeipt > .picker > .cols {
+	position: absolute;
+    height: 3.6rem;
+    left: 0.15rem;
+    right: 0.15rem;
+    top: 50%;
+    margin-top: -1.8rem;
+    overflow: hidden;
+    font-size: 0.16rem;
+    text-align: center;
+    border-radius: 0.03rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-timeipt > .picker > .cols:before,
+.ui-timeipt > .picker > .cols:after {
+	content: "";
+    position: absolute;
+    height: 1.6rem;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ui-timeipt > .picker > .cols:before {
+    top: 0px;
+    border-bottom: 1px solid #ccc;
+    background: -webkit-linear-gradient(top, #fff, rgba(255, 255, 255, 0.25)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25), #fff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), #fff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.25), #fff); /* 标准的语法 */
+}
+
+.ui-timeipt > .picker > .cols:after {
+    bottom: 0px;
+    border-top: 1px solid #ccc;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), #fff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, #fff, rgba(255, 255, 255, 0.25)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, #fff, rgba(255, 255, 255, 0.25)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0.25)); /* 标准的语法 */
+}
+
+.ui-timeipt > .picker > .cols > .col {
+	display: inline-block;
+    vertical-align: top;
+    width: 0.8rem;
+    height: 100%;
+    padding: 2rem 0px 1.6rem;
+    overflow: auto;
+}
+
+.ui-timeipt > .picker > .cols > .col > .item {
+	line-height: 0.4rem;
+}
+
+
+.ui-timeipt > .picker > .cols > .col > .item.selected {
+	font-size: 0.2rem;
+}
+
+.ui-timeipt > .picker > .cols > .col > .item.disabled {
+	color: #aaa;
+}
+
+.ui-timeipt.show-picker > .picker {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.25s;
+}
+
+.ui-timeipt.show-picker > .picker > .cols {
+    transform: scale(0);
+    transition: all 0.25s;
+}
+
+.ui-timeipt.animate-in > .picker {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ui-timeipt.animate-in > .picker > .cols {
+    transform: scale(1);
+}
+
+.ui-timeipt.animate-out > .picker {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-timeipt.animate-out > .picker > .cols {
+    transform: scale(0);
+}
+
+.ui-timeipt.has-val > .ipt > .clear {
+	display: inline-block;
+}
+
+.ui-timeipt.has-val > .ipt > .prompt {
+    display: none;
+}
+
+.ui-timeipt[disabled] > .ipt {
+	opacity: 0.5;
+    pointer-events: none;
+    background-color: #f0f0f0;
+}
+
+.ui-timeipt[disabled] > .ipt > .clear {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

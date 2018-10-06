@@ -77,10 +77,10 @@
     display: none;
 	position: absolute;
     z-index: 200;
-    height: 220px;
     left: 0px;
     top: 100%;
     margin-top: 2px;
+    overflow: hidden;
     color: #505050;
     font-size: 14px;
     border-radius: 3px;
@@ -89,7 +89,8 @@
 }
 
 .ui-timeipt > .picker > .cols {
-	height: 100%;
+	height: 220px;
+    overflow: auto;
 	white-space: nowrap;
 }
 
@@ -97,7 +98,7 @@
 	display: inline-block;
     vertical-align: top;
     overflow: auto;
-    width: 55px;
+    width: 60px;
     height: 100%;
     border-left: 1px solid #eee;
 }
@@ -120,6 +121,11 @@
 	background-color: #333444;
 }
 
+.ui-timeipt > .picker > .cols > .col > .item.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .ui-timeipt.show-picker > .picker {
     display: block;
     max-height: 0px;
@@ -134,13 +140,17 @@
 }
 
 .ui-timeipt.animate-in > .picker {
-    max-height: 220px;
+    max-height: 230px;
     opacity: 1;
 }
 
 .ui-timeipt.animate-out > .picker {
     max-height: 0px;
     opacity: 0;
+}
+
+.ui-timeipt.has-val > .ipt > .prompt {
+    display: none;
 }
 
 .ui-timeipt.has-val > .ipt:hover > input {
