@@ -1,29 +1,29 @@
 
-.ui-timeipt {
+.ui-datetime {
     tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
 }
 
-.ui-timeipt > .ipt {
+.ui-datetime > .ipt {
 	height: 0.44rem;
     border: 1px solid #ddd;
     border-radius: 0.03rem;
 }
 
-.ui-timeipt > .ipt:before {
+.ui-datetime > .ipt:before {
 	content: "";
     position: absolute;
     width: 0.2rem;
     height: 100%;
     left: 0.12rem;
-    background-image: url(/VRender/icons/039a.png);
+    background-image: url(/VRender/icons/040a.png);
     background-size: 0.16rem;
     background-repeat: no-repeat;
     background-position: center;
     opacity: .7;
 }
 
-.ui-timeipt > .ipt > input {
+.ui-datetime > .ipt > input {
 	width: 100%;
     height: 100%;
     color: inherit;
@@ -36,7 +36,7 @@
     pointer-events: none;
 }
 
-.ui-timeipt > .ipt > .clear {
+.ui-datetime > .ipt > .clear {
 	display: none;
 	position: absolute;
     width: .4rem;
@@ -51,7 +51,7 @@
     z-index: 1;
 }
 
-.ui-timeipt > .ipt > .prompt {
+.ui-datetime > .ipt > .prompt {
     position: absolute;
     left: 0.4rem;
     right: 0px;
@@ -65,7 +65,7 @@
     text-overflow: ellipsis;
 }
 
-.ui-timeipt > .picker {
+.ui-datetime > .picker {
 	display: none;
 	position: fixed;
     left: 0px;
@@ -76,8 +76,8 @@
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.ui-timeipt > .picker > .cols {
-	position: absolute;
+.ui-datetime > .picker > .cols {
+    position: absolute;
     height: 3.6rem;
     left: 0.15rem;
     right: 0.15rem;
@@ -90,9 +90,9 @@
     background-color: rgba(255, 255, 255, 0.95);
 }
 
-.ui-timeipt > .picker > .cols:before,
-.ui-timeipt > .picker > .cols:after {
-	content: "";
+.ui-datetime > .picker > .cols:before,
+.ui-datetime > .picker > .cols:after {
+    content: "";
     position: absolute;
     height: 1.6rem;
     left: 0px;
@@ -101,7 +101,7 @@
     pointer-events: none;
 }
 
-.ui-timeipt > .picker > .cols:before {
+.ui-datetime > .picker > .cols:before {
     top: 0px;
     border-bottom: 1px solid #ccc;
     background: -webkit-linear-gradient(top, #fff, rgba(255, 255, 255, 0.25)); /* Safari 5.1 - 6.0 */
@@ -110,7 +110,7 @@
     background: linear-gradient(to top, rgba(255, 255, 255, 0.25), #fff); /* 标准的语法 */
 }
 
-.ui-timeipt > .picker > .cols:after {
+.ui-datetime > .picker > .cols:after {
     bottom: 0px;
     border-top: 1px solid #ccc;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), #fff); /* Safari 5.1 - 6.0 */
@@ -119,76 +119,76 @@
     background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0.25)); /* 标准的语法 */
 }
 
-.ui-timeipt > .picker > .cols > .col {
-	display: inline-block;
+.ui-datetime > .picker > .cols > .col {
+    display: inline-block;
     vertical-align: top;
-    width: 0.8rem;
+    width: 16%;
     height: 100%;
     padding: 2rem 0px 1.6rem;
     overflow: auto;
 }
 
-.ui-timeipt > .picker > .cols > .col > .item {
-	line-height: 0.4rem;
+.ui-datetime > .picker > .cols > .col.year {
+    width: 20%;
+}
+
+.ui-datetime > .picker > .cols > .col > .item {
+    line-height: 0.4rem;
 }
 
 
-.ui-timeipt > .picker > .cols > .col > .item.selected {
-	font-size: 0.2rem;
+.ui-datetime > .picker > .cols > .col > .item.selected {
+    font-size: 0.2rem;
 }
 
-.ui-timeipt > .picker > .cols > .col > .item.disabled {
-	color: #ccc;
+.ui-datetime > .picker > .cols > .col > .item.disabled {
+    color: #ccc;
 }
 
-.ui-timeipt.show-picker > .picker {
+.ui-datetime.show-picker > .picker {
     display: block;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.25s;
 }
 
-.ui-timeipt.show-picker > .picker > .cols {
+.ui-datetime.show-picker > .picker > .cols {
     transform: scale(0);
     transition: all 0.25s;
 }
 
-.ui-timeipt.animate-in > .picker {
+.ui-datetime.animate-in > .picker {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.ui-timeipt.animate-in > .picker > .cols {
+.ui-datetime.animate-in > .picker > .cols {
     transform: scale(1);
 }
 
-.ui-timeipt.animate-out > .picker {
+.ui-datetime.animate-out > .picker {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.ui-timeipt.animate-out > .picker > .cols {
+.ui-datetime.animate-out > .picker > .cols {
     transform: scale(0);
 }
 
-.ui-timeipt.has-val > .ipt > .clear {
+.ui-datetime.has-val > .ipt > .clear {
 	display: inline-block;
 }
 
-.ui-timeipt.has-val > .ipt > .prompt {
+.ui-datetime.has-val > .ipt > .prompt {
     display: none;
 }
 
-.ui-timeipt[disabled] > .ipt {
+.ui-datetime[disabled] > .ipt {
 	opacity: 0.5;
     pointer-events: none;
     background-color: #f0f0f0;
 }
 
-.ui-timeipt[disabled] > .ipt > .clear {
+.ui-datetime[disabled] > .ipt > .clear {
 	display: none;
 }
-
-
-
-
 
 
 
