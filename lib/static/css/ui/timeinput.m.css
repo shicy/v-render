@@ -138,7 +138,7 @@
 }
 
 .ui-timeipt > .picker > .cols > .col > .item.disabled {
-	color: #ccc;
+	color: #c0c0c0;
 }
 
 .ui-timeipt.show-picker > .picker {
