@@ -1,6 +1,7 @@
 
 .ui-daterange {
 	display: inline-block;
+    text-align: left;
 }
 
 .ui-daterange > .ipt {

@@ -1,6 +1,7 @@
 
 .ui-textview {
     display: inline-block;
+    text-align: left;
 }
 
 .ui-textview > .ipt {

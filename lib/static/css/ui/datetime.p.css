@@ -2,6 +2,7 @@
 .ui-datetime {
 	display: inline-block;
 	width: 260px;
+    text-align: left;
 }
 
 .ui-datetime > .ipt:before {

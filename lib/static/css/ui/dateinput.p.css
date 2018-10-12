@@ -2,6 +2,7 @@
 .ui-dateipt {
 	display: inline-block;
 	width: 200px;
+    text-align: left;
 }
 
 .ui-dateipt > .ipt:before {
