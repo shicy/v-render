@@ -112,7 +112,7 @@
 
 .ui-datetime > .picker > .timebar > .ui-combobox > .ipt > input {
     height: 28px;
-    padding-left: 8px;
+    padding-left: 6px;
     font-size: 14px;
     border-color: #eee;
 }
