@@ -77,6 +77,7 @@
 }
 
 .ui-textview > .ipt > .clear {
+    display: none;
     position: absolute;
     width: 30px;
     height: 30px;
@@ -90,7 +91,6 @@
     background-position: center;
     cursor: pointer;
     opacity: .25;
-    display: none;
     z-index: 1;
 }
 
@@ -151,10 +151,6 @@
     padding-right: 30px;
 }
 
-.ui-textview > .ipt:hover > .clear {
-    display: block;
-}
-
 .ui-textview > .errmsg {
     display: none;
     position: absolute;
@@ -210,6 +206,10 @@
 
 .ui-textview.has-val > .ipt > .prompt {
     display: none;
+}
+
+.ui-textview.has-val > .ipt:hover > .clear {
+    display: block;
 }
 
 .ui-textview.show-size > .ipt > input {
