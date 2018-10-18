@@ -247,7 +247,7 @@
     padding-right: 3px;
 }
 
-.ui-textview[opt-readonly] > .ipt > .clear {
+.ui-textview[opt-readonly] > .ipt:hover > .clear {
     display: none;
 }
 
