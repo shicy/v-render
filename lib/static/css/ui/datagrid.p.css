@@ -361,6 +361,10 @@
 }
 
 /* expand view（不用全路径了，冲突也不要紧，况且概率很小） */
+.ui-datagrid tr.row-expand {
+	background-color: #fafafa;
+}
+
 .ui-datagrid tr.row-expand .datagrid-expand {
 	font-size: 14px;
 	padding: 10px 20px 0px 10px;
