@@ -1,11 +1,9 @@
 # v-render
-A web framework, which is run in NodeJS. You can use it as a web service, and render views at server side by components.
-
-> 本框架设计以组件化的思想在服务器端构建网页，网页中的每一个部分都可以设计为一个小小的组件，提高代码的重用性，以及模块之间合理分层。 你不需要担心太多的碎片化组件会影响客户端请求效率，框架会负责组件打包，处理组件依赖关联，作为一个整体返回给客户端。
+> VRender 是一个 Node.js 的 web 开发框架，基于经典 JS 框架 jQuery。
 
 ### 获取 v-render
 ```
-npm install v-render
+npm install v-render --save
 ```
 
 ### 启动框架
@@ -15,15 +13,15 @@ var VRender = require("v-render");
 // 创建一个实例，初始化并运行
 VRender.create().initialize().run();
 ```
-启动成功后按提示打开网页`http://localhost:8888/`，更多的帮助信息将在这里找到。  
-端口`8888`是框架启动 WebService 的默认端口号，自定义端口号如`8080`，如下所示：
+现在，打开浏览器输入`http://localhost:8888/`，更多的帮助信息将在这里找到。  
+端口`8888`是默认端口号，自定义端口号如`8080`，如下所示：
 
 ```javascript
 VRender.create().initialize({server: {port: 8080}}).run();
 ```
 
 ### 相关配置
-类似于端口号的设置，本框架还提供了一些其他配置信息，在框架启动的时候你可以输入配置信息。
+配置信息通过`initialize()`方法传入，如下所示：
 
 ```javascript
 VRender.create().initialize(config).run();
@@ -43,20 +41,20 @@ VRender.create().initialize(config).run();
 
 ```javascript
 {
-	logfiles: {
-		"error": "err.log", // 错误日志
-		"debug": "dev.log", // 调试、开发日志
-		"all": "app.log" // “all”作为关键字使用，所有的日志信息都会输出到该文件
-	}
+  logfiles: {
+    "error": "err.log", // 错误日志
+    "debug": "dev.log", // 调试、开发日志
+    "all": "app.log" // “all”作为关键字使用，所有的日志信息都会输出到该文件
+  }
 }
 ```
 框架默认还会输出日志文件`"vr.log"`，获取相应日志对象的方法是`VRender.log(name)`，其中`name`即日志类型。默认还可以使用`VRender.logger`作为日志输出。
 
 #### - config.server
-WEB 服务器相关配置信息
+web 服务器相关配置信息
 
 #### - config.server.expires
-WEB 静态资源缓存策略，包含`age`和`files`属性。
+web 静态资源缓存策略，包含`age`和`files`属性。
 
 #### - config.server.expires.age
 类型：`Number`，默认值：`2592000000`，即30天。  
@@ -72,22 +70,22 @@ WEB 静态资源缓存策略，包含`age`和`files`属性。
 
 ```javascript
 {
-    "www.xxx.cn": "www.xxx.com", // 将www.xxx.cn替换成www.xxx.com
-    "localhost": "www.xxx.com"
+  "www.xxx.cn": "www.xxx.com", // 将www.xxx.cn替换成www.xxx.com
+  "localhost": "www.xxx.com"
 }
 ```
 
 #### - config.server.port
 类型：`Number`，默认值：`8888`。   
-WEB 服务器端口号。
+web 服务器端口号。
 
 #### - config.server.root
 类型：`String`，默认值：`"./WebContent"`，基于`config.cwd`目录的WebContent子目录。  
-WEB 静态资源根目录，是图片、脚本、样式等文件的存放目录。该目录下的文件是公开的，可以被用户直接访问到，访问资源文件如`http://localhost/test/sample.html`。**为防止路由冲突，使用关键字`webroot`强制访问，上述可以是`http://localhost/webroot/test/sample.html`**。
+web 静态资源根目录，是图片、脚本、样式等文件的存放目录。该目录下的文件是公开的，可以被用户直接访问到，访问资源文件如：`http://localhost/test/sample.html`。**为防止路由冲突，使用关键字`webroot`强制访问，上述可以是`http://localhost/webroot/test/sample.html`**。
 
 #### - config.server.waitTimeout
 类型：`Number`，默认值：`120000`，即2分钟。  
-WEB 服务器超时等待时间，默认2分钟。
+web 服务器超时等待时间，默认2分钟。
 
 #### - config.router
 路由相关配置
@@ -120,21 +118,125 @@ _注：路由映射表的优先级要次于路由适配器，如果适配器受�
 类型：`String`，默认值：`无`。   
 数据接口调用的上下文（可选），当使用相对路径访问接口时，框架自动加上`contextPath`。比如访问接口`human/list`则自动转化为`{contextPath}/human/list`。
 
-#### - config.dataServer.liveApi
-类型：`String`，默认值：`无`。
-数据服务器“存活”检测接口，即“心跳接口”。
-
 #### - config.dataServer.server
 类型：`String`，默认值：`127.0.0.1:8080`。  
 数据服务器IP地址和端口号，其中IP地址也可以用域名代替，如：`www.xxx.com:8080`。
 
-#### - config.dataServer.stopOnServerDown
-类型：`Boolean`，默认值：`false`。   
-当数据服务器不可用时，是否需要停止 WEB 服务器，当“存活”检测接口访问失败时认为数据服务器不可用。在集群环境中当服务不可用需及时的停止服务，保证用户的正常访问。
+### 路由
+应用初始化时的路由配置可以查看`config.router`配置说明。其中，`config.router.map`为静态路由，`config.router.adapter`为自定义路由适配器，可以实现动态路由。
 
+另一种更灵活的动态路由方式：分为 视图路由 和 API路由
 
+```javascript
+// 创建一个视图路由
+var viewRouter = new VRender.router();
 
+viewRouter("/admin/settings", function (name, params, callback) {
+  if (/profile$/.test(name))
+    callback(false, "admin/settings/ProfileSettingsView");
+  else if (/account$/.test(name))
+    callback(false, "admin/settings/AccountSettingsView");
+  else 
+    callback({code: 404, msg: "视图不存在"});
+});
 
+viewRouter("/module/customer", function (name, params, callback) {
+  callback(false, "modules/customer/CustomerMainView");
+});
+```
+上例中，网址`http://www.xxx.com/admin/settings/profile`返回的是`ProfileSettingsView`视图（_视图可以是一个网页或网页片段_）
+
+```javascript
+// 创建一个API路由
+var apiRouter = new VRender.api();
+
+apiRouter("user.info.getbyid", function (name, params, callback) {
+  callback(false, {id: 1, name: "admin", mobile: ""});
+});
+```
+API路由返回接口数据
+
+### 视图
+#### 新建一个页面
+```javascript
+var VRender = require("v-render");
+
+var IndexView = VRender.PageView.extend(module, {
+  renderBody: function (body) {
+    IndexView.__super__.renderBody.call(this, body);
+    body.append("Web Content.");
+  }
+});
+```
+
+#### 新建自定义视图
+```javascript
+var VRender = require("v-render");
+
+var MyView = VRender.UIView.extend(module, {
+  className: "my-view-class",
+  
+  doInit: function () {
+    MyView.__super__.doInit.call(this);
+    // something init
+  },
+  
+  renderView: function () {
+    MyView.__super__.renderView.call(this);
+    this.$el.append("<div>my view content.</div>");
+    // or
+    // VRender.$("div").appendTo(this.$el).text("my view content.");
+  }
+});
+```
+
+#### 使用自定义视图
+```javascript
+var VRender = require("v-render");
+var MyView = require("./MyView");
+
+var MyView2 = VRender.UIView.extend(module, {
+  renderView: function () {
+    MyView2.__super__.renderView.call(this);
+    new MyView(this).render(this.$el);
+  }
+});
+```
+
+### 组件
+
+* UIGroup
+* UIHGroup
+* UIVGroup
+* UIContainer
+* UIButton
+* UICheckbox
+* UICheckGroup
+* UICombobox
+* UIConfirm
+* UIDatagrid
+* UIDateInput
+* UIDatePicker
+* UIDateRange
+* UIDateTime
+* UIDialog
+* UIFileUpload
+* UIFormView
+* UIListView
+* UINotice
+* UIPaginator
+* UIPanel
+* UIPopupMenu
+* UIRadiobox
+* UIRadioGroup
+* UIScrollBox
+* UITabbar
+* UIText
+* UITextView
+* UITimeInput
+* UITooltip
+* UITreeView
+* UITreeCombobox
 
 
 
