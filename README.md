@@ -186,6 +186,9 @@ var MyView = VRender.UIView.extend(module, {
     this.$el.append("<div>my view content.</div>");
     // or
     // VRender.$("div").appendTo(this.$el).text("my view content.");
+
+    // 添加组件
+    new VRender.UIDateInput(this, {date: new Date()}).render(this.$el);
   }
 });
 ```
