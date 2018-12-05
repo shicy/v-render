@@ -4,3 +4,4 @@ node_modules
 vrender.sublime-project
 vrender.sublime-workspace
 vrender.sketch
+package-lock.json
