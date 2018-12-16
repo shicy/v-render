@@ -110,6 +110,10 @@
     min-width: 80px;
 }
 
+.ui-dialog.scrollless > .dialog-container > .dialog-view > section > .container {
+    overflow: visible;
+}
+
 .ui-dialog.waiting > .dialog-container:before {
     content: "";
     position: absolute;

@@ -164,6 +164,10 @@
 	opacity: .5;
 }
 
+.ui-timeipt[opt-readonly] > .ipt:hover > .clear {
+    display: none;
+}
+
 .ui-timeipt[disabled] {
     cursor: no-drop;
 }
