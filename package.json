@@ -25,10 +25,10 @@
   "dependencies": {
     "clean-css": "^4.2.1",
     "dot": "^1.1.2",
-    "htmlparser2": "^3.10.0",
+    "htmlparser2": "^3.10.1",
     "log4js": "^2.11.0",
     "through2": "^2.0.5",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.5.2"
   },
   "devDependencies": {}
 }
