@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/shicy/v-render#readme",
   "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
     "clean-css": "^4.2.1",
     "dot": "^1.1.2",
     "htmlparser2": "^3.10.1",
     "log4js": "^2.11.0",
+    "node-sass": "^4.11.0",
     "through2": "^2.0.5",
     "uglify-js": "^3.5.2"
   },
