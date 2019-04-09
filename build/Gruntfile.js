@@ -116,13 +116,13 @@ module.exports = function (grunt) {
 		grunt.file.setBase("../lib/static/");
 		grunt.task.run(["uglify", "cssmin"]);
 
-		var version = grunt.template.today("yymmddHHMM");
+		var version = grunt.template.today("yymmdd");
 		var files = ["PageView.js", "AppPageView.js", "WebPageView.js"];
 		for (var i = 0, l = files.length; i < l; i++) {
 			var filepath = "../ui/" + files[i];
 			var text = grunt.file.read(filepath).toString("utf-8");
-			text = text.replace(/\.min\.js\?v=.{10}/g, ".min.js?v=" + version);
-			text = text.replace(/\.min\.css\?v=.{10}/g, ".min.css?v=" + version);
+			text = text.replace(/\.min\.js\?v=.{6}/g, ".min.js?v=" + version);
+			text = text.replace(/\.min\.css\?v=.{6}/g, ".min.css?v=" + version);
 			grunt.file.write(filepath, text);
 		}
 	});
