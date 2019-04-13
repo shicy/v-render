@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 
 	commonScripts.push("js/render/_base.js");
 	commonScripts.push("js/ui/_base.js");
-	commonScripts.push("js/render/button.js");
-	commonScripts.push("js/ui/button.js");
+	// commonScripts.push("js/render/button.js");
+	// commonScripts.push("js/ui/button.js");
 	commonScripts.push("js/render/textview.js");
 	commonScripts.push("js/ui/textview.js");
 	commonScripts.push("js/render/checkbox.js");
