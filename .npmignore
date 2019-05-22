@@ -3,5 +3,3 @@ build
 dev.js
 logs/*.log*
 node_modules
-vrender.sublime-project
-vrender.sublime-workspace
