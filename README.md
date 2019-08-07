@@ -1,5 +1,5 @@
 # v-render
-> VRender 是一个 Node.js 的 web 开发框架，基于经典 JS 框架 jQuery。
+> VRender 是一个 Node.js 的 web 开发框架，基于框架 jQuery。
 
 ### 获取 v-render
 ```
@@ -11,21 +11,16 @@ npm install v-render --save
 // 引入框架
 var VRender = require("v-render");
 // 创建一个实例，初始化并运行
-VRender.create().initialize().run();
+new VRender({});
 ```
 现在，打开浏览器输入`http://localhost:8888/`，更多的帮助信息将在这里找到。  
 端口`8888`是默认端口号，自定义端口号如`8080`，如下所示：
 
 ```javascript
-VRender.create().initialize({server: {port: 8080}}).run();
+new VRender({server: {port: 8080}});
 ```
 
 ### 相关配置
-配置信息通过`initialize()`方法传入，如下所示：
-
-```javascript
-VRender.create().initialize(config).run();
-```
 
 #### - config.cwd
 类型：`String`，默认值：`"./"`，即框架所在目录。  
@@ -37,7 +32,8 @@ VRender.create().initialize(config).run();
 
 #### - config.logfiles
 类型：`String`或`Object`，默认值：`无`，文件基于`config.logdir`。  
-系统日志输出文件名称定义，如<code>"app.log"</code>将所有日志信息输出到`"./logs/app.log"`文件（基于`config.cwd`）。想要分类型输出到不同的日志文件，可以使用下面的方式配置：
+系统日志输出文件名称定义，如`"app.log"`将所有日志信息输出到`"./logs/app.log"`文件（基于`config.cwd`）。   
+想要分类型输出到不同的日志文件，可以使用下面的方式配置：
 
 ```javascript
 {
@@ -49,6 +45,26 @@ VRender.create().initialize(config).run();
 }
 ```
 框架默认还会输出日志文件`"vr.log"`，获取相应日志对象的方法是`VRender.log(name)`，其中`name`即日志类型。默认还可以使用`VRender.logger`作为日志输出。
+
+#### - config.uglify
+类型：`Boolean`，默认值：`true`。
+是否合并以及压缩脚本、样式文件。
+
+#### - config.fileCacheExpires
+类型：`Number`，默认值：`0`。
+脚本、样式相应的压缩文件缓存，为`0`时缓存永不失效。服务重启将清除缓存。
+
+#### - config.babel
+类型：`Boolean`，默认值：`false`。
+是否启用前端 ES6 脚本转换，使用 babel 插件将 ES6 脚本转换成 ES5。
+
+### - config.useREM
+类型：`Boolean`，默认值：`true`。
+移动端页面，是否启用`rem`度量方式。
+
+### - config.designDraftSize
+类型：`Number`，默认值：`750`。
+针对于`useREM`配置项，指定设计稿的宽度，方便页面中大小尺寸的转换（width/100rem）。
 
 #### - config.server
 web 服务器相关配置信息
@@ -163,7 +179,7 @@ var VRender = require("v-render");
 
 var IndexView = VRender.PageView.extend(module, {
   renderBody: function (body) {
-    IndexView.__super__.renderBody.call(this, body);
+    IndexView.super(this, body);
     body.append("Web Content.");
   }
 });
@@ -176,18 +192,21 @@ var VRender = require("v-render");
 var MyView = VRender.UIView.extend(module, {
   className: "my-view-class",
   
-  doInit: function () {
-    MyView.__super__.doInit.call(this);
+  doInit: function (done) {
+    MyView.super(this, () => {
+      done();
+    });
     // something init
   },
   
   renderView: function () {
-    MyView.__super__.renderView.call(this);
+    MyView.super(this);
     this.$el.append("<div>my view content.</div>");
     // or
     // VRender.$("div").appendTo(this.$el).text("my view content.");
 
     // 添加组件
+    // 需安装"v-render-ui"(npm install v-render-ui --save)
     new VRender.UIDateInput(this, {date: new Date()}).render(this.$el);
   }
 });
@@ -200,46 +219,18 @@ var MyView = require("./MyView");
 
 var MyView2 = VRender.UIView.extend(module, {
   renderView: function () {
-    MyView2.__super__.renderView.call(this);
+    MyView2.super(this);
     new MyView(this).render(this.$el);
   }
 });
 ```
 
 ### 组件
+安装 [v-render-ui](https://github.com/shicy/v-render-ui) 组件
 
-* UIGroup
-* UIHGroup
-* UIVGroup
-* UIContainer
-* UIButton
-* UICheckbox
-* UICheckGroup
-* UICombobox
-* UIConfirm
-* UIDatagrid
-* UIDateInput
-* UIDatePicker
-* UIDateRange
-* UIDateTime
-* UIDialog
-* UIFileUpload
-* UIFormView
-* UIListView
-* UINotice
-* UIPaginator
-* UIPanel
-* UIPopupMenu
-* UIRadiobox
-* UIRadioGroup
-* UIScrollBox
-* UITabbar
-* UIText
-* UITextView
-* UITimeInput
-* UITooltip
-* UITreeView
-* UITreeCombobox
+```
+npm install v-render-ui --save
+```
 
 
 
