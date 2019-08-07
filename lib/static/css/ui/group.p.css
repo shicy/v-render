@@ -1,8 +1,0 @@
-
-.ui-group.horizontial > * {
-	display: inline-block;
-}
-
-.ui-group.vertical > * {
-	display: block;
-}
