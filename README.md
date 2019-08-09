@@ -145,8 +145,9 @@ _注：路由映射表的优先级要次于路由适配器，如果适配器受�
 
 ```javascript
 // 创建一个视图路由
-var viewRouter = new VRender.router();
+var viewRouter = VRender.router();
 
+// 页面视图，继承自 VRender.PageView，是一个完整的网页
 viewRouter("/admin/settings", function (name, params, callback) {
   if (/profile$/.test(name))
     callback(false, "admin/settings/ProfileSettingsView");
@@ -156,6 +157,7 @@ viewRouter("/admin/settings", function (name, params, callback) {
     callback({code: 404, msg: "视图不存在"});
 });
 
+// 模块视图，继承自 VRender.Fragment，内容不包含 html/head/body 标签，适用于单页应用
 viewRouter("/module/customer", function (name, params, callback) {
   callback(false, "modules/customer/CustomerMainView");
 });
@@ -164,7 +166,7 @@ viewRouter("/module/customer", function (name, params, callback) {
 
 ```javascript
 // 创建一个API路由
-var apiRouter = new VRender.api();
+var apiRouter = VRender.api();
 
 apiRouter("user.info.getbyid", function (name, params, callback) {
   callback(false, {id: 1, name: "admin", mobile: ""});
@@ -174,6 +176,8 @@ API路由返回接口数据
 
 ### 视图
 #### 新建一个页面
+一个页面即是一个完整的网页，继承自`VRender.PageView`。
+
 ```javascript
 var VRender = require("v-render");
 
@@ -181,6 +185,21 @@ var IndexView = VRender.PageView.extend(module, {
   renderBody: function (body) {
     IndexView.super(this, body);
     body.append("Web Content.");
+  }
+});
+```
+
+#### 新建一个模块
+一个模块只是网页的一个片段，继承自`VRender.Fragment`，不包含 html/head/body 等标签，但相对于普通视图，模块将自动加载样式和脚本。   
+注：前端可以通过 `VRender.loadModule()` 加载模块视图
+
+```javascript
+var VRender = require("v-render");
+
+var ModuleView = VRender.Fragment.extend(module, {
+  render: function (output) {
+    ModuleView.super(this, output);
+    output.text("Module Content");
   }
 });
 ```
