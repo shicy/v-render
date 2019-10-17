@@ -14,8 +14,10 @@
   },
   "keywords": [
     "web",
-    "component",
-    "framework"
+    "html",
+    "framework",
+    "componential",
+    "render"
   ],
   "author": "shicy",
   "license": "ISC",
