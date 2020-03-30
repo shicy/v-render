@@ -1,6 +1,6 @@
 {
   "name": "v-render",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "a web framework is component based for NodeJS applications.",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "uglify-js": "^3.7.7"
   },
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.1.0",
     "grunt-contrib-uglify": "^4.0.1"
   }
 }
